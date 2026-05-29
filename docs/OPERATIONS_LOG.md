@@ -495,3 +495,122 @@ bash scripts/setup_port_forward.sh
 4. **SockShop 部分服务故障**：`carts-db`、`orders-db`、`rabbitmq` Pod 处于 Error 状态，导致购物车和订单功能不可用，SockShop 的 Selenium 测试只能覆盖前端浏览和 API 查询部分。
 
 5. **long-running 采集的时间戳起点**：由于使用 Prometheus `query_range` 的实际返回时间戳作为主索引，采集窗口的首尾几个点可能因 `irate/rate` 计算窗口不足而为 NaN。建议 `lookback_minutes` 至少设置为 `rate_window + 1min` 的余量。
+
+---
+
+## 阶段九：Run-based 数据导出重构（2026-05-29）
+
+### 9.1 背景：多次间断采集需求
+
+**问题：** 原 live/collect 模式每次采集内部按 50/20/30 自动切 train/valid/test，导致：
+- 单次采集数据量少时切分无意义（valid 只有 5 行，test 1445 行）
+- 无法跨多次采集累积数据集
+
+**设计决策：** 改为每次采集保存一个独立 **run**，由用户选定若干 run 后统一 assemble 成 train/valid/test。
+
+### 9.2 特征数从 66 改为 63
+
+**决策：** 彻底删除 `redis-cart_qps`、`redis-cart_latency_p95`、`redis-cart_error_rate`（不再填 NaN，直接从 schema 中移除）。
+
+**新特征数：** 10 服务 × 6 指标 + redis-cart × 3 资源指标 = **63**
+
+**影响文件：** `config.py`（FEATURE_NAMES assert 63）、`schema.py`（63行）、`mock_data.py`、`dataset_builder.py`、`prometheus_queries.yaml`
+
+### 9.3 NaN 补全策略（impute_features）
+
+**新增函数：** `benchmark/exporter.py::impute_features(df)`
+
+**策略：**
+
+| 指标 | 条件 | 处理 |
+|------|------|------|
+| `error_rate` / `latency_p95` | 对应服务 `qps == 0` 时为 NaN | 填 0.0（无流量时正常） |
+| `cpu_usage` / `memory_usage` / `restart_count` | 连续缺失 ≤2 个点 | Forward fill（短暂 scrape 缺口） |
+| 其他 | 仍有 NaN | 不处理，quality report 硬失败 |
+
+**关键设计：** 补全数量和补全特征记录在 `quality_report.imputed_features`，完全透明。
+
+### 9.4 严格 quality_report 硬校验
+
+**旧问题：** live 模式 `nan_count > 0` 但 `passed=True`（fake pass）。
+
+**新规则：** 以下任一条件满足 → `passed=False` → CLI 以非零退出：
+
+- `run_x` 含 NaN 或 Inf
+- `run_x` 含标签列
+- `feature_count != 63` 或 `schema_feature_count != 63`
+- 时间戳非 5s 等间隔
+- `duplicate_timestamp_count > 0`
+- `ground_truth.y_true` 与 `run_y.is_anomaly` 不一致
+- `root_cause_dims` 引用不存在于 schema 的特征
+- chaos run 的 `anomaly_points == 0`
+- 补全后仍有 NaN
+
+### 9.5 Run-based 输出目录结构
+
+**新目录格式：**
+
+```
+data/runs/<run_id>/
+  processed/run_x.csv      ← 特征（无 NaN/Inf/标签）
+  processed/run_y.csv      ← 标签
+  processed/quality_report.json
+  run_meta.json            ← run 元信息
+  answers/ground_truth.csv
+```
+
+**新命令：** `python -m benchmark.cli assemble --runs-root data/runs --output data/datasets/v1`
+
+**split 策略（last3_valid_last2_test）：** 按 `collection_start` 排序，最后 2 run = test，倒数第 3 run = valid，其余 = train。最少需要 4 次 quality_passed=True 的 run。
+
+### 9.6 多轮故障注入
+
+**新参数（collect 命令）：**
+
+| 参数 | 说明 |
+|------|------|
+| `--rounds N` | 将 fault-types 循环注入 N 次，INC 编号全局连续 |
+| `--round-gap-minutes` | 轮与轮之间的间隔 |
+| `--gap-jitter M` | 每个间隔额外随机叠加 0~M 秒 |
+
+### 9.7 Grafana Dashboard 配置
+
+**目标：** 实验运行期间实时查看服务指标。
+
+**使用现有 `monitoring` 命名空间的独立 Grafana（从 SockShop 时代保留）：**
+
+1. 注册数据源 `Istio-Prometheus`（内部 URL：`http://prometheus.istio-system.svc.cluster.local:9090`）
+2. 创建 6 panel dashboard：QPS / Latency p95 / Error Rate / CPU / Memory / Pod Restarts
+3. Dashboard URL: `http://localhost:3000/d/f9R_XXJvz/online-boutique-aiops`（需 port-forward）
+
+**port-forward 加入 Grafana：**
+
+```bash
+kubectl port-forward -n monitoring svc/grafana 3000:80
+```
+
+### 9.8 Port-forward 端口占用修复
+
+**问题：** 重复运行 `setup_port_forward.sh` 时报 `bind: Only one usage of each socket address`（端口 3000/8080/9090 未被 Ctrl+C 释放）。
+
+**修复：** 脚本启动前用 PowerShell `Get-NetTCPConnection` 找到占用该端口的进程 PID，`Stop-Process` 精准释放，不误杀其他 kubectl 进程。
+
+```bash
+# 现在可以安全重复运行
+bash scripts/setup_port_forward.sh
+```
+
+### 9.9 文件改动汇总
+
+| 文件 | 改动 |
+|------|------|
+| `benchmark/exporter.py` | 新增 `impute_features()`，import SERVICES/_REDIS_METRICS |
+| `benchmark/dataset_builder.py` | 新增 `build_and_write_run()` + `_build_quality_report_run()`；smoke 保留原函数 |
+| `benchmark/cli.py` | `cmd_live`/`cmd_collect` 改为 run-based；新增 `cmd_assemble`、`_update_manifest` |
+| `benchmark/reexport.py` | 改用 `build_and_write_run()` |
+| `scripts/setup_port_forward.sh` | 新增端口释放逻辑（PowerShell `Get-NetTCPConnection`） |
+| `docs/EXPERIMENT_GUIDE.md` | 重写为 run-based + assemble 工作流 |
+| `README.md` | 更新特征数 66→63；新增 run-based 和 assemble 说明；更新端口表 |
+
+**Git commit:** `b26d143` fix: harden live collection dataset quality and run-based exports  
+**Git commit:** `aaf257b` fix: release occupied ports before starting port-forwards
