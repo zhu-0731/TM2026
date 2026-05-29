@@ -28,6 +28,28 @@ fi
 echo "Cluster OK"
 echo ""
 
+# Kill the process (if any) that is currently LISTEN-ing on a given port.
+# Uses PowerShell Get-NetTCPConnection so only the specific process is killed.
+_free_port() {
+    local port=$1
+    if command -v powershell.exe &>/dev/null; then
+        powershell.exe -NoProfile -Command "
+            \$c = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
+            if (\$c) {
+                \$c | Select-Object -ExpandProperty OwningProcess -Unique |
+                    ForEach-Object { Stop-Process -Id \$_ -Force -ErrorAction SilentlyContinue }
+                Start-Sleep -Milliseconds 600
+                Write-Host '  Freed port $port'
+            }
+        " 2>/dev/null || true
+    fi
+}
+
+echo "Releasing ports 9090 8080 3000 if occupied ..."
+_free_port 9090
+_free_port 8080
+_free_port 3000
+
 echo "Starting port-forward: Prometheus  istio-system:9090  -> localhost:9090"
 "$KUBECTL" port-forward -n istio-system svc/prometheus 9090:9090 &
 PF_PROM_PID=$!
