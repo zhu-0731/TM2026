@@ -4,8 +4,7 @@
   "expected_interval_seconds": 5,
   "is_regular_interval": true,
   "duplicate_timestamp_count": 0,
-  "nan_count": 150,
-  "unexpected_nan_count": 150,
+  "nan_count": 0,
   "inf_count": 0,
   "constant_feature_count": 19,
   "train_rows": 49,
@@ -17,5 +16,21 @@
   "valid_incident_count": 20,
   "schema_feature_count": 63,
   "x_has_no_label_columns": true,
-  "passed": true
+  "passed": true,
+  "imputation_applied": true,
+  "imputation_strategy": "zero_qps_fill0_and_resource_ffill_limit2",
+  "imputed_value_count": 142,
+  "imputed_features": {
+    "cartservice_cpu_usage": 9,
+    "checkoutservice_error_rate": 27,
+    "checkoutservice_latency_p95": 21,
+    "emailservice_error_rate": 25,
+    "emailservice_latency_p95": 15,
+    "paymentservice_error_rate": 23,
+    "paymentservice_latency_p95": 21,
+    "adservice_cpu_usage": 1
+  },
+  "run_x_added": true,
+  "run_y_added": true,
+  "total_anomaly_points": 236
 }
