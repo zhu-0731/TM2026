@@ -1,5 +1,5 @@
 """
-Re-export a dataset from already-collected Prometheus data.
+Re-export a dataset run from already-collected Prometheus data.
 
 Use when the ChaosMesh injection succeeded but the dataset export failed,
 to avoid re-running the experiment. Edit the timestamps and incident
@@ -61,38 +61,28 @@ INCIDENTS = [
     },
 ]
 
-OUTPUT_DIR = Path("data/datasets/online_boutique_rca_v1")
+OUTPUT_DIR = Path("data/runs/reexport")
 PROM_URL   = "http://localhost:9090"
 QUERIES    = Path("configs/prometheus_queries.yaml")
 STEP       = 5
+RUN_ID     = "reexport"
 # ────────────────────────────────────────────────────────────────────────
 
 
 def main():
     from benchmark.config import ExportConfig
-    from benchmark.exporter import fetch_live_data
-    from benchmark.dataset_builder import build_and_write_dataset
+    from benchmark.exporter import fetch_live_data, impute_features
+    from benchmark.dataset_builder import build_and_write_run
     from benchmark.mock_data import MockIncident
 
     if OUTPUT_DIR.exists():
         shutil.rmtree(OUTPUT_DIR)
-
-    total_sec  = (COLLECTION_END - COLLECTION_START).total_seconds()
-    first_fault = min(inc["effect_start"] for inc in INCIDENTS)
-    warmup_sec  = (first_fault - COLLECTION_START).total_seconds()
-
-    train_ratio = round(min((warmup_sec * 0.80) / total_sec, 0.70), 3)
-    valid_ratio = round(min(((warmup_sec - 30) * 0.10) / total_sec, 0.15), 3)
-    print(f"Splits: train={train_ratio:.1%}  valid={valid_ratio:.1%}  "
-          f"test={1-train_ratio-valid_ratio:.1%}")
 
     cfg = ExportConfig(
         output_dir=OUTPUT_DIR,
         step_seconds=STEP,
         prometheus_url=PROM_URL,
         mode="collect",
-        train_ratio=train_ratio,
-        valid_ratio=valid_ratio,
     )
 
     ts = lambda dt: dt.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -103,6 +93,13 @@ def main():
         end=COLLECTION_END,
     )
     print(f"Got {len(metrics_df)} time points, {len(missing)} features missing")
+
+    # Impute NaN
+    metrics_df, imputation_stats = impute_features(metrics_df)
+    if imputation_stats["imputed_value_count"] > 0:
+        print(f"Imputed {imputation_stats['imputed_value_count']} values")
+    if imputation_stats["remaining_nan_count"] > 0:
+        print(f"WARNING: {imputation_stats['remaining_nan_count']} NaN remain after imputation")
 
     incidents = [
         MockIncident(
@@ -123,17 +120,23 @@ def main():
         for inc in INCIDENTS
     ]
 
-    quality = build_and_write_dataset(
+    quality = build_and_write_run(
         metrics_df, incidents, cfg,
+        run_id=RUN_ID,
+        imputation_stats=imputation_stats,
         missing_features=missing,
         collection_start=ts(COLLECTION_START),
         collection_end=ts(COLLECTION_END),
+        chaos_enabled=True,
+        run_type="chaos",
     )
-    print(f"\nDataset: {OUTPUT_DIR}")
-    print(f"Test anomaly points: {quality['test_anomaly_points']}")
-    print(f"Quality passed:      {quality['passed']}")
+    print(f"\nRun: {OUTPUT_DIR}")
+    print(f"Anomaly points: {quality['anomaly_points']}")
+    print(f"Quality passed: {quality['passed']}")
+    for reason in quality.get("fail_reasons", []):
+        print(f"  FAIL: {reason}")
 
-    # Write injection_log.json to prove real ChaosMesh execution
+    # Write injection_log.json (backward compat)
     log = [
         {
             "incident_id":      inc["incident_id"],
@@ -145,14 +148,13 @@ def main():
             "effect_start":     ts(inc["effect_start"]),
             "effect_end":       ts(inc["effect_end"]),
             "success":          True,
-            "experiment_name":  f"inc00{i+1}-{inc['fault_type'].replace('_','-')}-{inc['target_service']}",
             "source":           "reexport_from_real_chaosmesh_run",
         }
-        for i, inc in enumerate(INCIDENTS)
+        for inc in INCIDENTS
     ]
     log_path = OUTPUT_DIR / "injection_log.json"
     log_path.write_text(json.dumps(log, indent=2))
-    print(f"Injection log:       {log_path}")
+    print(f"Injection log: {log_path}")
 
     if not quality["passed"]:
         import sys

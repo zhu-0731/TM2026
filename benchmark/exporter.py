@@ -8,7 +8,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
-from .config import ExportConfig, FEATURE_NAMES
+from .config import ExportConfig, FEATURE_NAMES, SERVICES, _REDIS_METRICS
 from .prometheus_client import PrometheusClient
 
 
@@ -94,3 +94,64 @@ def fetch_live_data(
 
     df = pd.DataFrame(data)
     return df, missing_features
+
+
+MAX_FORWARD_FILL = 2
+
+
+def impute_features(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+    """
+    Impute NaN values in feature columns using metric-type-aware strategies.
+
+    Strategy:
+    - error_rate / latency_p95: if same-service qps == 0, fill with 0.0
+      (no traffic → no errors / no latency samples is expected and correct)
+    - cpu_usage / memory_usage / restart_count: forward-fill up to
+      MAX_FORWARD_FILL consecutive missing points (short scrape gaps)
+
+    Returns (imputed_df, imputation_stats) where imputation_stats contains:
+      imputation_strategy, imputed_value_count, imputed_features (dict),
+      remaining_nan_count, remaining_nan_features (list)
+    """
+    out = df.copy()
+    imputed_features: dict[str, int] = {}
+
+    for svc in SERVICES:
+        if svc != "redis-cart":
+            qps_col = f"{svc}_qps"
+            if qps_col in out.columns:
+                qps_zero = out[qps_col].fillna(0) == 0
+                for met in ("error_rate", "latency_p95"):
+                    col = f"{svc}_{met}"
+                    if col not in out.columns:
+                        continue
+                    fill_mask = qps_zero & out[col].isna()
+                    n = int(fill_mask.sum())
+                    if n:
+                        out.loc[fill_mask, col] = 0.0
+                        imputed_features[col] = imputed_features.get(col, 0) + n
+
+        for met in ("cpu_usage", "memory_usage", "restart_count"):
+            col = f"{svc}_{met}"
+            if col not in out.columns:
+                continue
+            n_before = int(out[col].isna().sum())
+            if not n_before:
+                continue
+            out[col] = out[col].ffill(limit=MAX_FORWARD_FILL)
+            n_after = int(out[col].isna().sum())
+            n_filled = n_before - n_after
+            if n_filled:
+                imputed_features[col] = imputed_features.get(col, 0) + n_filled
+
+    feat_cols = [f for f in FEATURE_NAMES if f in out.columns]
+    remaining_nan_count = int(out[feat_cols].isna().sum().sum())
+    remaining_nan_features = [c for c in feat_cols if out[c].isna().any()]
+
+    return out, {
+        "imputation_strategy": "zero_qps_fill0_and_resource_ffill_limit2",
+        "imputed_value_count": sum(imputed_features.values()),
+        "imputed_features": imputed_features,
+        "remaining_nan_count": remaining_nan_count,
+        "remaining_nan_features": remaining_nan_features,
+    }

@@ -1,6 +1,7 @@
 """CLI entry point for the benchmark dataset exporter."""
 from __future__ import annotations
 
+import csv
 import sys
 import json
 import time
@@ -11,6 +12,47 @@ from pathlib import Path
 
 from .config import ExportConfig
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _parse_datetime(s: str) -> datetime:
+    """Parse ISO 8601 UTC timestamp (e.g. 2026-05-29T12:00:00Z)."""
+    return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(timezone.utc)
+
+
+def _update_manifest(run_dir: Path, run_meta: dict, quality: dict) -> None:
+    """Append this run's summary to <run_dir.parent>/manifest.csv."""
+    runs_root = run_dir.parent
+    manifest_path = runs_root / "manifest.csv"
+    row = {
+        "run_id":           run_meta.get("run_id", ""),
+        "run_dir":          str(run_dir),
+        "collection_start": run_meta.get("collection_start", ""),
+        "collection_end":   run_meta.get("collection_end", ""),
+        "mode":             run_meta.get("mode", ""),
+        "feature_count":    run_meta.get("feature_count", 63),
+        "incident_count":   run_meta.get("incidents_count", 0),
+        "anomaly_points":   run_meta.get("anomaly_points", 0),
+        "quality_passed":   quality.get("passed", False),
+    }
+    header = list(row.keys())
+    exists = manifest_path.exists()
+    try:
+        with open(manifest_path, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=header)
+            if not exists:
+                writer.writeheader()
+            writer.writerow(row)
+        print(f"[manifest] Updated: {manifest_path}")
+    except OSError as e:
+        print(f"[manifest] WARNING: could not write manifest: {e}", file=sys.stderr)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# smoke
+# ─────────────────────────────────────────────────────────────────────────────
 
 def cmd_smoke(args: argparse.Namespace) -> None:
     from .mock_data import generate_mock_data
@@ -36,14 +78,13 @@ def cmd_smoke(args: argparse.Namespace) -> None:
         sys.exit(1)
 
 
-def _parse_datetime(s: str) -> datetime:
-    """Parse ISO 8601 UTC timestamp (e.g. 2026-05-29T12:00:00Z)."""
-    return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(timezone.utc)
-
+# ─────────────────────────────────────────────────────────────────────────────
+# live  (run-based, no train/valid/test split)
+# ─────────────────────────────────────────────────────────────────────────────
 
 def cmd_live(args: argparse.Namespace) -> None:
-    from .exporter import fetch_live_data
-    from .dataset_builder import build_and_write_dataset
+    from .exporter import fetch_live_data, impute_features
+    from .dataset_builder import build_and_write_run
 
     cfg = ExportConfig(
         output_dir=Path(args.output),
@@ -58,36 +99,70 @@ def cmd_live(args: argparse.Namespace) -> None:
         print(f"ERROR: Queries config not found: {queries_path}", file=sys.stderr)
         sys.exit(1)
 
-    # Support explicit time window (overrides lookback_minutes)
     start_dt: datetime | None = _parse_datetime(args.start_time) if args.start_time else None
     end_dt:   datetime | None = _parse_datetime(args.end_time)   if args.end_time   else None
 
     if start_dt or end_dt:
-        window_desc = f"{args.start_time} → {args.end_time or 'now'}"
-        print(f"[live] Fetching explicit window: {window_desc} from {args.prometheus_url}...")
+        print(f"[live] Fetching window: {args.start_time} → {args.end_time or 'now'} ...")
     else:
         print(f"[live] Fetching last {args.lookback_minutes}min from {args.prometheus_url}...")
 
     metrics_df, missing = fetch_live_data(cfg, queries_path, start=start_dt, end=end_dt)
 
     if missing:
-        print(f"[live] WARNING: {len(missing)} features missing: {missing[:5]}...")
+        print(f"[live] WARNING: {len(missing)} features missing from Prometheus: {missing[:5]}")
 
-    cs_str = start_dt.strftime("%Y-%m-%dT%H:%M:%SZ") if start_dt else None
-    ce_str = end_dt.strftime("%Y-%m-%dT%H:%M:%SZ")   if end_dt   else None
-    quality = build_and_write_dataset(
+    # Impute NaN values
+    metrics_df, imputation_stats = impute_features(metrics_df)
+    total_imputed = imputation_stats["imputed_value_count"]
+    if total_imputed > 0:
+        print(f"[live] Imputed {total_imputed} values across "
+              f"{len(imputation_stats['imputed_features'])} features")
+    remaining_nan = imputation_stats["remaining_nan_count"]
+    if remaining_nan > 0:
+        print(f"[live] WARNING: {remaining_nan} NaN values remain after imputation — "
+              f"quality will fail: {imputation_stats['remaining_nan_features'][:5]}",
+              file=sys.stderr)
+
+    # Determine run_id and timestamps
+    run_id = getattr(args, "run_id", None) or cfg.output_dir.name
+    now = datetime.now(tz=timezone.utc)
+    if start_dt:
+        cs_str = start_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    else:
+        cs_str = (now - timedelta(minutes=args.lookback_minutes)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    ce_str = end_dt.strftime("%Y-%m-%dT%H:%M:%SZ") if end_dt else now.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    quality = build_and_write_run(
         metrics_df, [], cfg,
+        run_id=run_id,
+        imputation_stats=imputation_stats,
         missing_features=missing,
         collection_start=cs_str,
         collection_end=ce_str,
+        chaos_enabled=False,
+        run_type="normal",
     )
-    print(f"[live] Dataset written to: {cfg.output_dir}")
+
+    print(f"[live] Run written to: {cfg.output_dir}")
     print(f"[live] Quality report: passed={quality['passed']}")
+    for reason in quality.get("fail_reasons", []):
+        print(f"  FAIL: {reason}", file=sys.stderr)
+
+    # Update manifest
+    run_meta_path = cfg.output_dir / "run_meta.json"
+    if run_meta_path.exists():
+        run_meta = json.loads(run_meta_path.read_text())
+        _update_manifest(cfg.output_dir, run_meta, quality)
 
     if not quality["passed"]:
-        print("ERROR: Quality checks failed. See quality_report.json for details.", file=sys.stderr)
+        print("ERROR: Quality checks failed. See processed/quality_report.json.", file=sys.stderr)
         sys.exit(1)
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# collect  (ChaosMesh fault injection + run-based export)
+# ─────────────────────────────────────────────────────────────────────────────
 
 def cmd_collect(args: argparse.Namespace) -> None:
     """
@@ -95,12 +170,13 @@ def cmd_collect(args: argparse.Namespace) -> None:
       1. Warmup phase  (normal traffic, no faults)
       2. Inject fault  (ChaosMesh experiment, record exact timestamps)
       3. Wait for recovery
-      4. Repeat for each fault type
+      4. Repeat for each fault type / round
       5. Fetch full window from Prometheus
-      6. Build labeled dataset with real RCA ground truth
+      6. Impute NaN values
+      7. Build run-based dataset with real RCA ground truth
     """
-    from .exporter import fetch_live_data
-    from .dataset_builder import build_and_write_dataset
+    from .exporter import fetch_live_data, impute_features
+    from .dataset_builder import build_and_write_run
     from .chaos_injector import (
         run_injection, results_to_mock_incidents, FAULT_DEFINITIONS
     )
@@ -117,8 +193,6 @@ def cmd_collect(args: argparse.Namespace) -> None:
         step_seconds=args.step_seconds,
         prometheus_url=args.prometheus_url,
         mode="collect",
-        train_ratio=args.train_ratio,
-        valid_ratio=args.valid_ratio,
     )
 
     queries_path = Path(args.queries_config)
@@ -135,19 +209,18 @@ def cmd_collect(args: argparse.Namespace) -> None:
     print("=" * 60)
     print(" ChaosMesh Fault Injection + Data Collection")
     print("=" * 60)
-    print(f" Fault types:   {fault_types}")
-    print(f" Rounds:        {rounds}")
-    print(f" Warmup:        {args.warmup_minutes}min")
+    print(f" Fault types:     {fault_types}")
+    print(f" Rounds:          {rounds}")
+    print(f" Warmup:          {args.warmup_minutes}min")
     print(f" Intra-round gap: {args.gap_minutes}min ±{gap_jitter_sec}s jitter")
     if rounds > 1:
         print(f" Inter-round gap: {args.round_gap_minutes}min ±{gap_jitter_sec}s jitter")
-    print(f" Step:          {args.step_seconds}s")
-    print(f" Output:        {cfg.output_dir}")
-    print(f" Dry-run:       {dry_run}")
+    print(f" Step:            {args.step_seconds}s")
+    print(f" Output:          {cfg.output_dir}")
+    print(f" Dry-run:         {dry_run}")
     print("=" * 60)
 
     def _jittered_sleep(base_minutes: float, label: str) -> None:
-        """Sleep base_minutes with up to gap_jitter_sec of random extra time."""
         jitter = random.uniform(0, gap_jitter_sec) if gap_jitter_sec > 0 else 0
         total = base_minutes * 60 + jitter
         jitter_str = f" (+{jitter:.0f}s jitter)" if jitter > 0 else ""
@@ -158,14 +231,14 @@ def cmd_collect(args: argparse.Namespace) -> None:
     collection_start = datetime.now(tz=timezone.utc)
     print(f"\n[collect] Collection start: {collection_start.strftime('%Y-%m-%dT%H:%M:%SZ')}")
 
-    # --- Warmup phase ---
+    # --- Warmup ---
     print(f"\n[collect] Warmup phase: {args.warmup_minutes}min normal traffic ...")
     if not dry_run:
         time.sleep(args.warmup_minutes * 60)
 
-    # --- Fault injection phases (multi-round) ---
+    # --- Fault injection (multi-round) ---
     injection_results = []
-    inc_counter = 1  # global incident counter across all rounds
+    inc_counter = 1
 
     for round_idx in range(rounds):
         if rounds > 1:
@@ -184,37 +257,33 @@ def cmd_collect(args: argparse.Namespace) -> None:
             )
             injection_results.append(result)
 
-            # Intra-round gap (skip after last fault in current round)
             is_last_in_round = idx == len(fault_types) - 1
             if not is_last_in_round:
                 _jittered_sleep(args.gap_minutes, "Gap between faults")
 
-        # Inter-round gap (skip after final round)
         is_last_round = round_idx == rounds - 1
         if not is_last_round:
-            _jittered_sleep(args.round_gap_minutes, f"Gap between rounds ({round_idx+1}→{round_idx+2})")
+            _jittered_sleep(args.round_gap_minutes,
+                            f"Gap between rounds ({round_idx+1}→{round_idx+2})")
 
     collection_end = datetime.now(tz=timezone.utc)
     print(f"\n[collect] All injections complete. "
-          f"Collection end: {collection_end.strftime('%Y-%m-%dT%H:%M:%SZ')}")
+          f"End: {collection_end.strftime('%Y-%m-%dT%H:%M:%SZ')}")
 
-    # --- Dry-run: print summary and exit ---
+    # --- Dry-run summary ---
     if dry_run:
         total_sec = sum(
             60 + FAULT_DEFINITIONS[ft].get("recovery_buffer_sec", 30)
             for ft in fault_types
         ) + args.warmup_minutes * 60 + args.gap_minutes * 60 * (len(fault_types) - 1)
-        print(f"\n[dry-run] Plan summary:")
-        print(f"  Estimated total time: {total_sec // 60}min {total_sec % 60}s")
-        print(f"  Faults: {fault_types}")
+        print(f"\n[dry-run] Estimated total time: {total_sec // 60}min {total_sec % 60}s")
         for r in injection_results:
             print(f"  {r.incident_id} ({r.fault_type}): "
-                  f"effect_start={r.effect_start.strftime('%H:%M:%SZ')}, "
-                  f"effect_end={r.effect_end.strftime('%H:%M:%SZ')}")
-        print("[dry-run] Done. Use without --dry-run to actually run.")
+                  f"{r.effect_start.strftime('%H:%M:%SZ')} → {r.effect_end.strftime('%H:%M:%SZ')}")
+        print("[dry-run] Done.")
         return
 
-    # --- Fetch data from Prometheus ---
+    # --- Fetch from Prometheus ---
     total_minutes = int((collection_end - collection_start).total_seconds() / 60) + 1
     print(f"\n[collect] Fetching {total_minutes}min of data from Prometheus ...")
     metrics_df, missing = fetch_live_data(
@@ -222,10 +291,21 @@ def cmd_collect(args: argparse.Namespace) -> None:
         start=collection_start,
         end=collection_end,
     )
-    print(f"[collect] Got {len(metrics_df)} time points, "
-          f"{len(missing)} features missing")
+    print(f"[collect] Got {len(metrics_df)} time points, {len(missing)} features missing")
 
-    # --- Convert injection results to MockIncident format ---
+    # --- Impute NaN ---
+    metrics_df, imputation_stats = impute_features(metrics_df)
+    total_imputed = imputation_stats["imputed_value_count"]
+    if total_imputed > 0:
+        print(f"[collect] Imputed {total_imputed} values across "
+              f"{len(imputation_stats['imputed_features'])} features")
+    remaining_nan = imputation_stats["remaining_nan_count"]
+    if remaining_nan > 0:
+        print(f"[collect] WARNING: {remaining_nan} NaN remain after imputation — "
+              f"quality will fail: {imputation_stats['remaining_nan_features'][:5]}",
+              file=sys.stderr)
+
+    # --- Build incidents ---
     incidents = results_to_mock_incidents(injection_results)
     successful = [r for r in injection_results if r.success]
     failed = [r for r in injection_results if not r.success]
@@ -233,67 +313,227 @@ def cmd_collect(args: argparse.Namespace) -> None:
     if failed:
         print(f"\n[collect] WARNING: {len(failed)} injections failed: "
               f"{[r.incident_id for r in failed]}", file=sys.stderr)
-
     if not incidents:
         print("[collect] WARNING: No successful incidents — dataset will have no anomaly labels",
               file=sys.stderr)
 
-    # --- Compute split ratios so faults always land in test ---
-    # train: warmup period (before first fault) × 0.85
-    # valid: warmup period × 0.15
-    # test: everything from first fault onset onward
-    if successful:
-        first_effect = min(r.effect_start for r in successful)
-        total_sec = (collection_end - collection_start).total_seconds()
-        warmup_sec = (first_effect - collection_start).total_seconds()
-        # train: first 80% of warmup; valid: next 10%; test: last 10% of warmup + all faults
-        # Subtracting 30s buffer ensures first fault always lands inside test
-        buffer_sec = 30
-        cfg.train_ratio = round(min((warmup_sec * 0.80) / total_sec, 0.7), 3)
-        cfg.valid_ratio = round(min(((warmup_sec - buffer_sec) * 0.10) / total_sec, 0.15), 3)
-        print(f"[collect] Auto-computed splits: "
-              f"train={cfg.train_ratio:.1%}  valid={cfg.valid_ratio:.1%}  "
-              f"test={1-cfg.train_ratio-cfg.valid_ratio:.1%}")
-        print(f"[collect] First fault at {first_effect.strftime('%H:%M:%SZ')} "
-              f"({warmup_sec/60:.1f}min into collection)")
-
+    run_type = "chaos" if incidents else "normal"
+    run_id = getattr(args, "run_id", None) or cfg.output_dir.name
     cs_str = collection_start.strftime("%Y-%m-%dT%H:%M:%SZ")
     ce_str = collection_end.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # --- Build dataset ---
-    quality = build_and_write_dataset(
+    # --- Build dataset (run-based) ---
+    quality = build_and_write_run(
         metrics_df, incidents, cfg,
+        run_id=run_id,
+        imputation_stats=imputation_stats,
         missing_features=missing,
         collection_start=cs_str,
         collection_end=ce_str,
+        chaos_enabled=True,
+        run_type=run_type,
     )
-    print(f"\n[collect] Dataset written to: {cfg.output_dir}")
-    print(f"[collect] Incidents: {len(successful)} successful, {len(failed)} failed")
-    print(f"[collect] Test anomaly points: {quality['test_anomaly_points']}")
-    print(f"[collect] Quality report: passed={quality['passed']}")
 
-    # Save injection log
+    print(f"\n[collect] Run written to: {cfg.output_dir}")
+    print(f"[collect] Incidents: {len(successful)} successful, {len(failed)} failed")
+    print(f"[collect] Anomaly points: {quality['anomaly_points']}")
+    print(f"[collect] Quality report: passed={quality['passed']}")
+    for reason in quality.get("fail_reasons", []):
+        print(f"  FAIL: {reason}", file=sys.stderr)
+
+    # --- injection_log.json (backward compat) ---
     log = []
     for r in injection_results:
         log.append({
-            "incident_id": r.incident_id,
-            "fault_type": r.fault_type,
-            "target_service": r.target_service,
-            "injection_start": r.injection_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "injection_end": r.injection_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "effect_start": r.effect_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "effect_end": r.effect_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "success": r.success,
-            "error": r.error,
-            "experiment_name": r.experiment_name,
+            "incident_id":       r.incident_id,
+            "fault_type":        r.fault_type,
+            "target_service":    r.target_service,
+            "injection_start":   r.injection_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "injection_end":     r.injection_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "effect_start":      r.effect_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "effect_end":        r.effect_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "success":           r.success,
+            "error":             r.error,
+            "experiment_name":   r.experiment_name,
         })
     log_path = cfg.output_dir / "injection_log.json"
     log_path.write_text(json.dumps(log, indent=2))
     print(f"[collect] Injection log: {log_path}")
 
-    if not quality["passed"] and not dry_run:
+    # --- Update manifest ---
+    run_meta_path = cfg.output_dir / "run_meta.json"
+    if run_meta_path.exists():
+        run_meta = json.loads(run_meta_path.read_text())
+        _update_manifest(cfg.output_dir, run_meta, quality)
+
+    if not quality["passed"]:
+        print("ERROR: Quality checks failed. See processed/quality_report.json.", file=sys.stderr)
         sys.exit(1)
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# assemble  (combine multiple runs into train/valid/test dataset)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def cmd_assemble(args: argparse.Namespace) -> None:
+    """
+    Combine quality-passed runs into a train/valid/test dataset.
+
+    Split policy (last3_valid_last2_test):
+      - Sort runs by collection_start (ascending)
+      - last 2 runs → test
+      - 3rd-to-last run → valid
+      - all earlier runs → train
+      - Minimum 4 runs required
+    """
+    import pandas as pd
+    from .schema import build_feature_schema
+    from .config import FEATURE_NAMES, SERVICES
+
+    runs_root = Path(args.runs_root)
+    output = Path(args.output)
+
+    if not runs_root.exists():
+        print(f"ERROR: runs_root does not exist: {runs_root}", file=sys.stderr)
+        sys.exit(1)
+
+    # Discover quality-passed runs
+    runs: list[dict] = []
+    for meta_path in sorted(runs_root.glob("*/run_meta.json")):
+        meta = json.loads(meta_path.read_text())
+        run_dir = meta_path.parent
+        qr_path = run_dir / "processed" / "quality_report.json"
+        if not qr_path.exists():
+            print(f"  [skip] {run_dir.name}: no quality_report.json")
+            continue
+        qr = json.loads(qr_path.read_text())
+        if not qr.get("passed", False):
+            reasons = qr.get("fail_reasons", ["unknown"])[:2]
+            print(f"  [skip] {run_dir.name}: quality_passed=False ({reasons})")
+            continue
+        run_x_path  = run_dir / "processed" / "run_x.csv"
+        run_y_path  = run_dir / "processed" / "run_y.csv"
+        if not (run_x_path.exists() and run_y_path.exists()):
+            print(f"  [skip] {run_dir.name}: missing run_x.csv or run_y.csv")
+            continue
+        runs.append({
+            "run_id":           meta.get("run_id", run_dir.name),
+            "collection_start": meta.get("collection_start", ""),
+            "run_dir":          run_dir,
+            "run_x_path":       run_x_path,
+            "run_y_path":       run_y_path,
+            "incidents_path":   run_dir / "processed" / "incidents.csv",
+        })
+
+    runs.sort(key=lambda x: x["collection_start"])
+    n = len(runs)
+    print(f"[assemble] Found {n} quality-passed runs under {runs_root}")
+
+    if n < 4:
+        print(f"ERROR: Need at least 4 quality-passed runs, found {n}. "
+              "Collect more runs before assembling.", file=sys.stderr)
+        sys.exit(1)
+
+    train_runs = runs[:-3]
+    valid_runs = runs[-3:-2]
+    test_runs  = runs[-2:]
+
+    print(f"  train: {[r['run_id'] for r in train_runs]}")
+    print(f"  valid: {[r['run_id'] for r in valid_runs]}")
+    print(f"  test:  {[r['run_id'] for r in test_runs]}")
+
+    def load_run(r: dict) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        x = pd.read_csv(r["run_x_path"])
+        y = pd.read_csv(r["run_y_path"])
+        inc = pd.read_csv(r["incidents_path"]) if r["incidents_path"].exists() else pd.DataFrame()
+        # Ensure correct column order
+        ts_col = ["timestamp"]
+        feat_cols = [c for c in FEATURE_NAMES if c in x.columns]
+        x = x[ts_col + feat_cols]
+        return x, y, inc
+
+    def concat_runs(run_list: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        xs, ys, incs = [], [], []
+        for r in run_list:
+            x, y, inc = load_run(r)
+            xs.append(x)
+            ys.append(y)
+            if not inc.empty:
+                incs.append(inc)
+        x_all   = pd.concat(xs, ignore_index=True)
+        y_all   = pd.concat(ys, ignore_index=True)
+        inc_all = pd.concat(incs, ignore_index=True) if incs else pd.DataFrame()
+        return x_all, y_all, inc_all
+
+    train_x, train_y, _        = concat_runs(train_runs)
+    valid_x, valid_y, _        = concat_runs(valid_runs)
+    test_x,  test_y,  test_inc = concat_runs(test_runs)
+
+    proc_dir = output / "processed"
+    ans_dir  = output / "answers"
+    for d in (proc_dir, ans_dir):
+        d.mkdir(parents=True, exist_ok=True)
+
+    train_x.to_csv(proc_dir / "train_x.csv", index=False)
+    train_y.to_csv(proc_dir / "train_y.csv", index=False)
+    valid_x.to_csv(proc_dir / "valid_x.csv", index=False)
+    valid_y.to_csv(proc_dir / "valid_y.csv", index=False)
+    test_x.to_csv(proc_dir / "test_x.csv",   index=False)
+    test_y.to_csv(proc_dir / "test_y.csv",   index=False)
+
+    if not test_inc.empty:
+        test_inc.to_csv(proc_dir / "incidents.csv", index=False)
+
+    # Feature schema
+    schema_df = build_feature_schema()
+    schema_df.to_csv(proc_dir / "feature_schema.csv", index=False)
+
+    # Ground truth files (test split)
+    gt = test_y[["timestamp", "is_anomaly"]].rename(columns={"is_anomaly": "y_true"})
+    gt.to_csv(ans_dir / "test_ground_truth.csv", index=False)
+    test_y[["timestamp", "incident_id", "phase"]].to_csv(
+        ans_dir / "test_incident_ground_truth.csv", index=False
+    )
+    if not test_inc.empty and "root_cause_dims" in test_inc.columns:
+        rc_rows = [
+            {
+                "incident_id":        row.get("incident_id", ""),
+                "root_cause_service": row.get("root_cause_service", ""),
+                "root_cause_dims":    row.get("root_cause_dims", ""),
+                "fault_type":         row.get("fault_type", ""),
+            }
+            for _, row in test_inc.iterrows()
+        ]
+        pd.DataFrame(rc_rows).to_csv(ans_dir / "test_root_cause_ground_truth.csv", index=False)
+
+    # dataset_meta.json
+    now_str = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    meta_out = {
+        "dataset_name":        output.name,
+        "assembled_from":      [r["run_id"] for r in runs],
+        "train_runs":          [r["run_id"] for r in train_runs],
+        "valid_runs":          [r["run_id"] for r in valid_runs],
+        "test_runs":           [r["run_id"] for r in test_runs],
+        "split_policy":        "last3_valid_last2_test",
+        "created_at":          now_str,
+        "feature_count":       len(FEATURE_NAMES),
+        "services":            SERVICES,
+        "train_rows":          len(train_x),
+        "valid_rows":          len(valid_x),
+        "test_rows":           len(test_x),
+        "test_anomaly_points": int(test_y["is_anomaly"].sum()),
+    }
+    (output / "dataset_meta.json").write_text(json.dumps(meta_out, indent=2))
+
+    print(f"[assemble] Dataset written to: {output}")
+    print(f"  train: {len(train_x)} rows")
+    print(f"  valid: {len(valid_x)} rows")
+    print(f"  test:  {len(test_x)} rows, {int(test_y['is_anomaly'].sum())} anomaly points")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# main
+# ─────────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Online Boutique AIOps dataset exporter")
@@ -306,15 +546,17 @@ def main() -> None:
     p_smoke.add_argument("--step-seconds", type=int, default=5)
 
     # --- live ---
-    p_live = sub.add_parser("live", help="Export from Prometheus (no fault injection)")
-    p_live.add_argument("--output", required=True)
+    p_live = sub.add_parser("live", help="Export a run from Prometheus (no fault injection)")
+    p_live.add_argument("--output", required=True,
+                        help="Run output directory (e.g. data/runs/run_20260529_1)")
+    p_live.add_argument("--run-id", default=None,
+                        help="Run ID string; defaults to the output directory name")
     p_live.add_argument("--prometheus-url", default="http://localhost:9090")
     p_live.add_argument("--lookback-minutes", type=int, default=10)
     p_live.add_argument("--step-seconds", type=int, default=5)
     p_live.add_argument("--queries-config", default="configs/prometheus_queries.yaml")
     p_live.add_argument("--start-time", default=None,
-                        help="Explicit start time (ISO 8601 UTC, e.g. 2026-05-29T18:00:00Z); "
-                             "overrides --lookback-minutes")
+                        help="Explicit start time (ISO 8601 UTC, e.g. 2026-05-29T18:00:00Z)")
     p_live.add_argument("--end-time", default=None,
                         help="Explicit end time (ISO 8601 UTC); defaults to now")
 
@@ -323,7 +565,10 @@ def main() -> None:
         "collect",
         help="ChaosMesh fault injection + data collection (full RCA pipeline)"
     )
-    p_collect.add_argument("--output", required=True)
+    p_collect.add_argument("--output", required=True,
+                           help="Run output directory (e.g. data/runs/run_20260529_1)")
+    p_collect.add_argument("--run-id", default=None,
+                           help="Run ID string; defaults to the output directory name")
     p_collect.add_argument("--prometheus-url", default="http://localhost:9090")
     p_collect.add_argument("--step-seconds", type=int, default=5)
     p_collect.add_argument("--queries-config", default="configs/prometheus_queries.yaml")
@@ -333,20 +578,31 @@ def main() -> None:
         choices=["cpu_stress", "pod_kill", "network_delay"],
         help="Fault types to inject (in order)",
     )
-    p_collect.add_argument("--warmup-minutes", type=int, default=5,
+    p_collect.add_argument("--warmup-minutes",      type=int, default=5,
                            help="Normal traffic warmup before first fault")
-    p_collect.add_argument("--gap-minutes", type=int, default=3,
-                           help="Normal traffic gap between faults within a round")
-    p_collect.add_argument("--rounds", type=int, default=1,
-                           help="Number of injection rounds (fault sequence repeats N times)")
-    p_collect.add_argument("--round-gap-minutes", type=int, default=5,
-                           help="Normal traffic gap between rounds (only used when --rounds > 1)")
-    p_collect.add_argument("--gap-jitter", type=int, default=0,
-                           help="Max random seconds added to each gap interval (uniform 0..N)")
-    p_collect.add_argument("--train-ratio", type=float, default=0.5)
-    p_collect.add_argument("--valid-ratio", type=float, default=0.2)
+    p_collect.add_argument("--gap-minutes",          type=int, default=3,
+                           help="Gap between faults within a round")
+    p_collect.add_argument("--rounds",               type=int, default=1,
+                           help="Number of injection rounds")
+    p_collect.add_argument("--round-gap-minutes",    type=int, default=5,
+                           help="Gap between rounds (only used when --rounds > 1)")
+    p_collect.add_argument("--gap-jitter",           type=int, default=0,
+                           help="Max random seconds added to each gap (uniform 0..N)")
     p_collect.add_argument("--dry-run", action="store_true",
                            help="Print plan without actually injecting faults")
+
+    # --- assemble ---
+    p_assemble = sub.add_parser(
+        "assemble",
+        help="Combine multiple quality-passed runs into train/valid/test dataset"
+    )
+    p_assemble.add_argument("--runs-root", default="data/runs",
+                            help="Directory containing run subdirectories")
+    p_assemble.add_argument("--output", required=True,
+                            help="Output directory for the assembled dataset")
+    p_assemble.add_argument("--split-policy", default="last3_valid_last2_test",
+                            choices=["last3_valid_last2_test"],
+                            help="How to assign runs to splits")
 
     args = parser.parse_args()
     if args.command == "smoke":
@@ -355,6 +611,8 @@ def main() -> None:
         cmd_live(args)
     elif args.command == "collect":
         cmd_collect(args)
+    elif args.command == "assemble":
+        cmd_assemble(args)
 
 
 if __name__ == "__main__":
