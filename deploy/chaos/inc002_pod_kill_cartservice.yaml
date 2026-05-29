@@ -1,0 +1,18 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: inc002-pod-kill-cartservice
+  namespace: online-boutique
+  labels:
+    incident-id: INC-002
+    fault-type: pod_kill
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    namespaces:
+      - online-boutique
+    labelSelectors:
+      app: cartservice
+  gracePeriod: 0   # 立即终止，不等待优雅退出
+  duration: 60s    # 在此窗口内持续触发 pod-kill（使观测窗口与其他故障类型一致）

@@ -1,0 +1,29 @@
+{
+  "dataset_name": "online_boutique_rca_v1",
+  "version": "1.0.0",
+  "created_at": "2026-05-29T04:37:27Z",
+  "mode": "collect",
+  "step_seconds": 5,
+  "total_rows": 140,
+  "feature_count": 66,
+  "services": [
+    "frontend",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "shippingservice",
+    "adservice",
+    "redis-cart"
+  ],
+  "train_rows": 49,
+  "valid_rows": 5,
+  "test_rows": 86,
+  "incident_count": 2,
+  "test_anomaly_points": 24,
+  "collection_start": "2026-05-29T04:25:48Z",
+  "collection_end": "2026-05-29T04:37:25Z"
+}

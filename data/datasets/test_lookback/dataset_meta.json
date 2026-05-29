@@ -1,0 +1,29 @@
+{
+  "dataset_name": "test_lookback",
+  "version": "1.0.0",
+  "created_at": "2026-05-29T04:19:14Z",
+  "mode": "live",
+  "step_seconds": 5,
+  "total_rows": 241,
+  "feature_count": 66,
+  "services": [
+    "frontend",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "shippingservice",
+    "adservice",
+    "redis-cart"
+  ],
+  "train_rows": 120,
+  "valid_rows": 48,
+  "test_rows": 73,
+  "incident_count": 0,
+  "test_anomaly_points": 0,
+  "collection_start": null,
+  "collection_end": null
+}

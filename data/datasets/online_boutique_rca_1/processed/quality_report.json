@@ -1,0 +1,21 @@
+{
+  "row_count": 1499,
+  "feature_count": 63,
+  "expected_interval_seconds": 5,
+  "is_regular_interval": true,
+  "duplicate_timestamp_count": 0,
+  "nan_count": 150,
+  "unexpected_nan_count": 150,
+  "inf_count": 0,
+  "constant_feature_count": 19,
+  "train_rows": 49,
+  "valid_rows": 5,
+  "test_rows": 1445,
+  "test_anomaly_points": 236,
+  "test_anomaly_ratio": 0.1633,
+  "incident_count": 20,
+  "valid_incident_count": 20,
+  "schema_feature_count": 63,
+  "x_has_no_label_columns": true,
+  "passed": true
+}

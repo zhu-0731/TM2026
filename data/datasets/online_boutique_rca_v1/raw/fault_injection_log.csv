@@ -1,0 +1,3 @@
+incident_id,injection_start,injection_end,fault_type,target_service
+INC-001,2026-05-29T04:30:48Z,2026-05-29T04:31:52Z,cpu_stress,recommendationservice
+INC-002,2026-05-29T04:35:22Z,2026-05-29T04:36:25Z,pod_kill,cartservice

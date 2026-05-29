@@ -1,0 +1,27 @@
+{
+  "dataset_name": "online_boutique_short_fault_v1",
+  "version": "1.0.0",
+  "created_at": "2026-05-28T17:57:44Z",
+  "mode": "live",
+  "step_seconds": 5,
+  "total_rows": 37,
+  "feature_count": 66,
+  "services": [
+    "checkoutservice",
+    "frontend",
+    "adservice",
+    "emailservice",
+    "paymentservice",
+    "redis-cart",
+    "recommendationservice",
+    "productcatalogservice",
+    "currencyservice",
+    "shippingservice",
+    "cartservice"
+  ],
+  "train_rows": 18,
+  "valid_rows": 7,
+  "test_rows": 12,
+  "incident_count": 0,
+  "test_anomaly_points": 0
+}
