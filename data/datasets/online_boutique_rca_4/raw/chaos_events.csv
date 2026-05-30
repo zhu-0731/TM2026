@@ -1,0 +1,9 @@
+incident_id,injection_start,injection_end,fault_type,target_service
+INC-001,2026-05-30T06:45:47Z,2026-05-30T06:46:46Z,cpu_stress,recommendationservice
+INC-002,2026-05-30T06:50:37Z,2026-05-30T06:51:41Z,pod_kill,cartservice
+INC-003,2026-05-30T06:57:38Z,2026-05-30T06:58:38Z,cpu_stress,recommendationservice
+INC-004,2026-05-30T07:11:32Z,2026-05-30T07:12:35Z,pod_kill,cartservice
+INC-005,2026-05-30T07:18:28Z,2026-05-30T07:19:28Z,cpu_stress,recommendationservice
+INC-006,2026-05-30T07:23:56Z,2026-05-30T07:24:59Z,pod_kill,cartservice
+INC-007,2026-05-30T07:30:26Z,2026-05-30T07:31:26Z,cpu_stress,recommendationservice
+INC-008,2026-05-30T07:36:09Z,2026-05-30T07:37:12Z,pod_kill,cartservice

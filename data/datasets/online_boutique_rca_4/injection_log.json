@@ -1,0 +1,98 @@
+[
+  {
+    "incident_id": "INC-001",
+    "fault_type": "cpu_stress",
+    "target_service": "recommendationservice",
+    "injection_start": "2026-05-30T06:45:47Z",
+    "injection_end": "2026-05-30T06:46:46Z",
+    "recovery_end": "2026-05-30T06:47:16Z",
+    "effect_start": "2026-05-30T06:45:52Z",
+    "effect_end": "2026-05-30T06:46:46Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-002",
+    "fault_type": "pod_kill",
+    "target_service": "cartservice",
+    "injection_start": "2026-05-30T06:50:37Z",
+    "injection_end": "2026-05-30T06:51:41Z",
+    "recovery_end": "2026-05-30T06:52:41Z",
+    "effect_start": "2026-05-30T06:50:42Z",
+    "effect_end": "2026-05-30T06:51:41Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-003",
+    "fault_type": "cpu_stress",
+    "target_service": "recommendationservice",
+    "injection_start": "2026-05-30T06:57:38Z",
+    "injection_end": "2026-05-30T06:58:38Z",
+    "recovery_end": "2026-05-30T06:59:08Z",
+    "effect_start": "2026-05-30T06:57:43Z",
+    "effect_end": "2026-05-30T06:58:38Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-004",
+    "fault_type": "pod_kill",
+    "target_service": "cartservice",
+    "injection_start": "2026-05-30T07:11:32Z",
+    "injection_end": "2026-05-30T07:12:35Z",
+    "recovery_end": "2026-05-30T07:13:35Z",
+    "effect_start": "2026-05-30T07:11:37Z",
+    "effect_end": "2026-05-30T07:12:35Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-005",
+    "fault_type": "cpu_stress",
+    "target_service": "recommendationservice",
+    "injection_start": "2026-05-30T07:18:28Z",
+    "injection_end": "2026-05-30T07:19:28Z",
+    "recovery_end": "2026-05-30T07:19:58Z",
+    "effect_start": "2026-05-30T07:18:33Z",
+    "effect_end": "2026-05-30T07:19:28Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-006",
+    "fault_type": "pod_kill",
+    "target_service": "cartservice",
+    "injection_start": "2026-05-30T07:23:56Z",
+    "injection_end": "2026-05-30T07:24:59Z",
+    "recovery_end": "2026-05-30T07:25:59Z",
+    "effect_start": "2026-05-30T07:24:01Z",
+    "effect_end": "2026-05-30T07:24:59Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-007",
+    "fault_type": "cpu_stress",
+    "target_service": "recommendationservice",
+    "injection_start": "2026-05-30T07:30:26Z",
+    "injection_end": "2026-05-30T07:31:26Z",
+    "recovery_end": "2026-05-30T07:31:56Z",
+    "effect_start": "2026-05-30T07:30:31Z",
+    "effect_end": "2026-05-30T07:31:26Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  },
+  {
+    "incident_id": "INC-008",
+    "fault_type": "pod_kill",
+    "target_service": "cartservice",
+    "injection_start": "2026-05-30T07:36:09Z",
+    "injection_end": "2026-05-30T07:37:12Z",
+    "recovery_end": "2026-05-30T07:38:12Z",
+    "effect_start": "2026-05-30T07:36:14Z",
+    "effect_end": "2026-05-30T07:37:12Z",
+    "success": true,
+    "source": "reexport_from_real_chaosmesh_run"
+  }
+]

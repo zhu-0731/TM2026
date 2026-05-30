@@ -16,10 +16,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ── Edit these to match your actual injection run ────────────────────────
-COLLECTION_START = datetime(2026, 5, 28, 18, 54, 10, tzinfo=timezone.utc)
-COLLECTION_END   = datetime(2026, 5, 28, 19,  5, 47, tzinfo=timezone.utc)
+# Run: 2026-05-30 failed collection, 4 rounds × (cpu_stress + pod_kill)
+# Timestamps from: kubectl get events -n online-boutique -o json
+COLLECTION_START = datetime(2026, 5, 30,  6, 40, 47, tzinfo=timezone.utc)  # INC-001 Applied - 5min warmup
+COLLECTION_END   = datetime(2026, 5, 30,  7, 38, 43, tzinfo=timezone.utc)  # INC-008 Recovered + 90s
 
 INCIDENTS = [
+    # Round 1
     {
         "incident_id":        "INC-001",
         "fault_type":         "cpu_stress",
@@ -27,18 +30,13 @@ INCIDENTS = [
         "root_cause_service": "recommendationservice",
         "severity":           "high",
         "duration_sec":       60,
-        # ChaosMesh kubectl apply/delete timestamps
-        "injection_start": datetime(2026, 5, 28, 18, 59, 10, tzinfo=timezone.utc),
-        "injection_end":   datetime(2026, 5, 28, 19,  0, 13, tzinfo=timezone.utc),
-        "recovery_end":    datetime(2026, 5, 28, 19,  0, 43, tzinfo=timezone.utc),
-        # Anomaly effect window (injection + propagation delay)
-        "effect_start":    datetime(2026, 5, 28, 18, 59, 15, tzinfo=timezone.utc),
-        "effect_end":      datetime(2026, 5, 28, 19,  0, 13, tzinfo=timezone.utc),
-        "root_cause_dims": [
-            "recommendationservice_cpu_usage",
-            "recommendationservice_latency_p95",
-        ],
-        "secondary_dims": ["frontend_latency_p95"],
+        "injection_start": datetime(2026, 5, 30,  6, 45, 47, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  6, 46, 46, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  6, 47, 16, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  6, 45, 52, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  6, 46, 46, tzinfo=timezone.utc),
+        "root_cause_dims": ["recommendationservice_cpu_usage", "recommendationservice_latency_p95"],
+        "secondary_dims":  ["frontend_latency_p95"],
     },
     {
         "incident_id":        "INC-002",
@@ -47,25 +45,114 @@ INCIDENTS = [
         "root_cause_service": "cartservice",
         "severity":           "critical",
         "duration_sec":       60,
-        "injection_start": datetime(2026, 5, 28, 19,  3, 44, tzinfo=timezone.utc),
-        "injection_end":   datetime(2026, 5, 28, 19,  4, 47, tzinfo=timezone.utc),
-        "recovery_end":    datetime(2026, 5, 28, 19,  5, 47, tzinfo=timezone.utc),
-        "effect_start":    datetime(2026, 5, 28, 19,  3, 49, tzinfo=timezone.utc),
-        "effect_end":      datetime(2026, 5, 28, 19,  4, 47, tzinfo=timezone.utc),
-        "root_cause_dims": [
-            "cartservice_restart_count",
-            "cartservice_error_rate",
-            "cartservice_qps",
-        ],
-        "secondary_dims": ["frontend_error_rate"],
+        "injection_start": datetime(2026, 5, 30,  6, 50, 37, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  6, 51, 41, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  6, 52, 41, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  6, 50, 42, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  6, 51, 41, tzinfo=timezone.utc),
+        "root_cause_dims": ["cartservice_restart_count", "cartservice_error_rate", "cartservice_qps"],
+        "secondary_dims":  ["frontend_error_rate"],
+    },
+    # Round 2
+    {
+        "incident_id":        "INC-003",
+        "fault_type":         "cpu_stress",
+        "target_service":     "recommendationservice",
+        "root_cause_service": "recommendationservice",
+        "severity":           "high",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  6, 57, 38, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  6, 58, 38, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  6, 59,  8, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  6, 57, 43, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  6, 58, 38, tzinfo=timezone.utc),
+        "root_cause_dims": ["recommendationservice_cpu_usage", "recommendationservice_latency_p95"],
+        "secondary_dims":  ["frontend_latency_p95"],
+    },
+    {
+        "incident_id":        "INC-004",
+        "fault_type":         "pod_kill",
+        "target_service":     "cartservice",
+        "root_cause_service": "cartservice",
+        "severity":           "critical",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  7, 11, 32, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  7, 12, 35, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  7, 13, 35, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  7, 11, 37, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  7, 12, 35, tzinfo=timezone.utc),
+        "root_cause_dims": ["cartservice_restart_count", "cartservice_error_rate", "cartservice_qps"],
+        "secondary_dims":  ["frontend_error_rate"],
+    },
+    # Round 3
+    {
+        "incident_id":        "INC-005",
+        "fault_type":         "cpu_stress",
+        "target_service":     "recommendationservice",
+        "root_cause_service": "recommendationservice",
+        "severity":           "high",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  7, 18, 28, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  7, 19, 28, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  7, 19, 58, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  7, 18, 33, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  7, 19, 28, tzinfo=timezone.utc),
+        "root_cause_dims": ["recommendationservice_cpu_usage", "recommendationservice_latency_p95"],
+        "secondary_dims":  ["frontend_latency_p95"],
+    },
+    {
+        "incident_id":        "INC-006",
+        "fault_type":         "pod_kill",
+        "target_service":     "cartservice",
+        "root_cause_service": "cartservice",
+        "severity":           "critical",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  7, 23, 56, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  7, 24, 59, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  7, 25, 59, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  7, 24,  1, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  7, 24, 59, tzinfo=timezone.utc),
+        "root_cause_dims": ["cartservice_restart_count", "cartservice_error_rate", "cartservice_qps"],
+        "secondary_dims":  ["frontend_error_rate"],
+    },
+    # Round 4
+    {
+        "incident_id":        "INC-007",
+        "fault_type":         "cpu_stress",
+        "target_service":     "recommendationservice",
+        "root_cause_service": "recommendationservice",
+        "severity":           "high",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  7, 30, 26, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  7, 31, 26, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  7, 31, 56, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  7, 30, 31, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  7, 31, 26, tzinfo=timezone.utc),
+        "root_cause_dims": ["recommendationservice_cpu_usage", "recommendationservice_latency_p95"],
+        "secondary_dims":  ["frontend_latency_p95"],
+    },
+    {
+        "incident_id":        "INC-008",
+        "fault_type":         "pod_kill",
+        "target_service":     "cartservice",
+        "root_cause_service": "cartservice",
+        "severity":           "critical",
+        "duration_sec":       60,
+        "injection_start": datetime(2026, 5, 30,  7, 36,  9, tzinfo=timezone.utc),
+        "injection_end":   datetime(2026, 5, 30,  7, 37, 12, tzinfo=timezone.utc),
+        "recovery_end":    datetime(2026, 5, 30,  7, 38, 12, tzinfo=timezone.utc),
+        "effect_start":    datetime(2026, 5, 30,  7, 36, 14, tzinfo=timezone.utc),
+        "effect_end":      datetime(2026, 5, 30,  7, 37, 12, tzinfo=timezone.utc),
+        "root_cause_dims": ["cartservice_restart_count", "cartservice_error_rate", "cartservice_qps"],
+        "secondary_dims":  ["frontend_error_rate"],
     },
 ]
 
-OUTPUT_DIR = Path("data/runs/reexport")
+OUTPUT_DIR = Path("data/datasets/online_boutique_rca_4")
 PROM_URL   = "http://localhost:9090"
 QUERIES    = Path("configs/prometheus_queries.yaml")
 STEP       = 5
-RUN_ID     = "reexport"
+RUN_ID     = "online_boutique_rca_4"
 # ────────────────────────────────────────────────────────────────────────
 
 

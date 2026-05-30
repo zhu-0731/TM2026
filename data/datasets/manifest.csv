@@ -1,3 +1,4 @@
 run_id,run_dir,collection_start,collection_end,mode,feature_count,incident_count,anomaly_points,quality_passed
 online_boutique_rca_2,data\datasets\online_boutique_rca_2,2026-05-29T09:43:52Z,2026-05-29T11:48:52Z,collect,63,20,232,True
 online_boutique_rca_3,data\datasets\online_boutique_rca_3,2026-05-29T13:25:08Z,2026-05-29T20:11:14Z,collect,63,60,692,True
+online_boutique_rca_4,data\datasets\online_boutique_rca_4,2026-05-30T06:40:47Z,2026-05-30T07:38:43Z,collect,63,8,91,True
