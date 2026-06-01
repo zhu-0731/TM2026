@@ -450,6 +450,16 @@ def cmd_assemble(args: argparse.Namespace) -> None:
         ts_col = ["timestamp"]
         feat_cols = [c for c in FEATURE_NAMES if c in x.columns]
         x = x[ts_col + feat_cols]
+        # Namespace incident_id by run so IDs stay unique after cross-run concat.
+        # Each run numbers incidents from INC-001, so two runs would otherwise collide.
+        rid = r["run_id"]
+        if "incident_id" in y.columns:
+            mask = y["incident_id"].notna()
+            y.loc[mask, "incident_id"] = rid + "/" + y.loc[mask, "incident_id"].astype(str)
+        if not inc.empty and "incident_id" in inc.columns:
+            inc = inc.copy()
+            inc["run_id"] = rid
+            inc["incident_id"] = rid + "/" + inc["incident_id"].astype(str)
         return x, y, inc
 
     def concat_runs(run_list: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
@@ -471,15 +481,17 @@ def cmd_assemble(args: argparse.Namespace) -> None:
 
     proc_dir = output / "processed"
     ans_dir  = output / "answers"
-    for d in (proc_dir, ans_dir):
+    ex_dir   = output / "examples"
+    for d in (proc_dir, ans_dir, ex_dir):
         d.mkdir(parents=True, exist_ok=True)
 
+    # train/valid: features + labels both provided (user trains on these).
+    # test: features only in processed/; labels held in answers/ (blind eval).
     train_x.to_csv(proc_dir / "train_x.csv", index=False)
     train_y.to_csv(proc_dir / "train_y.csv", index=False)
     valid_x.to_csv(proc_dir / "valid_x.csv", index=False)
     valid_y.to_csv(proc_dir / "valid_y.csv", index=False)
     test_x.to_csv(proc_dir / "test_x.csv",   index=False)
-    test_y.to_csv(proc_dir / "test_y.csv",   index=False)
 
     if not test_inc.empty:
         test_inc.to_csv(proc_dir / "incidents.csv", index=False)
@@ -487,6 +499,25 @@ def cmd_assemble(args: argparse.Namespace) -> None:
     # Feature schema
     schema_df = build_feature_schema()
     schema_df.to_csv(proc_dir / "feature_schema.csv", index=False)
+
+    # Normalization stats — fit on TRAIN ONLY to prevent leakage.
+    # valid/test must be transformed with these same stats by the consumer.
+    feat_cols = [c for c in FEATURE_NAMES if c in train_x.columns]
+    norm_features: dict[str, dict] = {}
+    for col in feat_cols:
+        s = train_x[col]
+        norm_features[col] = {
+            "mean": float(s.mean()),
+            "std":  float(s.std(ddof=1)) if len(s) > 1 else 0.0,
+            "min":  float(s.min()),
+            "max":  float(s.max()),
+        }
+    norm_stats = {
+        "fit_on": "train_only",
+        "note": "Apply these train-derived stats to valid/test; do NOT refit on valid/test.",
+        "features": norm_features,
+    }
+    (proc_dir / "norm_stats.json").write_text(json.dumps(norm_stats, indent=2))
 
     # Ground truth files (test split)
     gt = test_y[["timestamp", "is_anomaly"]].rename(columns={"is_anomaly": "y_true"})
@@ -498,6 +529,7 @@ def cmd_assemble(args: argparse.Namespace) -> None:
         rc_rows = [
             {
                 "incident_id":        row.get("incident_id", ""),
+                "run_id":             row.get("run_id", ""),
                 "root_cause_service": row.get("root_cause_service", ""),
                 "root_cause_dims":    row.get("root_cause_dims", ""),
                 "fault_type":         row.get("fault_type", ""),
@@ -505,6 +537,10 @@ def cmd_assemble(args: argparse.Namespace) -> None:
             for _, row in test_inc.iterrows()
         ]
         pd.DataFrame(rc_rows).to_csv(ans_dir / "test_root_cause_ground_truth.csv", index=False)
+
+    # Sample submission template (anomaly score per test timestamp, all zeros).
+    sample = pd.DataFrame({"timestamp": test_x["timestamp"], "anomaly_score": 0.0})
+    sample.to_csv(ex_dir / "sample_submission.csv", index=False)
 
     # dataset_meta.json
     now_str = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -514,14 +550,20 @@ def cmd_assemble(args: argparse.Namespace) -> None:
         "train_runs":          [r["run_id"] for r in train_runs],
         "valid_runs":          [r["run_id"] for r in valid_runs],
         "test_runs":           [r["run_id"] for r in test_runs],
+        "run_windows":         {r["run_id"]: r["collection_start"] for r in runs},
         "split_policy":        "last3_valid_last2_test",
+        "temporal_order":      "runs sorted by collection_start; train precedes valid precedes test (no future leakage)",
         "created_at":          now_str,
         "feature_count":       len(FEATURE_NAMES),
         "services":            SERVICES,
         "train_rows":          len(train_x),
         "valid_rows":          len(valid_x),
         "test_rows":           len(test_x),
-        "test_anomaly_points": int(test_y["is_anomaly"].sum()),
+        "train_anomaly_points": int(train_y["is_anomaly"].sum()),
+        "valid_anomaly_points": int(valid_y["is_anomaly"].sum()),
+        "test_anomaly_points":  int(test_y["is_anomaly"].sum()),
+        "norm_stats_fit_on":   "train_only",
+        "test_labels_location": "answers/ (test_y not in processed/ to keep eval blind)",
     }
     (output / "dataset_meta.json").write_text(json.dumps(meta_out, indent=2))
 
