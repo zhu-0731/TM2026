@@ -290,6 +290,90 @@ python -m benchmark.cli assemble \
 
 ---
 
+## 模型评测 Pipeline
+
+数据集 assemble 完成后，用 `benchmark.pipeline` 一键完成
+**标准化 → 训练 → 推理 → 评测 → 绘图**。用户只需实现 `fit` / `predict` 两个方法，
+pipeline 负责其余全部环节，所有产物按时间戳写入 `output/<时间戳>_<run_name>/`，不会互相覆盖。
+
+```python
+from benchmark.pipeline import Pipeline, DatasetBundle
+
+bundle = DatasetBundle.load("data/datasets/online_boutique_rca_full_v1")
+
+class MyDetector:
+    def fit(self, train_x, train_y, valid_x, valid_y, ctx):
+        # train_x/valid_x 已用 train-only 统计量标准化（防泄露）
+        ...
+    def predict(self, test_x, ctx):
+        return scores   # 一维异常分数，长度 == len(test_x)，越大越异常
+
+pipe = Pipeline(bundle, run_name="my_detector", threshold_mode="validation_f1")
+result = pipe.run(MyDetector())
+```
+
+完整上手示例见 [notebooks/demo_pipeline.ipynb](notebooks/demo_pipeline.ipynb)。
+
+### 评测指标体系
+
+`metrics.json` 分为 7 大块，覆盖点级、排序、事件级、延迟、误报、point-adjust、分组指标：
+
+| 类别 | 指标 |
+|------|------|
+| 点级 | `point_precision/recall/f1/accuracy/specificity`，`TP/FP/TN/FN` |
+| 排序 | `pr_auc`（AUPRC）、`roc_auc`（AUROC）；y_true 单类时为 `null` + warning |
+| 事件级 | `event_recall`、`detected/missed_incidents`、`recall_at_{15,30,60}s` |
+| 检测延迟 | `mean/median/p90/max_detection_delay_seconds`、逐 incident 延迟 |
+| 误报 | `false_alarms_per_hour`、`alarm_ratio`、`false_positive_points` |
+| point-adjust | `point_adjust_precision/recall/f1`（对齐 OmniAnomaly/USAD，仅作补充） |
+| 分组 | 按 `fault_type` / `target_service` 分组的 recall / delay / point_f1 |
+
+**事件命中规则**：某 incident 的 `[effect_start, effect_end]` 窗口内只要有一个 `y_pred=1` 即算检测到。
+**检测延迟**：`delay = first_alarm_time - effect_start`，漏检不计入均值。
+
+### 阈值模式
+
+| 模式 | 含义 | 可部署 |
+|------|------|--------|
+| `best_f1` | 在 test 上最大化 F1 | ❌ 仅作性能上界（窥探测试标签） |
+| `validation_f1` | 在 validation 上最大化 F1 | ✅ |
+| `fixed_fpr` | validation 正常点控制目标 FPR | ✅ |
+
+> `best_f1` 给出上界，`metrics.json` 中 `threshold_deployable=false`。pipeline 总会额外输出
+> `threshold_comparison.csv/png` 并排比较 best_f1 与 validation_f1。
+
+### 输出图表示例
+
+每次运行生成 7 张诊断图。以高斯负对数似然基线为例：
+
+**分数时间线**（橙带 = 真实异常区间，红线 = 阈值）
+
+![score timeline](docs/images/score_timeline.png)
+
+**ROC / PR 曲线**（排序质量，与阈值无关）
+
+![roc pr](docs/images/roc_pr_curves.png)
+
+**按故障类型的 Event Recall vs Recall@30s** —— 最关键分组图
+
+![event recall by fault type](docs/images/event_recall_by_fault_type.png)
+
+> 该基线对 `pod_kill` 完美检测（Recall@30s = 1.0），但对 `cpu_stress` 30 秒内仅检出 0.15，
+> 清晰暴露慢传播故障的实时性短板。
+
+**逐 incident 检测延迟**（按故障类型着色，红叉 = 漏检）
+
+![incident delay](docs/images/incident_delay_bar.png)
+
+**阈值模式对比**（best_f1 上界 vs validation_f1 可部署）
+
+![threshold comparison](docs/images/threshold_comparison.png)
+
+完整产物清单（含 `predictions.csv`、`per_incident.csv` 等）见
+[notebooks/README.md](notebooks/README.md)。
+
+---
+
 ## 数据集文件结构
 
 ### 单次 Run 输出（live / collect 模式）
