@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Pipeline experiment outputs (timestamped, regenerated per run)
+output/
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
