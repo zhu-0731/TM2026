@@ -10,6 +10,10 @@ output/
 # Logs
 *.log
 
+# Local archives / backups (not source)
+*.zip
+data/datasets/备份/
+
 # OS / editor
 .DS_Store
 Thumbs.db
