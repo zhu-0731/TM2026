@@ -1,3 +1,0 @@
-incident_id,injection_start,injection_end,effect_start,effect_end,recovery_end,fault_type,target_service,root_cause_service,severity,duration_sec,valid_incident,root_cause_dims,secondary_dims
-INC-001,2026-05-29T04:30:48Z,2026-05-29T04:31:52Z,2026-05-29T04:30:53Z,2026-05-29T04:31:52Z,2026-05-29T04:32:22Z,cpu_stress,recommendationservice,recommendationservice,high,60,True,recommendationservice_cpu_usage;recommendationservice_latency_p95,frontend_latency_p95
-INC-002,2026-05-29T04:35:22Z,2026-05-29T04:36:25Z,2026-05-29T04:35:27Z,2026-05-29T04:36:25Z,2026-05-29T04:37:25Z,pod_kill,cartservice,cartservice,critical,60,True,cartservice_restart_count;cartservice_error_rate;cartservice_qps,frontend_error_rate

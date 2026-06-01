@@ -1,3 +1,0 @@
-incident_id,root_cause_service,root_cause_dims,fault_type
-INC-001,recommendationservice,recommendationservice_cpu_usage;recommendationservice_latency_p95,cpu_stress
-INC-002,cartservice,cartservice_restart_count;cartservice_error_rate;cartservice_qps,pod_kill
