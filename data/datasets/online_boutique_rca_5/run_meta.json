@@ -1,0 +1,39 @@
+{
+  "run_id": "online_boutique_rca_5",
+  "mode": "collect",
+  "dataset_type": "run_collection",
+  "run_type": "chaos",
+  "collection_start": "2026-05-30T10:29:26Z",
+  "collection_end": "2026-05-30T12:34:02Z",
+  "created_at": "2026-05-30T12:34:05Z",
+  "sampling_interval_seconds": 5,
+  "feature_count": 63,
+  "services": [
+    "frontend",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "shippingservice",
+    "adservice",
+    "redis-cart"
+  ],
+  "metrics_per_service": [
+    "qps",
+    "latency_p95",
+    "error_rate",
+    "cpu_usage",
+    "memory_usage",
+    "restart_count"
+  ],
+  "chaos_enabled": true,
+  "prometheus_url": "http://localhost:9090",
+  "namespace": "online-boutique",
+  "incidents_count": 20,
+  "anomaly_points": 235,
+  "timezone": "UTC",
+  "run_dir": "data\\datasets\\online_boutique_rca_5"
+}
