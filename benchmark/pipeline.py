@@ -297,7 +297,7 @@ def _plot_all(
         for i, f in enumerate(fts):
             ax.text(i - w/2, er[f] + 0.02, f"{er[f]:.2f}", ha="center", fontsize=8)
             ax.text(i + w/2, r30.get(f, 0) + 0.02, f"{r30.get(f, 0):.2f}", ha="center", fontsize=8)
-        ax.legend(fontsize=9)
+        ax.legend(fontsize=9, loc="lower left")
         fig.tight_layout()
         fig.savefig(out_dir / "event_recall_by_fault_type.png", dpi=120)
         plt.close(fig)
