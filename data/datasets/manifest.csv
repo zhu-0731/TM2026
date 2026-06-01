@@ -1,4 +1,8 @@
 run_id,run_dir,collection_start,collection_end,mode,feature_count,incident_count,anomaly_points,quality_passed
+online_boutique_rca_1,data\datasets\online_boutique_rca_1,2026-05-29T05:24:14Z,2026-05-29T07:29:04Z,collect,63,20,236,True
 online_boutique_rca_2,data\datasets\online_boutique_rca_2,2026-05-29T09:43:52Z,2026-05-29T11:48:52Z,collect,63,20,232,True
 online_boutique_rca_3,data\datasets\online_boutique_rca_3,2026-05-29T13:25:08Z,2026-05-29T20:11:14Z,collect,63,60,692,True
 online_boutique_rca_4,data\datasets\online_boutique_rca_4,2026-05-30T06:40:47Z,2026-05-30T07:38:43Z,collect,63,8,91,True
+online_boutique_rca_5,data\datasets\online_boutique_rca_5,2026-05-30T10:29:26Z,2026-05-30T12:34:02Z,collect,63,20,235,True
+online_boutique_rca_6,data\datasets\online_boutique_rca_6,2026-05-30T12:55:57Z,2026-05-30T14:58:06Z,collect,63,20,237,True
+online_boutique_rca_7,data\datasets\online_boutique_rca_7,2026-05-30T15:02:13Z,2026-05-30T16:58:55Z,collect,63,20,236,True
