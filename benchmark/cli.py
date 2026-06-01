@@ -419,6 +419,7 @@ def cmd_assemble(args: argparse.Namespace) -> None:
         runs.append({
             "run_id":           meta.get("run_id", run_dir.name),
             "collection_start": meta.get("collection_start", ""),
+            "sampling_interval": meta.get("sampling_interval_seconds", 5),
             "run_dir":          run_dir,
             "run_x_path":       run_x_path,
             "run_y_path":       run_y_path,
@@ -493,8 +494,10 @@ def cmd_assemble(args: argparse.Namespace) -> None:
     valid_y.to_csv(proc_dir / "valid_y.csv", index=False)
     test_x.to_csv(proc_dir / "test_x.csv",   index=False)
 
+    # Test incident windows (effect_start/end) are evaluation ground truth,
+    # so they live in answers/, not processed/ (would leak fault timing).
     if not test_inc.empty:
-        test_inc.to_csv(proc_dir / "incidents.csv", index=False)
+        test_inc.to_csv(ans_dir / "test_incidents.csv", index=False)
 
     # Feature schema
     schema_df = build_feature_schema()
@@ -544,6 +547,7 @@ def cmd_assemble(args: argparse.Namespace) -> None:
 
     # dataset_meta.json
     now_str = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    cfg_step = runs[0].get("sampling_interval", 5) if runs else 5
     meta_out = {
         "dataset_name":        output.name,
         "assembled_from":      [r["run_id"] for r in runs],
@@ -554,6 +558,7 @@ def cmd_assemble(args: argparse.Namespace) -> None:
         "split_policy":        "last3_valid_last2_test",
         "temporal_order":      "runs sorted by collection_start; train precedes valid precedes test (no future leakage)",
         "created_at":          now_str,
+        "sampling_interval_seconds": cfg_step,
         "feature_count":       len(FEATURE_NAMES),
         "services":            SERVICES,
         "train_rows":          len(train_x),

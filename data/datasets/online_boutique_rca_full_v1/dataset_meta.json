@@ -33,7 +33,8 @@
   },
   "split_policy": "last3_valid_last2_test",
   "temporal_order": "runs sorted by collection_start; train precedes valid precedes test (no future leakage)",
-  "created_at": "2026-06-01T03:22:19Z",
+  "created_at": "2026-06-01T03:42:41Z",
+  "sampling_interval_seconds": 5,
   "feature_count": 63,
   "services": [
     "frontend",
