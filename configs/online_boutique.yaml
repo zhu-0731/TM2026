@@ -1,0 +1,54 @@
+dataset:
+  name: online_boutique_short_fault_v1
+  step_seconds: 5
+  services:
+    - frontend
+    - cartservice
+    - checkoutservice
+    - currencyservice
+    - emailservice
+    - paymentservice
+    - productcatalogservice
+    - recommendationservice
+    - shippingservice
+    - adservice
+    - redis-cart
+  metrics:
+    - qps
+    - latency_p95
+    - error_rate
+    - cpu_usage
+    - memory_usage
+    - restart_count
+
+splits:
+  train_ratio: 0.5
+  valid_ratio: 0.2
+  # test_ratio: 0.3 (implicit)
+
+mock:
+  duration_minutes: 10
+  incidents:
+    - incident_id: INC-001
+      fault_type: cpu_stress
+      target_service: recommendationservice
+      root_cause_service: recommendationservice
+      severity: high
+      duration_sec: 60
+      root_cause_dims:
+        - recommendationservice_cpu_usage
+        - recommendationservice_latency_p95
+      secondary_dims:
+        - frontend_latency_p95
+    - incident_id: INC-002
+      fault_type: pod_kill
+      target_service: cartservice
+      root_cause_service: cartservice
+      severity: critical
+      duration_sec: 60
+      root_cause_dims:
+        - cartservice_restart_count
+        - cartservice_error_rate
+        - cartservice_qps
+      secondary_dims:
+        - frontend_error_rate

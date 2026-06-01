@@ -1,0 +1,22 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: inc003-network-delay-frontend
+  namespace: online-boutique
+  labels:
+    incident-id: INC-003
+    fault-type: network_delay
+spec:
+  action: delay
+  mode: all
+  selector:
+    namespaces:
+      - online-boutique
+    labelSelectors:
+      app: frontend
+  delay:
+    latency: 500ms     # 注入 500ms 网络延迟
+    jitter: 50ms       # ±50ms 抖动
+    correlation: "25"  # 25% 相关性
+  direction: to        # 影响入站流量
+  duration: 60s

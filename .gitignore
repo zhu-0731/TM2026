@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Pipeline experiment outputs (timestamped, regenerated per run)
+output/
+
+# Logs
+*.log
+
+# Local archives / backups (not source)
+*.zip
+
+# Datasets are NOT published in this public repo (collect your own via
+# `python -m benchmark.cli collect` + `assemble`). See README.
+data/
+
+# OS / editor
+.DS_Store
+Thumbs.db

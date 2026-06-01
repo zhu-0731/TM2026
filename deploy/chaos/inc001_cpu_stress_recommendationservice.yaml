@@ -1,0 +1,20 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: inc001-cpu-stress-recommendationservice
+  namespace: online-boutique
+  labels:
+    incident-id: INC-001
+    fault-type: cpu_stress
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - online-boutique
+    labelSelectors:
+      app: recommendationservice
+  stressors:
+    cpu:
+      workers: 2    # 2 个 goroutine 持续占满 CPU
+      load: 80      # 目标 CPU 负载 80%
+  duration: 60s

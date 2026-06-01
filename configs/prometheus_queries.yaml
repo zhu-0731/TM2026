@@ -1,0 +1,98 @@
+# Prometheus queries for Online Boutique (Istio + cAdvisor + kube-state-metrics)
+# Prometheus: istio-system/prometheus (port-forward → localhost:9090)
+#
+# Coverage: 63 features (10 services × 6 metrics + redis-cart × 3 metrics)
+#   - qps/latency_p95/error_rate → Istio Envoy metrics (istio_requests_total)
+#   - cpu_usage → cAdvisor (container_cpu_usage_seconds_total, cpu="total")
+#   - memory_usage → cAdvisor (container_memory_working_set_bytes / MiB)
+#   - restart_count → kube-state-metrics (kube_pod_container_status_restarts_total)
+# redis-cart: only cpu_usage/memory_usage/restart_count (TCP protocol, no HTTP metrics)
+
+queries:
+  # ---- frontend ----
+  frontend_qps: 'sum(irate(istio_requests_total{destination_service_name="frontend",destination_service_namespace="online-boutique"}[1m]))'
+  frontend_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="frontend",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  frontend_error_rate: '(sum(rate(istio_requests_total{destination_service_name="frontend",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="frontend",destination_service_namespace="online-boutique"}[1m]))'
+  frontend_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"frontend-.*",cpu="total"}[1m]))'
+  frontend_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"frontend-.*"}) / 1048576'
+  frontend_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"frontend-.*"})'
+
+  # ---- cartservice ----
+  cartservice_qps: 'sum(irate(istio_requests_total{destination_service_name="cartservice",destination_service_namespace="online-boutique"}[1m]))'
+  cartservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="cartservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  cartservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="cartservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="cartservice",destination_service_namespace="online-boutique"}[1m]))'
+  cartservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"cartservice-.*",cpu="total"}[1m]))'
+  cartservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"cartservice-.*"}) / 1048576'
+  cartservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"cartservice-.*"})'
+
+  # ---- checkoutservice ----
+  checkoutservice_qps: 'sum(irate(istio_requests_total{destination_service_name="checkoutservice",destination_service_namespace="online-boutique"}[1m]))'
+  checkoutservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="checkoutservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  checkoutservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="checkoutservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="checkoutservice",destination_service_namespace="online-boutique"}[1m]))'
+  checkoutservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"checkoutservice-.*",cpu="total"}[1m]))'
+  checkoutservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"checkoutservice-.*"}) / 1048576'
+  checkoutservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"checkoutservice-.*"})'
+
+  # ---- currencyservice ----
+  currencyservice_qps: 'sum(irate(istio_requests_total{destination_service_name="currencyservice",destination_service_namespace="online-boutique"}[1m]))'
+  currencyservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="currencyservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  currencyservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="currencyservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="currencyservice",destination_service_namespace="online-boutique"}[1m]))'
+  currencyservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"currencyservice-.*",cpu="total"}[1m]))'
+  currencyservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"currencyservice-.*"}) / 1048576'
+  currencyservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"currencyservice-.*"})'
+
+  # ---- emailservice ----
+  emailservice_qps: 'sum(irate(istio_requests_total{destination_service_name="emailservice",destination_service_namespace="online-boutique"}[1m]))'
+  emailservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="emailservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  emailservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="emailservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="emailservice",destination_service_namespace="online-boutique"}[1m]))'
+  emailservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"emailservice-.*",cpu="total"}[1m]))'
+  emailservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"emailservice-.*"}) / 1048576'
+  emailservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"emailservice-.*"})'
+
+  # ---- paymentservice ----
+  paymentservice_qps: 'sum(irate(istio_requests_total{destination_service_name="paymentservice",destination_service_namespace="online-boutique"}[1m]))'
+  paymentservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="paymentservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  paymentservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="paymentservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="paymentservice",destination_service_namespace="online-boutique"}[1m]))'
+  paymentservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"paymentservice-.*",cpu="total"}[1m]))'
+  paymentservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"paymentservice-.*"}) / 1048576'
+  paymentservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"paymentservice-.*"})'
+
+  # ---- productcatalogservice ----
+  productcatalogservice_qps: 'sum(irate(istio_requests_total{destination_service_name="productcatalogservice",destination_service_namespace="online-boutique"}[1m]))'
+  productcatalogservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="productcatalogservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  productcatalogservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="productcatalogservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="productcatalogservice",destination_service_namespace="online-boutique"}[1m]))'
+  productcatalogservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"productcatalogservice-.*",cpu="total"}[1m]))'
+  productcatalogservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"productcatalogservice-.*"}) / 1048576'
+  productcatalogservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"productcatalogservice-.*"})'
+
+  # ---- recommendationservice ----
+  recommendationservice_qps: 'sum(irate(istio_requests_total{destination_service_name="recommendationservice",destination_service_namespace="online-boutique"}[1m]))'
+  recommendationservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="recommendationservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  recommendationservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="recommendationservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="recommendationservice",destination_service_namespace="online-boutique"}[1m]))'
+  recommendationservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"recommendationservice-.*",cpu="total"}[1m]))'
+  recommendationservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"recommendationservice-.*"}) / 1048576'
+  recommendationservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"recommendationservice-.*"})'
+
+  # ---- shippingservice ----
+  shippingservice_qps: 'sum(irate(istio_requests_total{destination_service_name="shippingservice",destination_service_namespace="online-boutique"}[1m]))'
+  shippingservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="shippingservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  shippingservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="shippingservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="shippingservice",destination_service_namespace="online-boutique"}[1m]))'
+  shippingservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"shippingservice-.*",cpu="total"}[1m]))'
+  shippingservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"shippingservice-.*"}) / 1048576'
+  shippingservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"shippingservice-.*"})'
+
+  # ---- adservice ----
+  adservice_qps: 'sum(irate(istio_requests_total{destination_service_name="adservice",destination_service_namespace="online-boutique"}[1m]))'
+  adservice_latency_p95: 'histogram_quantile(0.95, sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name="adservice",destination_service_namespace="online-boutique"}[1m])) by (le))'
+  adservice_error_rate: '(sum(rate(istio_requests_total{destination_service_name="adservice",destination_service_namespace="online-boutique",response_code=~"5.."}[1m])) or vector(0)) / sum(rate(istio_requests_total{destination_service_name="adservice",destination_service_namespace="online-boutique"}[1m]))'
+  adservice_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"adservice-.*",cpu="total"}[1m]))'
+  adservice_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"adservice-.*"}) / 1048576'
+  adservice_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"adservice-.*"})'
+
+  # ---- redis-cart (TCP/Redis protocol — no Istio HTTP metrics) ----
+  # redis-cart_qps: not available (Redis TCP, not HTTP)
+  # redis-cart_latency_p95: not available
+  # redis-cart_error_rate: not available
+  redis-cart_cpu_usage: 'sum(rate(container_cpu_usage_seconds_total{namespace="online-boutique",pod=~"redis-cart-.*",cpu="total"}[1m]))'
+  redis-cart_memory_usage: 'sum(container_memory_working_set_bytes{namespace="online-boutique",pod=~"redis-cart-.*"}) / 1048576'
+  redis-cart_restart_count: 'sum(kube_pod_container_status_restarts_total{namespace="online-boutique",pod=~"redis-cart-.*"})'
