@@ -13,6 +13,9 @@ output/
 # Local archives / backups (not source)
 *.zip
 
+# Local agent configuration
+aiops_agent/config.yaml
+
 # Datasets are NOT published in this public repo (collect your own via
 # `python -m benchmark.cli collect` + `assemble`). See README.
 data/
@@ -20,3 +23,5 @@ data/
 # OS / editor
 .DS_Store
 Thumbs.db
+aiops_agent/config.yaml
+data/

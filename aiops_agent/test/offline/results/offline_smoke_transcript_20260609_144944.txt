@@ -1,0 +1,57 @@
+[COMMAND]
+D:\miniconda3\envs\tm2026-aiops\python.exe -m aiops_agent.main --mode offline --prompt 请先总结数据集，再扫描 valid split 中最异常的窗口，并继续分析排名第一的窗口，最后生成完整报告。
+
+[STDOUT]
+����������ά Agent ��������
+�����ֱ�������ʣ�
+- �ȸ��ҿ�һ������������ݼ��ܷ���ʲô
+- valid �����ĸ�ʱ������쳣
+- ��ɨ�� valid���ټ�������������һ���쳣����
+- ����� valid split �� start_index=120��window_size=120 �Ĵ���
+- ����չʾ������������Ϲ��̣������ɱ���
+
+���� exit �� quit �����˳���
+[32m2026-06-09 14:49:44[0m | [31m[1mERROR[0m | [36mutils.py:41[0m - Get Volcegnine access key or secret key from environment variables failed, and VeFaaS IAM file (path=/var/run/secrets/iam/credential) not exists. Please check your configuration.
+
+
+[STDERR]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "F:\workprogram\TM2026\aiops_agent\main.py", line 104, in <module>
+    main()
+  File "F:\workprogram\TM2026\aiops_agent\main.py", line 70, in main
+    asyncio.run(interactive_chat())
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "F:\workprogram\TM2026\aiops_agent\veadk_app\agent.py", line 85, in interactive_chat
+    agent = build_agent()
+            ^^^^^^^^^^^^^
+  File "F:\workprogram\TM2026\aiops_agent\veadk_app\agent.py", line 44, in build_agent
+    return Agent(
+           ^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\site-packages\veadk\agent.py", line 111, in <lambda>
+    model_api_key: str = Field(default_factory=lambda: settings.model.api_key)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\functools.py", line 998, in __get__
+    val = self.func(instance)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\site-packages\veadk\configs\model_configs.py", line 45, in api_key
+    return os.getenv("MODEL_AGENT_API_KEY") or get_ark_token()
+                                               ^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\site-packages\veadk\auth\veauth\ark_veauth.py", line 33, in get_ark_token
+    cred = get_credential_from_vefaas_iam()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\tm2026-aiops\Lib\site-packages\veadk\auth\veauth\utils.py", line 44, in get_credential_from_vefaas_iam
+    raise FileNotFoundError(
+FileNotFoundError: Get Volcegnine access key or secret key from environment variables failed, and VeFaaS IAM file (path=/var/run/secrets/iam/credential) not exists. Please check your configuration.
