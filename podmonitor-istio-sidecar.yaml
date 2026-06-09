@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: online-boutique-istio-sidecar
+  namespace: monitoring
+spec:
+  namespaceSelector:
+    matchNames:
+      - online-boutique
+
+  selector:
+    matchExpressions:
+      - key: app
+        operator: Exists
+
+  podMetricsEndpoints:
+    - portNumber: 15090
+      path: /stats/prometheus
+      scheme: http
+      interval: 15s
+      scrapeTimeout: 10s

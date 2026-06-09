@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "command": [
+    "D:\\miniconda3\\envs\\tm2026-aiops\\python.exe",
+    "-m",
+    "aiops_agent.main",
+    "--mode",
+    "offline",
+    "--prompt",
+    "请先总结数据集，再扫描 valid split 中最异常的窗口，并继续分析排名第一的窗口，最后生成完整报告。"
+  ],
+  "returncode": 0,
+  "json_report": "F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.json",
+  "markdown_report": "F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.md",
+  "details": {
+    "new_files": [
+      "F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.json",
+      "F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.md"
+    ],
+    "json_validation": {
+      "missing_keys": [],
+      "mode": "offline",
+      "split": "valid",
+      "window": {
+        "start_index": 420,
+        "end_index": 539
+      },
+      "summary_length": 122,
+      "tool_call_count": 5
+    },
+    "markdown_validation": {
+      "missing_sections": [],
+      "line_count": 105
+    }
+  }
+}

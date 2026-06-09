@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "command": [
+    "D:\\miniconda3\\python.exe",
+    "-m",
+    "aiops_agent.main",
+    "--mode",
+    "offline",
+    "--prompt",
+    "请先总结数据集，再扫描 valid split 中最异常的窗口，并继续分析排名第一的窗口，最后生成完整报告。"
+  ],
+  "returncode": 1,
+  "json_report": null,
+  "markdown_report": null,
+  "details": {
+    "new_files": [],
+    "error": "missing_report_files"
+  }
+}

@@ -1,0 +1,100 @@
+[COMMAND]
+D:\miniconda3\envs\tm2026-aiops\python.exe -m aiops_agent.main --mode offline --prompt 请先总结数据集，再扫描 valid split 中最异常的窗口，并继续分析排名第一的窗口，最后生成完整报告。
+
+[STDOUT]
+[32m2026-06-10 00:06:23[0m | [1mINFO[0m | [36mconfig.py:50[0m - No `.env` file found.
+[32m2026-06-10 00:06:23[0m | [33m[1mWARNING[0m | [36mconfig.py:138[0m - No `config.yaml` file found.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.telemetry.tracing tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.telemetry tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.flows.llm_flows.functions tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.apps.compaction tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.flows.llm_flows.base_llm_flow tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mpatches.py:118[0m - Patch google.adk.runners tracer with VeADK tracer.
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36magent.py:219[0m - Model extra config: {'extra_headers': {'x-is-encrypted': 'true', 'veadk-source': 'veadk', 'veadk-version': '0.5.36', 'User-Agent': 'VeADK/0.5.36', 'X-Client-Request-Id': 'veadk/0.5.36'}, 'extra_body': {'caching': {'type': 'enabled'}, 'expire_at': 1781024775}}
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36magent.py:258[0m - LiteLLM client created with config: {'extra_headers': {'x-is-encrypted': 'true', 'veadk-source': 'veadk', 'veadk-version': '0.5.36', 'User-Agent': 'VeADK/0.5.36', 'X-Client-Request-Id': 'veadk/0.5.36'}, 'extra_body': {'caching': {'type': 'enabled'}, 'expire_at': 1781024775}}
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36magent.py:602[0m - No exporter enabled by env, skip prepare tracers.
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36magent.py:404[0m - VeADK version: 0.5.36
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36magent.py:406[0m - Agent `aiops_offline_diagnosis_agent` init done.
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36magent.py:407[0m - Agent: {'name': 'aiops_offline_diagnosis_agent', 'tools': [<function summarize_dataset_tool at 0x000002492D1D5D00>, <function inspect_current_state_tool at 0x000002492D1D5DA0>, <function find_anomalous_windows_tool at 0x000002492D1D5F80>, <function show_ranked_windows_tool at 0x000002492D1D5E40>, <function continue_with_ranked_window_tool at 0x000002492D1D62A0>, <function run_full_offline_diagnosis_tool at 0x000002492D1D6340>, <function load_window_tool at 0x000002492D1D6020>, <function detect_anomaly_tool at 0x000002492D1D60C0>, <function diagnose_root_cause_tool at 0x000002492D1D6160>, <function write_report_tool at 0x000002492D1D6200>, <function show_tool_history_tool at 0x000002492D1D5EE0>], 'id': '0ccb1b0a', 'model_name': 'doubao-seed-2-0-pro-260215', 'model_api_base': 'https://ark.cn-beijing.volces.com/api/v3/', 'skills': []}
+[32m2026-06-10 00:06:24[0m | [33m[1mWARNING[0m | [36mrunner.py:401[0m - No short term memory or session service provided, use an in-memory one instead.
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36mrunner.py:420[0m - No long term memory provided.
+[32m2026-06-10 00:06:24[0m | [1mINFO[0m | [36mrunner.py:485[0m - Run config: speech_config=None response_modalities=None avatar_config=None save_input_blobs_as_artifacts=False support_cfc=False streaming_mode=<StreamingMode.NONE: None> output_audio_transcription=AudioTranscriptionConfig() input_audio_transcription=AudioTranscriptionConfig() realtime_input_config=None enable_affective_dialog=None proactivity=None session_resumption=None context_window_compression=None save_live_blob=False tool_thread_pool_config=None save_live_audio=False max_llm_calls=100 custom_metadata=None get_session_config=None
+[32m2026-06-10 00:06:24[0m | [34m[1mDEBUG[0m | [36mrunner.py:505[0m - Auto create session: tmp-session-20260610000624, user_id: veadk_default_user, app_name: veadk_default_app
+[32m2026-06-10 00:06:48[0m | [34m[1mDEBUG[0m | [36mrunner.py:154[0m - Function call: id='call_btk4bb1scef1xx13ffbph1ww' args={'dataset_root': None} name='summarize_dataset_tool' partial_args=None will_continue=None | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:06:48[0m | [34m[1mDEBUG[0m | [36mrunner.py:157[0m - Function response: will_continue=None scheduling=None parts=None id='call_btk4bb1scef1xx13ffbph1ww' name='summarize_dataset_tool' response={'status': 'ok', 'message': '�������ݼ����������ɡ�', 'dataset_root': 'F:\\workprogram\\TM2026\\data\\datasets\\online_boutique_rca_full_v1', 'dataset_name': 'online_boutique_rca_full_v1', 'feature_count': 63, 'services': ['adservice', 'cartservice', 'checkoutservice', 'currencyservice', 'emailservice', 'frontend', 'paymentservice', 'productcatalogservice', 'recommendationservice', 'redis-cart', 'shippingservice'], 'splits': {'train': 8570, 'valid': 1496, 'test': 2867}, 'sampling_interval_seconds': 5} | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:06:55[0m | [34m[1mDEBUG[0m | [36mrunner.py:154[0m - Function call: id='call_j2mchdummlyxhx2lryindkis' args={'split': 'valid', 'dataset_root': None} name='find_anomalous_windows_tool' partial_args=None will_continue=None | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:06:55[0m | [34m[1mDEBUG[0m | [36mrunner.py:157[0m - Function response: will_continue=None scheduling=None parts=None id='call_j2mchdummlyxhx2lryindkis' name='find_anomalous_windows_tool' response={'status': 'ok', 'message': '�쳣ʱ���ɨ����ɡ�', 'split': 'valid', 'window_size': 120, 'step_size': 60, 'total_rows': 1496, 'scanned_window_count': 24, 'anomalous_window_count': 24, 'top_windows': [{'rank': 1, 'split': 'valid', 'start_index': 420, 'end_index': 539, 'start_time': '2026-05-30T11:04:26Z', 'end_time': '2026-05-30T11:14:21Z', 'row_count': 120, 'anomaly_score': 36.231, 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'currencyservice'], 'incident_ids': ['online_boutique_rca_5/INC-006', 'online_boutique_rca_5/INC-007'], 'top_evidence': [{'feature_name': 'cartservice_cpu_usage', 'service': 'cartservice', 'metric': 'cpu_usage', 'score': 6.161, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=6.16'}, {'feature_name': 'adservice_restart_count', 'service': 'adservice', 'metric': 'restart_count', 'score': 4.989, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.99'}, {'feature_name': 'productcatalogservice_restart_count', 'service': 'productcatalogservice', 'metric': 'restart_count', 'score': 4.247, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.25'}]}, {'rank': 2, 'split': 'valid', 'start_index': 360, 'end_index': 479, 'start_time': '2026-05-30T10:59:26Z', 'end_time': '2026-05-30T11:09:21Z', 'row_count': 120, 'anomaly_score': 36.208, 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'currencyservice'], 'incident_ids': ['online_boutique_rca_5/INC-005', 'online_boutique_rca_5/INC-006'], 'top_evidence': [{'feature_name': 'cartservice_cpu_usage', 'service': 'cartservice', 'metric': 'cpu_usage', 'score': 6.161, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=6.16'}, {'feature_name': 'adservice_restart_count', 'service': 'adservice', 'metric': 'restart_count', 'score': 4.989, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.99'}, {'feature_name': 'productcatalogservice_restart_count', 'service': 'productcatalogservice', 'metric': 'restart_count', 'score': 4.247, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.25'}]}, {'rank': 3, 'split': 'valid', 'start_index': 900, 'end_index': 1019, 'start_time': '2026-05-30T11:44:26Z', 'end_time': '2026-05-30T11:54:21Z', 'row_count': 120, 'anomaly_score': 35.981, 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'checkoutservice'], 'incident_ids': ['online_boutique_rca_5/INC-013', 'online_boutique_rca_5/INC-014'], 'top_evidence': [{'feature_name': 'adservice_restart_count', 'service': 'adservice', 'metric': 'restart_count', 'score': 4.989, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.99'}, {'feature_name': 'cartservice_cpu_usage', 'service': 'cartservice', 'metric': 'cpu_usage', 'score': 4.888, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=4.89'}, {'feature_name': 'frontend_error_rate', 'service': 'frontend', 'metric': 'error_rate', 'score': 4.814, 'reason': 'error_rate ��Ȼ������Ը��ڣ�z-score=4.81'}]}]} | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:07:03[0m | [34m[1mDEBUG[0m | [36mrunner.py:154[0m - Function call: id='call_wc76k6wtop7f1wk4jqa3r554' args={'rank': 1, 'output_dir': None} name='continue_with_ranked_window_tool' partial_args=None will_continue=None | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:07:03[0m | [34m[1mDEBUG[0m | [36mrunner.py:157[0m - Function response: will_continue=None scheduling=None parts=None id='call_wc76k6wtop7f1wk4jqa3r554' name='continue_with_ranked_window_tool' response={'status': 'ok', 'message': '���������������ִ����ɡ�', 'window': {'dataset_name': 'online_boutique_rca_full_v1', 'split': 'valid', 'start_index': 420, 'end_index': 539, 'start_time': '2026-05-30T11:04:26Z', 'end_time': '2026-05-30T11:14:21Z', 'row_count': 120, 'incident_ids': ['online_boutique_rca_5/INC-006', 'online_boutique_rca_5/INC-007']}, 'detection': {'status': 'ok', 'message': '�쳣�����ɡ�', 'is_anomaly': True, 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'currencyservice', 'shippingservice', 'emailservice', 'checkoutservice', 'paymentservice', 'cartservice'], 'incident_ids': ['online_boutique_rca_5/INC-006', 'online_boutique_rca_5/INC-007'], 'top_evidence': [{'service': 'cartservice', 'metric': 'cpu_usage', 'feature_name': 'cartservice_cpu_usage', 'score': 6.161, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=6.16'}, {'service': 'adservice', 'metric': 'restart_count', 'feature_name': 'adservice_restart_count', 'score': 4.989, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.99'}, {'service': 'productcatalogservice', 'metric': 'restart_count', 'feature_name': 'productcatalogservice_restart_count', 'score': 4.247, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.25'}, {'service': 'recommendationservice', 'metric': 'qps', 'feature_name': 'recommendationservice_qps', 'score': 4.245, 'reason': 'qps ��Ȼ��������½���z-score=4.25'}, {'service': 'frontend', 'metric': 'restart_count', 'feature_name': 'frontend_restart_count', 'score': 4.243, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.24'}, {'service': 'recommendationservice', 'metric': 'cpu_usage', 'feature_name': 'recommendationservice_cpu_usage', 'score': 4.203, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=4.20'}, {'service': 'shippingservice', 'metric': 'restart_count', 'feature_name': 'shippingservice_restart_count', 'score': 4.072, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.07'}, {'service': 'emailservice', 'metric': 'restart_count', 'feature_name': 'emailservice_restart_count', 'score': 4.071, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.07'}], 'notes': []}, 'diagnosis': {'status': 'ok', 'message': '���������ɡ�', 'is_anomaly': True, 'suspected_root_cause_service': 'recommendationservice', 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'currencyservice', 'shippingservice', 'emailservice', 'checkoutservice', 'paymentservice', 'cartservice'], 'candidate_scores': {'recommendationservice': 10.448, 'cartservice': 8.161, 'productcatalogservice': 7.747, 'adservice': 6.989, 'shippingservice': 6.072, 'emailservice': 6.071, 'frontend': 3.743, 'currencyservice': 1.5, 'checkoutservice': 1.5}, 'supporting_metrics': [{'service': 'recommendationservice', 'metric': 'qps', 'feature_name': 'recommendationservice_qps', 'score': 4.245, 'reason': 'qps ��Ȼ��������½���z-score=4.25'}, {'service': 'recommendationservice', 'metric': 'cpu_usage', 'feature_name': 'recommendationservice_cpu_usage', 'score': 4.203, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=4.20'}], 'summary': '�쳣������Ҫ������ frontend, recommendationservice, adservice �ȷ����ϡ�recommendationservice �� qps��cpu_usage �ȹؼ�ָ��������ɣ���˱���Ϊ��ǰ����ܵĸ������'}, 'report': {'status': 'ok', 'message': '��ϱ��������ɡ�', 'json_report': 'F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.json', 'markdown_report': 'F:\\workprogram\\TM2026\\aiops_agent\\output\\veadk_reports\\valid_420_539.md', 'summary': '�쳣������Ҫ������ frontend, recommendationservice, adservice �ȷ����ϡ�recommendationservice �� qps��cpu_usage �ȹؼ�ָ��������ɣ���˱���Ϊ��ǰ����ܵĸ������'}, 'selected_rank': 1, 'selected_window': {'rank': 1, 'split': 'valid', 'start_index': 420, 'end_index': 539, 'start_time': '2026-05-30T11:04:26Z', 'end_time': '2026-05-30T11:14:21Z', 'row_count': 120, 'anomaly_score': 36.231, 'abnormal_services': ['frontend', 'recommendationservice', 'adservice', 'productcatalogservice', 'currencyservice'], 'incident_ids': ['online_boutique_rca_5/INC-006', 'online_boutique_rca_5/INC-007'], 'top_evidence': [{'feature_name': 'cartservice_cpu_usage', 'service': 'cartservice', 'metric': 'cpu_usage', 'score': 6.161, 'reason': 'cpu_usage ��Ȼ������Ը��ڣ�z-score=6.16'}, {'feature_name': 'adservice_restart_count', 'service': 'adservice', 'metric': 'restart_count', 'score': 4.989, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.99'}, {'feature_name': 'productcatalogservice_restart_count', 'service': 'productcatalogservice', 'metric': 'restart_count', 'score': 4.247, 'reason': 'restart_count ��Ȼ������Ը��ڣ�z-score=4.25'}]}} | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:07:22[0m | [34m[1mDEBUG[0m | [36mrunner.py:165[0m - Thinking output: 
+�û�Ҫ����ĸ����趼����˶԰ɣ������ܽ������ݼ���Ȼ��ɨ����valid���쳣���ڣ�������������һ�Ĵ��ڣ������Ѿ��Զ������˱��棿���ԣ����ղŵ�continue_with_ranked_window_tool���ؽ�����Ѿ���report�ֶ��ˣ�˵���������ˣ�json��md��·�����С���������Ҫ���û��ܽ����԰ɣ�
+
+�������г�������ʲô��
+1. ��summarize_dataset_tool�ܽ������ݼ������ݼ���online_boutique_rca_full_v1����11������train8570����valid1496����test2867�����������5�롣
+2. ��find_anomalous_windows_toolɨ����valid���쳣���ڣ�ɨ��24���쳣���ڣ�������һ����2026-05-30 11:04:26��11:14:21�Ĵ��ڣ��쳣�÷�36.231��
+3. ��continue_with_ranked_window_tool������������һ�Ĵ��ڣ��ж����쳣���漰10���쳣���񣬸�����recommendationservice���ؼ�֤��������qps�����½�z-score4.25��cpuʹ������������z-score4.20��
+4. �Ѿ������˱��棬·��Ҳ�г�����
+
+Ȼ����Ҫ����֯���ԣ����ģ��ṹ������������Ҫ�㶼�г������У�����Ҫ�ٵ��ù����ˣ���Ϊ���в��趼����ˣ�����Ҳ�����ˡ� | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:07:22[0m | [34m[1mDEBUG[0m | [36mrunner.py:169[0m - Event output: ### �����������ִ�н������
+---
+#### 1. ���ݼ�����������`summarize_dataset_tool`��ȡ��
+- ���ݼ����ƣ�`online_boutique_rca_full_v1`
+- ���Ƿ��񣺹�11��������`adservice`��`cartservice`��`checkoutservice`��`currencyservice`��`emailservice`��`frontend`��`paymentservice`��`productcatalogservice`��`recommendationservice`��`redis-cart`��`shippingservice`
+- ���ݲ�ֹ�ģ��ѵ����8570������֤��1496�������Լ�2867�����������5��
+
+#### 2. ��֤���쳣����ɨ����������`find_anomalous_windows_tool`��ȡ��
+- ��ɨ����֤��24��ʱ�䴰�ڣ�ȫ�������쳣
+- ������һ���쳣������Ϣ��
+  - ʱ�䷶Χ��2026-05-30 11:04:26 ~ 2026-05-30 11:14:21
+  - �쳣�÷֣�36.231
+  - ���������쳣����`frontend`��`recommendationservice`��`adservice`��`productcatalogservice`��`currencyservice`
+
+#### 3. ��һ���쳣������Ͻ��������`continue_with_ranked_window_tool`��ȡ��
+- �쳣�ж���ȷ�����쳣���ڣ������¼�IDΪ`INC-006`��`INC-007`
+- ȫ���쳣���񣺹�10����������5���⻹����`shippingservice`��`emailservice`��`checkoutservice`��`paymentservice`��`cartservice`
+- ����ɸ������`recommendationservice`
+- �ؼ�����֤�ݣ�
+  1. `recommendationservice`��QPS��Ȼ��������½���z-score=4.25
+  2. `recommendationservice`��CPUʹ������Ȼ����������ߣ�z-score=4.20
+- ֧���쳣֤�ݣ�`cartservice`CPUʹ�����쳣���ߣ�z-score=6.16����`adservice`���������쳣���ߣ�z-score=4.99����
+
+#### 4. �����������
+��ϱ������Զ����ɣ��洢·����
+- JSON��ʽ���棺`F:\workprogram\TM2026\aiops_agent\output\veadk_reports\valid_420_539.json`
+- Markdown��ʽ���棺`F:\workprogram\TM2026\aiops_agent\output\veadk_reports\valid_420_539.md`
+
+��������Ҫ��ķ���������ȫ����ɡ� | agent_name: aiops_offline_diagnosis_agent , user_id: veadk_default_user , session_id: tmp-session-20260610000624 , invocation_id: e-7dfbe51c-d874-4a30-b83f-da6acff1f220
+[32m2026-06-10 00:07:22[0m | [33m[1mWARNING[0m | [36mrunner.py:600[0m - No tracer is configured in the agent, no trace id provided.
+### �����������ִ�н������
+---
+#### 1. ���ݼ�����������`summarize_dataset_tool`��ȡ��
+- ���ݼ����ƣ�`online_boutique_rca_full_v1`
+- ���Ƿ��񣺹�11��������`adservice`��`cartservice`��`checkoutservice`��`currencyservice`��`emailservice`��`frontend`��`paymentservice`��`productcatalogservice`��`recommendationservice`��`redis-cart`��`shippingservice`
+- ���ݲ�ֹ�ģ��ѵ����8570������֤��1496�������Լ�2867�����������5��
+
+#### 2. ��֤���쳣����ɨ����������`find_anomalous_windows_tool`��ȡ��
+- ��ɨ����֤��24��ʱ�䴰�ڣ�ȫ�������쳣
+- ������һ���쳣������Ϣ��
+  - ʱ�䷶Χ��2026-05-30 11:04:26 ~ 2026-05-30 11:14:21
+  - �쳣�÷֣�36.231
+  - ���������쳣����`frontend`��`recommendationservice`��`adservice`��`productcatalogservice`��`currencyservice`
+
+#### 3. ��һ���쳣������Ͻ��������`continue_with_ranked_window_tool`��ȡ��
+- �쳣�ж���ȷ�����쳣���ڣ������¼�IDΪ`INC-006`��`INC-007`
+- ȫ���쳣���񣺹�10����������5���⻹����`shippingservice`��`emailservice`��`checkoutservice`��`paymentservice`��`cartservice`
+- ����ɸ������`recommendationservice`
+- �ؼ�����֤�ݣ�
+  1. `recommendationservice`��QPS��Ȼ��������½���z-score=4.25
+  2. `recommendationservice`��CPUʹ������Ȼ����������ߣ�z-score=4.20
+- ֧���쳣֤�ݣ�`cartservice`CPUʹ�����쳣���ߣ�z-score=6.16����`adservice`���������쳣���ߣ�z-score=4.99����
+
+#### 4. �����������
+��ϱ������Զ����ɣ��洢·����
+- JSON��ʽ���棺`F:\workprogram\TM2026\aiops_agent\output\veadk_reports\valid_420_539.json`
+- Markdown��ʽ���棺`F:\workprogram\TM2026\aiops_agent\output\veadk_reports\valid_420_539.md`
+
+��������Ҫ��ķ���������ȫ����ɡ�
+
+
+[STDERR]

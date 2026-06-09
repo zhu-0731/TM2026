@@ -1,0 +1,11 @@
+[COMMAND]
+D:\miniconda3\python.exe F:\workprogram\TM2026\aiops_agent\main.py --mode offline --prompt 请先总结数据集，再扫描 valid split 中最异常的窗口，并继续分析排名第一的窗口，最后生成完整报告。
+
+[STDOUT]
+
+
+[STDERR]
+Traceback (most recent call last):
+  File "F:\workprogram\TM2026\aiops_agent\main.py", line 9, in <module>
+    from aiops_agent.online.monitor import (
+ModuleNotFoundError: No module named 'aiops_agent.online'
