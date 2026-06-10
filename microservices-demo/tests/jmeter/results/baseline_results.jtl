@@ -1,0 +1,1801 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1780467565951,349,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10750,253,1,1,http://127.0.0.1:64009/,331,0,79
+1780467567945,88,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,2,2,http://127.0.0.1:64009/product/,88,0,0
+1780467568794,173,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10750,253,2,2,http://127.0.0.1:64009/,172,0,3
+1780467569144,19,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,2,2,http://127.0.0.1:64009/setCurrency,19,0,0
+1780467569622,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,2,2,http://127.0.0.1:64009/product/,10,0,0
+1780467570322,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,427,2,2,http://127.0.0.1:64009/cart,10,0,0
+1780467570726,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,2,2,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467570983,69,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,6993,319,3,3,http://127.0.0.1:64009/cart,69,0,0
+1780467571674,210,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10750,253,3,3,http://127.0.0.1:64009/,209,0,2
+1780467572313,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,3,3,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467572420,87,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,3,3,http://127.0.0.1:64009/cart,87,0,0
+1780467573075,145,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,3,3,http://127.0.0.1:64009/product/,144,0,0
+1780467573273,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,3,3,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467572743,927,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7045,319,3,3,http://127.0.0.1:64009/cart,926,0,0
+1780467573350,366,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,3,3,http://127.0.0.1:64009/,360,0,0
+1780467574193,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,4,4,http://127.0.0.1:64009/cart,8,0,0
+1780467574418,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,4,4,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467574740,54,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10750,253,4,4,http://127.0.0.1:64009/,53,0,1
+1780467574920,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,4,4,http://127.0.0.1:64009/product/,5,0,0
+1780467575635,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,4,4,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467575804,9,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,4,4,http://127.0.0.1:64009/product/,9,0,0
+1780467576288,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,4,4,http://127.0.0.1:64009/cart,8,0,0
+1780467576124,329,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,4,4,http://127.0.0.1:64009/,329,0,0
+1780467576309,213,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7037,319,4,4,http://127.0.0.1:64009/cart,213,0,0
+1780467576649,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,4,4,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467576674,14,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,4,4,http://127.0.0.1:64009/product/,14,0,0
+1780467577444,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,5,5,http://127.0.0.1:64009/cart/checkout,8,0,0
+1780467577468,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,5,5,http://127.0.0.1:64009/cart,5,0,0
+1780467577848,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,5,5,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467578097,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7019,319,5,5,http://127.0.0.1:64009/cart,22,0,0
+1780467578395,31,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7041,319,5,5,http://127.0.0.1:64009/cart,31,0,0
+1780467578547,458,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10750,253,5,5,http://127.0.0.1:64009/,454,0,1
+1780467579246,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,5,5,http://127.0.0.1:64009/cart,5,0,0
+1780467579515,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,5,5,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467579568,113,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,5,5,http://127.0.0.1:64009/,105,0,0
+1780467580110,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,642,6,6,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467580327,124,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7035,319,6,6,http://127.0.0.1:64009/cart,124,0,0
+1780467580532,159,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,6,6,http://127.0.0.1:64009/,159,0,0
+1780467580796,376,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10750,253,6,6,http://127.0.0.1:64009/,374,0,6
+1780467581268,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,6,6,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467581286,11,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,10,0,0
+1780467581667,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,6,0,0
+1780467581646,133,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,6,6,http://127.0.0.1:64009/,127,0,0
+1780467581907,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,4,0,0
+1780467581772,200,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,6,6,http://127.0.0.1:64009/,200,0,0
+1780467582126,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467582145,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467582471,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,5,0,0
+1780467582658,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,4,0,0
+1780467582852,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,8,0,0
+1780467582882,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467583056,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,7,0,0
+1780467583260,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,10,0,0
+1780467583346,108,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7061,319,7,7,http://127.0.0.1:64009/cart,108,0,0
+1780467583520,11,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,11,0,0
+1780467583614,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467583943,11,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,11,0,0
+1780467583987,29,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7009,319,7,7,http://127.0.0.1:64009/cart,28,0,0
+1780467584013,130,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10750,253,7,7,http://127.0.0.1:64009/,130,0,4
+1780467584184,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,8,0,0
+1780467584315,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,6,0,0
+1780467584411,14,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,14,0,0
+1780467584430,33,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7021,319,7,7,http://127.0.0.1:64009/cart,33,0,0
+1780467584478,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,7,7,http://127.0.0.1:64009/cart/checkout,8,0,0
+1780467584613,11,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,10,0,0
+1780467584676,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7023,319,7,7,http://127.0.0.1:64009/cart,20,0,0
+1780467585091,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,7,0,0
+1780467585244,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,4,0,0
+1780467585853,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,8,8,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467585950,114,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,8,8,http://127.0.0.1:64009/,114,0,0
+1780467586076,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,8,8,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467586103,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,8,8,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467586065,109,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,8,8,http://127.0.0.1:64009/,109,0,0
+1780467586344,28,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7039,319,8,8,http://127.0.0.1:64009/cart,28,0,0
+1780467586762,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,8,8,http://127.0.0.1:64009/cart,8,0,0
+1780467586818,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,4,0,0
+1780467586968,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7021,319,8,8,http://127.0.0.1:64009/cart,18,0,0
+1780467587022,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,8,8,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467587056,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,4,0,0
+1780467587628,147,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,8,8,http://127.0.0.1:64009/,147,0,0
+1780467587793,10,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,8,8,http://127.0.0.1:64009/setCurrency,10,0,0
+1780467587777,77,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7019,319,8,8,http://127.0.0.1:64009/cart,76,0,0
+1780467587984,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,8,8,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467588120,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,8,8,http://127.0.0.1:64009/cart,5,0,0
+1780467587831,313,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10750,253,8,8,http://127.0.0.1:64009/,312,0,1
+1780467587886,288,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,8,8,http://127.0.0.1:64009/,288,0,0
+1780467588239,12,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,8,8,http://127.0.0.1:64009/cart,12,0,0
+1780467588287,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,642,8,8,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467588065,306,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,8,8,http://127.0.0.1:64009/,306,0,0
+1780467588404,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,4,0,0
+1780467588494,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,6,0,0
+1780467588798,24,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7027,319,9,9,http://127.0.0.1:64009/cart,24,0,0
+1780467588936,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467588908,63,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,9,9,http://127.0.0.1:64009/,63,0,0
+1780467589142,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,9,9,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467589268,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467589317,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,9,9,http://127.0.0.1:64009/product/,5,0,0
+1780467589485,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,9,9,http://127.0.0.1:64009/cart,5,0,0
+1780467589598,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,427,9,9,http://127.0.0.1:64009/cart,4,0,0
+1780467589732,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,9,9,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467589737,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,9,9,http://127.0.0.1:64009/product/,3,0,0
+1780467589775,112,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10750,253,9,9,http://127.0.0.1:64009/,112,0,2
+1780467589919,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,9,9,http://127.0.0.1:64009/product/,4,0,0
+1780467589804,163,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,9,9,http://127.0.0.1:64009/,162,0,0
+1780467589943,35,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7029,319,9,9,http://127.0.0.1:64009/cart,35,0,0
+1780467590246,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467590359,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,9,9,http://127.0.0.1:64009/product/,4,0,0
+1780467590385,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,9,9,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467590397,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467590519,38,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7009,319,9,9,http://127.0.0.1:64009/cart,38,0,0
+1780467590731,17,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,17,0,0
+1780467590544,204,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,9,9,http://127.0.0.1:64009/,130,0,0
+1780467590621,127,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,6993,319,9,9,http://127.0.0.1:64009/cart,102,0,0
+1780467590899,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467591007,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,9,9,http://127.0.0.1:64009/cart,5,0,0
+1780467591067,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,9,9,http://127.0.0.1:64009/product/,5,0,0
+1780467591079,130,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,9,9,http://127.0.0.1:64009/,130,0,0
+1780467591679,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,9,9,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467591761,17,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,17,0,0
+1780467591829,14,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,14,0,0
+1780467591966,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467592014,13,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,13,0,0
+1780467592103,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467592247,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,8,0,0
+1780467592232,35,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7001,319,10,10,http://127.0.0.1:64009/cart,35,0,0
+1780467592303,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467592432,227,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7027,319,10,10,http://127.0.0.1:64009/cart,226,0,0
+1780467592241,552,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,10,10,http://127.0.0.1:64009/,551,0,0
+1780467592273,520,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,10,10,http://127.0.0.1:64009/,519,0,0
+1780467592812,55,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10750,253,10,10,http://127.0.0.1:64009/,55,0,1
+1780467593197,11,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,11,0,0
+1780467593242,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,3,0,0
+1780467593258,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7011,319,10,10,http://127.0.0.1:64009/cart,18,0,0
+1780467593295,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467593441,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467593493,57,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7035,319,10,10,http://127.0.0.1:64009/cart,57,0,0
+1780467593559,22,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7043,319,10,10,http://127.0.0.1:64009/cart,22,0,0
+1780467593840,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467593881,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,10,0,0
+1780467594058,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467594095,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467594327,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467594531,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467594543,18,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,17,0,0
+1780467594584,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467594591,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467594602,135,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,135,0,0
+1780467594991,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467595041,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467594919,219,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,218,0,0
+1780467594961,283,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,283,0,0
+1780467595288,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467595211,159,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,158,0,0
+1780467595460,17,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,16,0,0
+1780467595535,41,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,41,0,0
+1780467595650,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,8,0,0
+1780467595695,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,3,0,0
+1780467595673,93,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,91,0,0
+1780467595763,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467595955,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467596143,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467596233,22,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7019,319,10,10,http://127.0.0.1:64009/cart,20,0,0
+1780467596280,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467596324,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467596472,26,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7017,319,10,10,http://127.0.0.1:64009/cart,25,0,0
+1780467596659,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467596691,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7071,319,10,10,http://127.0.0.1:64009/cart,22,0,0
+1780467596727,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467596741,37,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7043,319,10,10,http://127.0.0.1:64009/cart,37,0,0
+1780467596789,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467596844,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7049,319,10,10,http://127.0.0.1:64009/cart,20,0,0
+1780467596968,35,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7063,319,10,10,http://127.0.0.1:64009/cart,35,0,0
+1780467597135,11,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,10,0,0
+1780467597149,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467597165,18,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,18,0,0
+1780467597436,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467597540,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467597674,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467597817,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467597867,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467597772,180,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7017,319,10,10,http://127.0.0.1:64009/cart,179,0,0
+1780467597976,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467597681,358,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,10,10,http://127.0.0.1:64009/,358,0,0
+1780467597691,350,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,10,10,http://127.0.0.1:64009/,348,0,0
+1780467598381,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467598399,46,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,10,10,http://127.0.0.1:64009/,46,0,0
+1780467598527,13,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,13,0,0
+1780467598626,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7009,319,10,10,http://127.0.0.1:64009/cart,23,0,0
+1780467598749,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467598760,119,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,10,10,http://127.0.0.1:64009/,117,0,0
+1780467598936,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,8,0,0
+1780467598811,166,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,10,10,http://127.0.0.1:64009/,166,0,0
+1780467599007,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467599053,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467599264,123,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,121,0,0
+1780467599312,262,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,261,0,0
+1780467599303,278,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,278,0,0
+1780467599575,32,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7057,319,10,10,http://127.0.0.1:64009/cart,32,0,0
+1780467599655,41,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7043,319,10,10,http://127.0.0.1:64009/cart,41,0,0
+1780467599702,11,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,10,0,0
+1780467599712,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467599837,12,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,12,0,0
+1780467599960,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467599991,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467600136,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,6,0,0
+1780467600273,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467600282,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,3,0,0
+1780467600330,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467600499,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467600719,9,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,9,0,0
+1780467600866,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467600986,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467600989,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467601065,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467601193,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467601338,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467601358,25,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7011,319,10,10,http://127.0.0.1:64009/cart,25,0,0
+1780467601679,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467601704,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467601660,94,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,94,0,0
+1780467601754,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7031,319,10,10,http://127.0.0.1:64009/cart,19,0,0
+1780467601859,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467601881,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467602010,24,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7013,319,10,10,http://127.0.0.1:64009/cart,24,0,0
+1780467602239,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467602150,111,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,111,0,0
+1780467602314,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467602502,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,8,0,0
+1780467602768,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7051,319,10,10,http://127.0.0.1:64009/cart,18,0,0
+1780467602691,113,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,643,10,10,http://127.0.0.1:64009/cart/checkout,113,0,0
+1780467602831,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,3,0,0
+1780467603019,19,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,643,10,10,http://127.0.0.1:64009/cart/checkout,19,0,0
+1780467603160,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467603188,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7067,319,10,10,http://127.0.0.1:64009/cart,18,0,0
+1780467603250,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467603349,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467603249,128,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,10,10,http://127.0.0.1:64009/,128,0,0
+1780467603389,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7067,319,10,10,http://127.0.0.1:64009/cart,20,0,0
+1780467603459,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467603513,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467603877,16,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,16,0,0
+1780467604123,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467604389,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467604622,156,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,156,0,0
+1780467605067,9,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,9,0,0
+1780467605323,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467603992,1634,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7015,319,10,10,http://127.0.0.1:64009/cart,1634,0,0
+1780467606025,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467604831,1398,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7045,319,10,10,http://127.0.0.1:64009/cart,1398,0,0
+1780467606152,172,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7015,319,10,10,http://127.0.0.1:64009/cart,172,0,0
+1780467605660,664,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7019,319,10,10,http://127.0.0.1:64009/cart,664,0,0
+1780467603521,2823,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,false,"The operation lasted too long: It took 2,823 milliseconds, but should not have lasted longer than 2,000 milliseconds.",10668,315,10,10,http://127.0.0.1:64009/,2822,0,0
+1780467604271,2197,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,false,"The operation lasted too long: It took 2,197 milliseconds, but should not have lasted longer than 2,000 milliseconds.",10668,315,10,10,http://127.0.0.1:64009/,2197,0,0
+1780467605382,1096,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,1086,0,0
+1780467604182,2296,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,false,"The operation lasted too long: It took 2,296 milliseconds, but should not have lasted longer than 2,000 milliseconds.",10668,315,10,10,http://127.0.0.1:64009/,2296,0,0
+1780467604998,1558,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,1558,0,0
+1780467606541,96,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,643,10,10,http://127.0.0.1:64009/cart/checkout,96,0,0
+1780467606823,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467606938,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467606895,63,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,63,0,0
+1780467607004,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467607061,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,3,0,0
+1780467607068,13,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,13,0,0
+1780467607210,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467607232,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467607263,11,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,11,0,0
+1780467607487,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467607794,77,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,10,10,http://127.0.0.1:64009/,76,0,0
+1780467607970,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,7,0,0
+1780467607870,197,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,197,0,0
+1780467608062,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467608019,135,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7045,319,10,10,http://127.0.0.1:64009/cart,135,0,0
+1780467608221,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467608225,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467607937,295,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,295,0,0
+1780467608250,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467608433,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467608592,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467608596,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467608654,29,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,29,0,0
+1780467608840,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467609098,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467609135,9,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,9,0,0
+1780467609237,9,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,9,0,0
+1780467609239,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,8,0,0
+1780467609240,34,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7015,319,10,10,http://127.0.0.1:64009/cart,32,0,0
+1780467609325,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467609332,21,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7051,319,10,10,http://127.0.0.1:64009/cart,21,0,0
+1780467609745,16,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7027,319,10,10,http://127.0.0.1:64009/cart,16,0,0
+1780467609796,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467609945,10,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,10,0,0
+1780467610041,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467610061,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467610125,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467610275,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467610335,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467610498,22,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7071,319,10,10,http://127.0.0.1:64009/cart,21,0,0
+1780467610520,47,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,47,0,0
+1780467610673,21,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7009,319,10,10,http://127.0.0.1:64009/cart,21,0,0
+1780467610868,15,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,15,0,0
+1780467611007,11,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,11,0,0
+1780467611010,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467611047,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,10,0,0
+1780467611206,44,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,10,10,http://127.0.0.1:64009/,44,0,0
+1780467611281,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467611226,99,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7059,319,10,10,http://127.0.0.1:64009/cart,99,0,0
+1780467611231,141,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,10,10,http://127.0.0.1:64009/,138,0,0
+1780467611517,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,8,0,0
+1780467611531,24,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,644,10,10,http://127.0.0.1:64009/cart/checkout,24,0,0
+1780467611569,40,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,40,0,0
+1780467611707,34,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7005,319,10,10,http://127.0.0.1:64009/cart,34,0,0
+1780467611959,124,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7061,319,10,10,http://127.0.0.1:64009/cart,102,0,0
+1780467612059,95,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,95,0,0
+1780467611977,181,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7045,319,10,10,http://127.0.0.1:64009/cart,179,0,0
+1780467612147,11,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,11,0,0
+1780467611946,232,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,10,10,http://127.0.0.1:64009/,232,0,0
+1780467612071,204,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,10,10,http://127.0.0.1:64009/,203,0,0
+1780467612554,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467612585,82,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,82,0,0
+1780467612688,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,10,0,0
+1780467612851,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,642,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467612898,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467612987,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467613022,18,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,18,0,0
+1780467613101,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467613165,9,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,9,0,0
+1780467613323,11,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,11,0,0
+1780467613495,37,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,37,0,0
+1780467613672,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467613621,115,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,115,0,0
+1780467613961,9,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,9,0,0
+1780467613976,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467613760,225,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,10,10,http://127.0.0.1:64009/,225,0,0
+1780467614091,14,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,14,0,0
+1780467614277,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467614321,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467614323,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467614546,13,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,13,0,0
+1780467614691,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,7,0,0
+1780467614719,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467615193,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467615301,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467615726,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467615742,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7025,319,10,10,http://127.0.0.1:64009/cart,20,0,0
+1780467615758,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467615793,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467615804,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467615948,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467615967,19,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7041,319,10,10,http://127.0.0.1:64009/cart,19,0,0
+1780467616207,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7003,319,10,10,http://127.0.0.1:64009/cart,18,0,0
+1780467616296,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467616330,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467616347,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467616441,31,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7035,319,10,10,http://127.0.0.1:64009/cart,30,0,0
+1780467616660,9,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,9,0,0
+1780467616706,13,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,12,0,0
+1780467616881,108,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7003,319,10,10,http://127.0.0.1:64009/cart,108,0,0
+1780467616936,69,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7035,319,10,10,http://127.0.0.1:64009/cart,69,0,0
+1780467616973,109,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7017,319,10,10,http://127.0.0.1:64009/cart,108,0,0
+1780467617215,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467617207,71,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,70,0,0
+1780467617352,12,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,12,0,0
+1780467617454,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,10,0,0
+1780467617525,8,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,8,0,0
+1780467617638,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467617777,33,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7007,319,10,10,http://127.0.0.1:64009/cart,33,0,0
+1780467618026,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467618008,41,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,10,10,http://127.0.0.1:64009/,40,0,0
+1780467618291,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,8,0,0
+1780467618352,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467618323,103,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7043,319,10,10,http://127.0.0.1:64009/cart,103,0,0
+1780467618293,135,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7055,319,10,10,http://127.0.0.1:64009/cart,134,0,0
+1780467618211,229,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,229,0,0
+1780467618232,402,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,402,0,0
+1780467618644,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467618816,10,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,10,0,0
+1780467618464,371,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,10,10,http://127.0.0.1:64009/,371,0,0
+1780467618914,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,6,0,0
+1780467618901,76,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,73,0,0
+1780467619510,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467619401,239,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,237,0,0
+1780467619719,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467619857,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,6,0,0
+1780467619935,111,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,111,0,0
+1780467619997,49,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,49,0,0
+1780467620042,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467620177,11,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,11,0,0
+1780467620281,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,8,0,0
+1780467620134,159,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,10,10,http://127.0.0.1:64009/,159,0,0
+1780467620407,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467620394,43,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,10,10,http://127.0.0.1:64009/,43,0,0
+1780467620464,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467620478,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7061,319,10,10,http://127.0.0.1:64009/cart,20,0,0
+1780467620504,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467620507,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467620553,23,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,23,0,0
+1780467620497,94,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,10,10,http://127.0.0.1:64009/,94,0,0
+1780467620876,11,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,11,0,0
+1780467621269,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467621366,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,8,0,0
+1780467621398,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467621438,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,3,0,0
+1780467621552,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,7,0,0
+1780467621542,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7049,319,10,10,http://127.0.0.1:64009/cart,23,0,0
+1780467621580,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467621583,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467621925,19,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7009,319,10,10,http://127.0.0.1:64009/cart,19,0,0
+1780467621967,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467621971,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467621965,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7061,319,10,10,http://127.0.0.1:64009/cart,23,0,0
+1780467622262,126,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,10,10,http://127.0.0.1:64009/,126,0,0
+1780467622564,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467622692,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7047,319,10,10,http://127.0.0.1:64009/cart,23,0,0
+1780467622712,18,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,644,10,10,http://127.0.0.1:64009/cart/checkout,18,0,0
+1780467622795,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467622847,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,5,0,0
+1780467622910,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467623151,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467623132,31,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7043,319,10,10,http://127.0.0.1:64009/cart,31,0,0
+1780467623227,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467623216,52,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-2,text,true,,10668,315,10,10,http://127.0.0.1:64009/,51,0,0
+1780467623287,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467623339,36,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7015,319,10,10,http://127.0.0.1:64009/cart,35,0,0
+1780467623418,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467623435,12,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,12,0,0
+1780467623530,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467623442,127,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-1,text,true,,10668,315,10,10,http://127.0.0.1:64009/,127,0,0
+1780467623469,111,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,10,10,http://127.0.0.1:64009/,111,0,0
+1780467623563,118,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,10,10,http://127.0.0.1:64009/,117,0,0
+1780467623886,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,7,0,0
+1780467623983,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467624232,11,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,11,0,0
+1780467624396,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467624469,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467624546,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467624570,16,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7037,319,10,10,http://127.0.0.1:64009/cart,16,0,0
+1780467624585,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,4,0,0
+1780467624588,91,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,10,10,http://127.0.0.1:64009/,28,0,0
+1780467624711,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,8,0,0
+1780467624926,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,7,0,0
+1780467624967,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7015,319,10,10,http://127.0.0.1:64009/cart,19,0,0
+1780467625049,37,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-3,text,true,,10668,315,10,10,http://127.0.0.1:64009/,36,0,0
+1780467625085,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467625435,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467625445,13,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,13,0,0
+1780467625500,13,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,12,0,0
+1780467625647,39,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7041,319,10,10,http://127.0.0.1:64009/cart,39,0,0
+1780467625695,9,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,9,0,0
+1780467625747,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,8,0,0
+1780467625772,9,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,9,0,0
+1780467625825,42,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7063,319,10,10,http://127.0.0.1:64009/cart,42,0,0
+1780467625911,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,10,0,0
+1780467626214,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467626334,18,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-2,text,true,,7063,319,10,10,http://127.0.0.1:64009/cart,18,0,0
+1780467626397,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,4,0,0
+1780467626498,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467626587,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,10,10,http://127.0.0.1:64009/cart,6,0,0
+1780467626672,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,642,10,10,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467626647,121,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,10,10,http://127.0.0.1:64009/,120,0,0
+1780467626806,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467626810,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,10,10,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467627138,29,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-1,text,true,,7055,319,10,10,http://127.0.0.1:64009/cart,29,0,2
+1780467627167,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,10,10,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467627257,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,427,10,10,http://127.0.0.1:64009/cart,5,0,0
+1780467627223,39,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,10,10,http://127.0.0.1:64009/,39,0,0
+1780467627302,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,10,10,http://127.0.0.1:64009/product/,3,0,0
+1780467627588,7,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,10,10,http://127.0.0.1:64009/cart/checkout,7,0,0
+1780467627741,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,,4068,426,9,9,http://127.0.0.1:64009/cart,4,0,0
+1780467627753,19,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7061,319,9,9,http://127.0.0.1:64009/cart,19,0,0
+1780467627852,7,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,9,9,http://127.0.0.1:64009/setCurrency,7,0,0
+1780467628076,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,9,9,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467628146,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,7,0,0
+1780467628229,92,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7037,319,8,8,http://127.0.0.1:64009/cart,91,0,0
+1780467628036,329,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-4,text,true,,10668,315,8,8,http://127.0.0.1:64009/,329,0,0
+1780467628076,370,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,8,8,http://127.0.0.1:64009/,369,0,0
+1780467628364,99,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7029,319,8,8,http://127.0.0.1:64009/cart,99,0,0
+1780467628495,30,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-3,text,true,,7055,319,8,8,http://127.0.0.1:64009/cart,29,0,0
+1780467628514,13,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,8,8,http://127.0.0.1:64009/cart/checkout,12,0,0
+1780467628557,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,427,8,8,http://127.0.0.1:64009/cart,7,0,0
+1780467628596,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,8,8,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467628924,12,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,8,8,http://127.0.0.1:64009/cart/checkout,12,0,0
+1780467629153,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,6,0,0
+1780467629200,25,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,6995,319,8,8,http://127.0.0.1:64009/cart,25,0,0
+1780467629367,10,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,8,8,http://127.0.0.1:64009/product/,10,0,0
+1780467629610,39,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,8,8,http://127.0.0.1:64009/,39,0,0
+1780467629740,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,8,8,http://127.0.0.1:64009/cart,10,0,0
+1780467629739,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,8,8,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467630302,57,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,7,7,http://127.0.0.1:64009/,56,0,0
+1780467630367,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467630581,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467630713,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,8,0,0
+1780467630985,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467631008,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467631037,5,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,5,0,0
+1780467631063,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7019,319,7,7,http://127.0.0.1:64009/cart,23,0,0
+1780467631318,39,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,7,7,http://127.0.0.1:64009/,39,0,0
+1780467631514,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,10,0,0
+1780467631561,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,7,7,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467631687,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467631741,37,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,7,7,http://127.0.0.1:64009/,37,0,0
+1780467631800,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,427,7,7,http://127.0.0.1:64009/cart,6,0,0
+1780467632020,8,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,8,0,0
+1780467632079,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467632301,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,6,0,0
+1780467632341,19,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7037,319,7,7,http://127.0.0.1:64009/cart,19,0,0
+1780467632620,6,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,6,0,0
+1780467632732,20,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-4,text,true,,7035,319,7,7,http://127.0.0.1:64009/cart,18,0,0
+1780467632750,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467632779,61,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,7,7,http://127.0.0.1:64009/,60,0,0
+1780467632835,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7051,319,7,7,http://127.0.0.1:64009/cart,23,0,0
+1780467632875,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,426,7,7,http://127.0.0.1:64009/cart,7,0,0
+1780467633134,6,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,7,7,http://127.0.0.1:64009/product/,6,0,0
+1780467633272,13,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,7,7,http://127.0.0.1:64009/setCurrency,13,0,0
+1780467633552,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467633627,29,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7069,319,7,7,http://127.0.0.1:64009/cart,29,0,0
+1780467633738,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,7,7,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467633721,115,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,6,6,http://127.0.0.1:64009/,115,0,0
+1780467633860,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,4,0,0
+1780467633784,155,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,6,6,http://127.0.0.1:64009/,154,0,0
+1780467634245,10,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,427,6,6,http://127.0.0.1:64009/cart,10,0,0
+1780467634513,91,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7055,319,6,6,http://127.0.0.1:64009/cart,91,0,0
+1780467634632,7,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,7,0,0
+1780467634655,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,6,6,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467634692,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,4,0,0
+1780467635057,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467635144,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,6,6,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467635149,45,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-6,text,true,,10668,315,6,6,http://127.0.0.1:64009/,45,0,0
+1780467635507,8,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,8,0,0
+1780467635818,9,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,9,0,0
+1780467635788,46,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7041,319,6,6,http://127.0.0.1:64009/cart,46,0,0
+1780467636193,13,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,13,0,0
+1780467636320,19,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,19,0,0
+1780467636378,29,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,6,6,http://127.0.0.1:64009/cart/checkout,29,0,0
+1780467636686,93,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,93,0,0
+1780467637195,104,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,104,0,0
+1780467637305,227,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7013,319,6,6,http://127.0.0.1:64009/cart,227,0,0
+1780467637566,25,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,25,0,0
+1780467637795,17,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,17,0,0
+1780467636054,1841,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-7,text,true,,10668,315,6,6,http://127.0.0.1:64009/,1841,0,0
+1780467637999,69,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7027,319,6,6,http://127.0.0.1:64009/cart,69,0,0
+1780467638482,29,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,6,6,http://127.0.0.1:64009/cart/checkout,29,0,0
+1780467638587,8,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,8,0,0
+1780467638136,490,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,6,6,http://127.0.0.1:64009/,487,0,0
+1780467638821,155,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7025,319,6,6,http://127.0.0.1:64009/cart,100,0,2
+1780467639209,36,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-6,text,false,,4068,426,6,6,http://127.0.0.1:64009/cart,36,0,0
+1780467639442,15,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,15,0,0
+1780467639213,257,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,6,6,http://127.0.0.1:64009/,257,0,0
+1780467639881,34,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,644,6,6,http://127.0.0.1:64009/cart/checkout,34,0,0
+1780467639965,11,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,6,6,http://127.0.0.1:64009/cart/checkout,11,0,0
+1780467640123,166,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,166,0,0
+1780467640367,26,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,,4068,427,6,6,http://127.0.0.1:64009/cart,26,0,0
+1780467640023,372,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,6,6,http://127.0.0.1:64009/,372,0,0
+1780467640820,11,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,11,0,0
+1780467641213,81,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,81,0,0
+1780467641139,233,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-6,text,true,,7031,319,6,6,http://127.0.0.1:64009/cart,233,0,2
+1780467641261,183,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-5,text,true,,10668,315,6,6,http://127.0.0.1:64009/,179,0,0
+1780467641503,28,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-7,text,true,,7035,319,6,6,http://127.0.0.1:64009/cart,27,0,0
+1780467641810,48,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,48,0,0
+1780467641813,58,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,6,6,http://127.0.0.1:64009/product/,57,0,0
+1780467642047,12,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,6,6,http://127.0.0.1:64009/setCurrency,12,0,0
+1780467642087,9,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,6,6,http://127.0.0.1:64009/cart/checkout,9,0,0
+1780467642143,13,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4066,428,5,5,http://127.0.0.1:64009/setCurrency,13,0,0
+1780467642311,14,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,5,5,http://127.0.0.1:64009/setCurrency,14,0,0
+1780467642591,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,5,5,http://127.0.0.1:64009/cart,5,0,0
+1780467642681,27,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,,4068,426,5,5,http://127.0.0.1:64009/cart,27,0,0
+1780467642813,7,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,427,5,5,http://127.0.0.1:64009/cart,7,0,0
+1780467642848,49,6. 下单 /cart/checkout,500,Internal Server Error,场景一：基准测试（10用户） 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",5261,643,5,5,http://127.0.0.1:64009/cart/checkout,49,0,0
+1780467643329,136,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-5,text,true,,7019,319,4,4,http://127.0.0.1:64009/cart,136,0,0
+1780467643362,114,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7021,319,4,4,http://127.0.0.1:64009/cart,114,0,0
+1780467643430,123,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7061,319,4,4,http://127.0.0.1:64009/cart,123,0,0
+1780467643634,4,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,4,4,http://127.0.0.1:64009/cart/checkout,4,0,0
+1780467643801,13,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,427,4,4,http://127.0.0.1:64009/cart,13,0,0
+1780467644158,105,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,4,4,http://127.0.0.1:64009/cart/checkout,105,0,0
+1780467644641,93,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,3,3,http://127.0.0.1:64009/cart/checkout,93,0,0
+1780467645164,94,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7021,319,3,3,http://127.0.0.1:64009/cart,92,0,0
+1780467645136,261,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-8,text,true,,10668,315,3,3,http://127.0.0.1:64009/,261,0,0
+1780467645419,75,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,3,3,http://127.0.0.1:64009/,74,0,0
+1780467645749,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,3,3,http://127.0.0.1:64009/product/,4,0,0
+1780467645850,19,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,3,3,http://127.0.0.1:64009/cart/checkout,19,0,0
+1780467646074,39,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,3,3,http://127.0.0.1:64009/product/,39,0,0
+1780467646506,4,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4066,428,3,3,http://127.0.0.1:64009/setCurrency,4,0,0
+1780467647376,26,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,3,3,http://127.0.0.1:64009/setCurrency,26,0,0
+1780467647706,59,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-10,text,true,,10668,315,3,3,http://127.0.0.1:64009/,59,0,0
+1780467647874,3,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,3,3,http://127.0.0.1:64009/product/,3,0,0
+1780467648036,4,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,3,3,http://127.0.0.1:64009/cart,4,0,0
+1780467648273,19,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,,4068,426,3,3,http://127.0.0.1:64009/cart,19,0,4
+1780467648396,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4066,428,3,3,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467649070,27,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7031,319,3,3,http://127.0.0.1:64009/cart,27,0,0
+1780467649412,6,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,3,3,http://127.0.0.1:64009/cart/checkout,6,0,0
+1780467649436,6,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,,4068,426,3,3,http://127.0.0.1:64009/cart,6,0,0
+1780467649464,23,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-8,text,true,,7021,319,3,3,http://127.0.0.1:64009/cart,23,0,0
+1780467650262,22,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-10,text,true,,7025,319,3,3,http://127.0.0.1:64009/cart,22,0,0
+1780467650583,51,1. 访问首页 /,200,OK,场景一：基准测试（10用户） 1-9,text,true,,10668,315,3,3,http://127.0.0.1:64009/,51,0,1
+1780467650766,4,2. 浏览商品 /product/{product_id},404,Not Found,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",176,323,3,3,http://127.0.0.1:64009/product/,4,0,0
+1780467650877,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,3,3,http://127.0.0.1:64009/cart/checkout,5,0,0
+1780467651723,16,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,644,2,2,http://127.0.0.1:64009/cart/checkout,16,0,0
+1780467652375,5,3. 设置货币 /setCurrency,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4066,428,1,1,http://127.0.0.1:64009/setCurrency,5,0,0
+1780467652519,5,4. 添加购物车 /cart,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,,4068,426,1,1,http://127.0.0.1:64009/cart,5,0,0
+1780467653366,22,5. 查看购物车 /cart,200,OK,场景一：基准测试（10用户） 1-9,text,true,,7065,319,1,1,http://127.0.0.1:64009/cart,22,0,0
+1780467654219,5,6. 下单 /cart/checkout,422,Unprocessable Entity,场景一：基准测试（10用户） 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[422]]]
+
+****** comparison: [[[200]]]
+
+/",4070,643,1,1,http://127.0.0.1:64009/cart/checkout,5,0,0

@@ -1,0 +1,26 @@
+{
+  "test_mode": "baseline",
+  "browser": "chrome",
+  "frontend_url": "http://localhost:18080",
+  "timestamp": "2026-06-03T00:38:22.741606",
+  "summary": {
+    "total_tests": 1,
+    "passed": 1,
+    "failed": 0,
+    "pass_rate": "100.0%",
+    "avg_response_ms": 362.82,
+    "max_response_ms": 362.82,
+    "min_response_ms": 362.82
+  },
+  "details": [
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "首页加载",
+      "duration_ms": 362.82,
+      "status": "success",
+      "detail": "找到 9 个商品",
+      "timestamp": "2026-06-03T00:38:22.736608"
+    }
+  ]
+}

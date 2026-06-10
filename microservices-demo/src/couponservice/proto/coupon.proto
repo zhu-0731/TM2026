@@ -1,0 +1,57 @@
+
+---
+
+## 2. gRPC Proto 定义（供 checkoutservice 调用）
+
+### `src/couponservice/proto/coupon.proto`
+
+```protobuf
+syntax = "proto3";
+
+package hipstershop;
+
+option go_package = "github.com/GoogleCloudPlatform/microservices-demo/src/checkoutservice/genproto";
+
+// Coupon Service
+service CouponService {
+  rpc ApplyCoupon(ApplyCouponRequest) returns (ApplyCouponResponse) {}
+  rpc ValidateCoupon(ValidateCouponRequest) returns (ValidateCouponResponse) {}
+}
+
+message ApplyCouponRequest {
+  string code = 1;
+  Money original_price = 2;
+  string user_id = 3;
+}
+
+message ApplyCouponResponse {
+  bool valid = 1;
+  string code = 2;
+  string description = 3;
+  string discount_type = 4;
+  Money original_price = 5;
+  Money discounted_price = 6;
+  Money saved = 7;
+  string message = 8;
+}
+
+message ValidateCouponRequest {
+  string code = 1;
+}
+
+message ValidateCouponResponse {
+  bool valid = 1;
+  string code = 2;
+  string description = 3;
+  string discount_type = 4;
+  int32 value = 5;
+  float min_order = 6;
+  string message = 7;
+}
+
+// 复用现有 Money 消息（实际编译时需与 demo.proto 合并或引用）
+message Money {
+  string currency_code = 1;
+  int64 units = 2;
+  int32 nanos = 3;
+}

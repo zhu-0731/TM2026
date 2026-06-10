@@ -1,0 +1,146 @@
+[
+  {
+    "browser": "edge",
+    "operation": "页面加载",
+    "duration_ms": 9780.65,
+    "status": "success",
+    "detail": "找到 9 个商品",
+    "timestamp": "2026-06-02T23:04:51.502345"
+  },
+  {
+    "browser": "edge",
+    "operation": "DNS查询",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:51.521676"
+  },
+  {
+    "browser": "edge",
+    "operation": "TCP连接",
+    "duration_ms": 279.8,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:51.521676"
+  },
+  {
+    "browser": "edge",
+    "operation": "DOM处理",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:51.521676"
+  },
+  {
+    "browser": "edge",
+    "operation": "总加载时间",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:51.521676"
+  },
+  {
+    "browser": "edge",
+    "operation": "货币更改",
+    "duration_ms": 343.2,
+    "status": "success",
+    "detail": "EUR",
+    "timestamp": "2026-06-02T23:04:52.479978"
+  },
+  {
+    "browser": "edge",
+    "operation": "加载商品",
+    "duration_ms": 506.25,
+    "status": "success",
+    "detail": "Sunglasses",
+    "timestamp": "2026-06-02T23:04:53.315329"
+  },
+  {
+    "browser": "edge",
+    "operation": "添加购物车",
+    "duration_ms": 521.96,
+    "status": "success",
+    "detail": "购物车有 1 个商品",
+    "timestamp": "2026-06-02T23:04:53.930866"
+  },
+  {
+    "browser": "edge",
+    "operation": "清空购物车",
+    "duration_ms": 0,
+    "status": "failed",
+    "detail": "未找到清空按钮",
+    "timestamp": "2026-06-02T23:05:14.600848"
+  },
+  {
+    "browser": "edge",
+    "operation": "返回主页",
+    "duration_ms": 577.3,
+    "status": "success",
+    "detail": "找到 9 个商品",
+    "timestamp": "2026-06-02T23:05:15.200199"
+  },
+  {
+    "browser": "edge",
+    "operation": "填写邮箱",
+    "duration_ms": 359.85,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:16.542520"
+  },
+  {
+    "browser": "edge",
+    "operation": "提交订单",
+    "duration_ms": 2423.24,
+    "status": "failed",
+    "detail": "Hot Products",
+    "timestamp": "2026-06-02T23:05:19.014807"
+  },
+  {
+    "browser": "edge",
+    "operation": "旅程-页面加载",
+    "duration_ms": 138.39,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:19.160326"
+  },
+  {
+    "browser": "edge",
+    "operation": "旅程-更改货币",
+    "duration_ms": 189.13,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:19.349452"
+  },
+  {
+    "browser": "edge",
+    "operation": "旅程-加载商品",
+    "duration_ms": 646.35,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:19.995805"
+  },
+  {
+    "browser": "edge",
+    "operation": "旅程-添加购物车",
+    "duration_ms": 511.57,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:20.507373"
+  },
+  {
+    "browser": "edge",
+    "operation": "旅程-提交订单",
+    "duration_ms": 2876.96,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:23.385812"
+  },
+  {
+    "browser": "edge",
+    "operation": "完整用户旅程",
+    "duration_ms": 4363.88,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:05:23.385812"
+  }
+]

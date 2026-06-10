@@ -1,0 +1,1001 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1780473908625,430,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10793,264,2,2,http://127.0.0.1:55255/,429,0,6
+1780473906574,148,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10793,264,1,1,http://127.0.0.1:55255/,127,0,39
+1780473910266,70,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8206,344,2,2,http://127.0.0.1:55255/product/OLJCESPC7Z,70,0,0
+1780473911253,33,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8192,344,3,3,http://127.0.0.1:55255/product/OLJCESPC7Z,33,0,0
+1780473911469,87,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,784,3,3,http://127.0.0.1:55255/,22,0,0
+1780473911469,22,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,439,3,3,http://127.0.0.1:55255/setCurrency,22,0,0
+1780473911495,61,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,3,3,http://127.0.0.1:55255/,61,0,0
+1780473911659,192,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10793,264,3,3,http://127.0.0.1:55255/,192,0,8
+1780473912377,23,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8184,344,3,3,http://127.0.0.1:55255/product/OLJCESPC7Z,23,0,0
+1780473912437,45,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,784,3,3,http://127.0.0.1:55255/,6,0,0
+1780473912437,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,439,3,3,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473912445,37,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,3,3,http://127.0.0.1:55255/,37,0,0
+1780473912437,93,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17524,815,3,3,http://127.0.0.1:55255/cart,15,0,0
+1780473912437,15,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,3,3,http://127.0.0.1:55255/cart,15,0,0
+1780473912453,77,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17352,349,3,3,http://127.0.0.1:55255/cart,77,0,0
+1780473913075,25,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17316,349,3,3,http://127.0.0.1:55255/cart,25,0,0
+1780473913461,35,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17532,815,4,4,http://127.0.0.1:55255/cart,10,0,0
+1780473913461,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,4,4,http://127.0.0.1:55255/cart,10,0,0
+1780473913472,24,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17360,349,4,4,http://127.0.0.1:55255/cart,24,0,0
+1780473913559,32,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7042,695,4,4,http://127.0.0.1:55255/cart/checkout,32,0,0
+1780473913869,34,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10793,264,4,4,http://127.0.0.1:55255/,33,0,1
+1780473913977,33,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,784,4,4,http://127.0.0.1:55255/,6,0,0
+1780473913977,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,439,4,4,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473913983,27,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,4,4,http://127.0.0.1:55255/,27,0,0
+1780473914463,25,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17358,349,4,4,http://127.0.0.1:55255/cart,25,0,0
+1780473914841,22,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8230,344,4,4,http://127.0.0.1:55255/product/OLJCESPC7Z,22,0,0
+1780473915159,23,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,4,4,http://127.0.0.1:55255/,23,0,0
+1780473915488,356,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17528,815,4,4,http://127.0.0.1:55255/cart,36,0,0
+1780473915488,36,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,4,4,http://127.0.0.1:55255/cart,36,0,0
+1780473915524,320,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17356,349,4,4,http://127.0.0.1:55255/cart,320,0,0
+1780473915674,184,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,784,4,4,http://127.0.0.1:55255/,8,0,0
+1780473915674,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,439,4,4,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473915682,176,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,4,4,http://127.0.0.1:55255/,176,0,0
+1780473916005,33,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7068,695,4,4,http://127.0.0.1:55255/cart/checkout,33,0,0
+1780473916145,19,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8200,363,4,4,http://127.0.0.1:55255/product/OLJCESPC7Z,19,0,0
+1780473916251,27,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,4,4,http://127.0.0.1:55255/,27,0,0
+1780473916702,53,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17338,349,5,5,http://127.0.0.1:55255/cart,52,0,0
+1780473916831,54,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17528,815,5,5,http://127.0.0.1:55255/cart,20,0,0
+1780473916831,20,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,5,5,http://127.0.0.1:55255/cart,20,0,0
+1780473916852,33,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17356,349,5,5,http://127.0.0.1:55255/cart,33,0,0
+1780473917453,38,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8160,363,5,5,http://127.0.0.1:55255/product/OLJCESPC7Z,35,0,0
+1780473917485,348,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,5,5,http://127.0.0.1:55255/,13,0,0
+1780473917485,13,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,5,5,http://127.0.0.1:55255/setCurrency,13,0,0
+1780473917499,334,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,5,5,http://127.0.0.1:55255/,334,0,0
+1780473918014,145,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10793,264,5,5,http://127.0.0.1:55255/,144,0,3
+1780473918335,107,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8192,344,5,5,http://127.0.0.1:55255/product/OLJCESPC7Z,106,0,0
+1780473918332,116,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17360,349,5,5,http://127.0.0.1:55255/cart,114,0,0
+1780473918319,144,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,5,5,http://127.0.0.1:55255/,14,0,0
+1780473918319,14,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,5,5,http://127.0.0.1:55255/setCurrency,14,0,0
+1780473918334,129,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,5,5,http://127.0.0.1:55255/,128,0,0
+1780473918333,132,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7052,695,5,5,http://127.0.0.1:55255/cart/checkout,132,0,0
+1780473919020,115,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,784,5,5,http://127.0.0.1:55255/,13,0,0
+1780473919020,13,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,439,5,5,http://127.0.0.1:55255/setCurrency,13,0,0
+1780473919033,102,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,5,5,http://127.0.0.1:55255/,102,0,0
+1780473919154,74,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17482,815,5,5,http://127.0.0.1:55255/cart,12,0,0
+1780473919154,12,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,5,5,http://127.0.0.1:55255/cart,12,0,0
+1780473919167,61,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17310,349,5,5,http://127.0.0.1:55255/cart,61,0,0
+1780473919154,86,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17522,815,5,5,http://127.0.0.1:55255/cart,18,0,0
+1780473919154,18,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,5,5,http://127.0.0.1:55255/cart,18,0,0
+1780473919173,67,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17350,349,5,5,http://127.0.0.1:55255/cart,67,0,0
+1780473919215,54,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7016,695,5,5,http://127.0.0.1:55255/cart/checkout,54,0,0
+1780473919342,24,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17324,349,5,5,http://127.0.0.1:55255/cart,24,0,0
+1780473919809,39,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,6,6,http://127.0.0.1:55255/,39,0,0
+1780473920146,61,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17506,815,6,6,http://127.0.0.1:55255/cart,33,0,0
+1780473920146,33,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,6,6,http://127.0.0.1:55255/cart,33,0,0
+1780473920179,28,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17334,349,6,6,http://127.0.0.1:55255/cart,27,0,0
+1780473920358,38,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10793,264,6,6,http://127.0.0.1:55255/,38,0,2
+1780473920420,35,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17350,349,6,6,http://127.0.0.1:55255/cart,35,0,0
+1780473920650,89,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,6,6,http://127.0.0.1:55255/,88,0,0
+1780473921077,23,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8224,363,6,6,http://127.0.0.1:55255/product/OLJCESPC7Z,23,0,0
+1780473921158,363,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7028,695,6,6,http://127.0.0.1:55255/cart/checkout,363,0,0
+1780473921608,19,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17352,349,6,6,http://127.0.0.1:55255/cart,19,0,0
+1780473921761,27,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8182,363,6,6,http://127.0.0.1:55255/product/OLJCESPC7Z,27,0,0
+1780473922075,20,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8184,344,6,6,http://127.0.0.1:55255/product/OLJCESPC7Z,20,0,0
+1780473922293,46,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,6998,695,6,6,http://127.0.0.1:55255/cart/checkout,45,0,0
+1780473922327,93,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7016,695,6,6,http://127.0.0.1:55255/cart/checkout,93,0,0
+1780473922324,123,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,7,7,http://127.0.0.1:55255/,10,0,0
+1780473922324,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473922334,113,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,7,7,http://127.0.0.1:55255/,113,0,0
+1780473922414,121,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,7,7,http://127.0.0.1:55255/,13,0,0
+1780473922414,13,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,13,0,0
+1780473922429,106,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,7,7,http://127.0.0.1:55255/,105,0,0
+1780473922489,138,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,7,7,http://127.0.0.1:55255/,138,0,0
+1780473922676,30,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17504,815,7,7,http://127.0.0.1:55255/cart,8,0,0
+1780473922676,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,7,7,http://127.0.0.1:55255/cart,8,0,0
+1780473922684,22,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17332,349,7,7,http://127.0.0.1:55255/cart,21,0,0
+1780473922768,33,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,7,7,http://127.0.0.1:55255/,33,0,0
+1780473922991,59,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,784,7,7,http://127.0.0.1:55255/,10,0,0
+1780473922991,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,439,7,7,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473923002,48,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,7,7,http://127.0.0.1:55255/,48,0,0
+1780473923374,69,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17328,349,7,7,http://127.0.0.1:55255/cart,69,0,0
+1780473923475,43,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17484,815,7,7,http://127.0.0.1:55255/cart,9,0,0
+1780473923475,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,7,7,http://127.0.0.1:55255/cart,9,0,0
+1780473923484,34,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17312,349,7,7,http://127.0.0.1:55255/cart,34,0,0
+1780473923553,161,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8194,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,161,0,0
+1780473923733,403,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8192,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,396,0,0
+1780473923665,557,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10793,264,7,7,http://127.0.0.1:55255/,557,0,1
+1780473923669,599,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,7,7,http://127.0.0.1:55255/,598,0,0
+1780473924231,202,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17496,815,7,7,http://127.0.0.1:55255/cart,49,0,0
+1780473924231,49,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,7,7,http://127.0.0.1:55255/cart,49,0,0
+1780473924281,152,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17324,349,7,7,http://127.0.0.1:55255/cart,152,0,0
+1780473924386,278,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,7,7,http://127.0.0.1:55255/,40,0,0
+1780473924386,40,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,40,0,0
+1780473924426,238,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,7,7,http://127.0.0.1:55255/,238,0,0
+1780473924479,377,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17320,349,7,7,http://127.0.0.1:55255/cart,376,0,0
+1780473924546,314,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8200,344,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,312,0,0
+1780473924573,359,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7024,695,7,7,http://127.0.0.1:55255/cart/checkout,359,0,0
+1780473924946,200,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,7,7,http://127.0.0.1:55255/,9,0,0
+1780473924946,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473924956,190,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,7,7,http://127.0.0.1:55255/,190,0,0
+1780473925164,192,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7006,695,7,7,http://127.0.0.1:55255/cart/checkout,192,0,0
+1780473925462,42,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17338,349,8,8,http://127.0.0.1:55255/cart,41,0,0
+1780473925624,182,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17494,815,8,8,http://127.0.0.1:55255/cart,65,0,0
+1780473925624,65,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,8,8,http://127.0.0.1:55255/cart,65,0,0
+1780473925689,117,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17322,349,8,8,http://127.0.0.1:55255/cart,117,0,0
+1780473925853,275,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17542,815,8,8,http://127.0.0.1:55255/cart,53,0,0
+1780473925853,53,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,8,8,http://127.0.0.1:55255/cart,53,0,0
+1780473925908,220,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17370,349,8,8,http://127.0.0.1:55255/cart,220,0,0
+1780473926101,429,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8182,363,8,8,http://127.0.0.1:55255/product/OLJCESPC7Z,429,0,0
+1780473925815,717,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10793,264,8,8,http://127.0.0.1:55255/,717,0,2
+1780473926269,266,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7012,695,8,8,http://127.0.0.1:55255/cart/checkout,265,0,0
+1780473925962,690,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,8,8,http://127.0.0.1:55255/,689,0,0
+1780473926101,821,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,784,8,8,http://127.0.0.1:55255/,208,0,0
+1780473926101,208,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,439,8,8,http://127.0.0.1:55255/setCurrency,208,0,0
+1780473926310,612,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,8,8,http://127.0.0.1:55255/,612,0,0
+1780473927114,265,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8162,344,8,8,http://127.0.0.1:55255/product/OLJCESPC7Z,264,0,0
+1780473927332,296,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17338,349,8,8,http://127.0.0.1:55255/cart,294,0,0
+1780473926968,668,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,8,8,http://127.0.0.1:55255/,71,0,0
+1780473926968,71,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,8,8,http://127.0.0.1:55255/setCurrency,71,0,0
+1780473927040,596,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,8,8,http://127.0.0.1:55255/,595,0,0
+1780473927812,704,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17312,349,9,9,http://127.0.0.1:55255/cart,703,0,0
+1780473927699,954,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,9,9,http://127.0.0.1:55255/,954,0,0
+1780473927891,764,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8176,363,9,9,http://127.0.0.1:55255/product/OLJCESPC7Z,762,0,0
+1780473927851,937,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,9,9,http://127.0.0.1:55255/,936,0,0
+1780473927866,920,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17510,815,9,9,http://127.0.0.1:55255/cart,163,0,0
+1780473927866,163,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,9,9,http://127.0.0.1:55255/cart,163,0,0
+1780473928030,756,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17338,349,9,9,http://127.0.0.1:55255/cart,756,0,0
+1780473928393,472,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7020,695,9,9,http://127.0.0.1:55255/cart/checkout,472,0,0
+1780473928480,482,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17514,815,9,9,http://127.0.0.1:55255/cart,89,0,0
+1780473928480,89,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,9,9,http://127.0.0.1:55255/cart,89,0,0
+1780473928570,392,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17342,349,9,9,http://127.0.0.1:55255/cart,392,0,0
+1780473929007,54,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8224,363,9,9,http://127.0.0.1:55255/product/OLJCESPC7Z,54,0,0
+1780473929006,56,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17332,349,9,9,http://127.0.0.1:55255/cart,56,0,0
+1780473928915,234,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,784,9,9,http://127.0.0.1:55255/,39,0,0
+1780473928915,39,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,439,9,9,http://127.0.0.1:55255/setCurrency,39,0,0
+1780473928954,195,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,9,9,http://127.0.0.1:55255/,194,0,0
+1780473929647,190,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17358,349,9,9,http://127.0.0.1:55255/cart,189,0,0
+1780473929728,571,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8180,363,9,9,http://127.0.0.1:55255/product/OLJCESPC7Z,571,0,0
+1780473929697,656,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7018,695,9,9,http://127.0.0.1:55255/cart/checkout,656,0,0
+1780473930057,1881,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,268,0,0
+1780473930057,268,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,268,0,0
+1780473930326,1612,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1611,0,0
+1780473930428,1607,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7058,695,10,10,http://127.0.0.1:55255/cart/checkout,1607,0,0
+1780473930271,1858,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1856,0,0
+1780473931051,1385,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7058,695,10,10,http://127.0.0.1:55255/cart/checkout,1385,0,0
+1780473930659,2023,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,245,0,0
+1780473930659,245,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,245,0,0
+1780473930904,1778,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,1777,0,0
+1780473930450,2377,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,false,"The operation lasted too long: It took 2,377 milliseconds, but should not have lasted longer than 2,000 milliseconds.",10793,264,10,10,http://127.0.0.1:55255/,2373,0,21
+1780473930659,2192,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,203,0,0
+1780473931148,1704,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1702,0,0
+1780473930659,203,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,203,0,0
+1780473930863,1988,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1988,0,0
+1780473932706,322,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,322,0,0
+1780473931644,1460,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,107,0,0
+1780473931644,107,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,107,0,0
+1780473931752,1352,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1352,0,0
+1780473932456,1321,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10793,264,10,10,http://127.0.0.1:55255/,1321,0,3
+1780473933206,1431,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7937,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,1431,0,0
+1780473932926,1711,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17484,815,10,10,http://127.0.0.1:55255/cart,102,0,0
+1780473932926,102,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,102,0,0
+1780473933029,1608,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17312,349,10,10,http://127.0.0.1:55255/cart,1608,0,0
+1780473933034,1816,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1816,0,0
+1780473933616,1372,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7064,695,10,10,http://127.0.0.1:55255/cart/checkout,1371,0,0
+1780473933867,1137,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8198,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,1137,0,0
+1780473933063,1968,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1967,0,0
+1780473934183,911,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8198,344,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,911,0,0
+1780473933823,1291,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,842,0,0
+1780473933823,842,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,842,0,0
+1780473934665,449,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,447,0,0
+1780473934246,888,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17496,815,10,10,http://127.0.0.1:55255/cart,613,0,0
+1780473934246,613,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,613,0,0
+1780473934860,274,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,273,0,0
+1780473935361,106,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8216,344,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,105,0,0
+1780473935771,440,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8178,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,440,0,0
+1780473935827,1061,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8212,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,1060,0,0
+1780473935641,1401,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,1401,0,0
+1780473935530,1512,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17378,349,10,10,http://127.0.0.1:55255/cart,1512,0,0
+1780473935557,1638,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,784,10,10,http://127.0.0.1:55255/,104,0,0
+1780473935557,104,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,439,10,10,http://127.0.0.1:55255/setCurrency,104,0,0
+1780473935662,1533,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1525,0,0
+1780473936328,1030,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17356,349,10,10,http://127.0.0.1:55255/cart,1028,0,0
+1780473935665,1883,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,254,0,0
+1780473935665,254,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,254,0,0
+1780473935919,1629,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1617,0,0
+1780473936052,1498,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,1498,0,0
+1780473935777,2255,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,100,0,0
+1780473935777,100,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,100,0,0
+1780473935877,2155,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,2154,0,0
+1780473938017,429,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7008,695,10,10,http://127.0.0.1:55255/cart/checkout,429,0,0
+1780473938047,410,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473938047,30,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473938077,380,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,361,0,0
+1780473937659,858,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,274,0,0
+1780473937659,274,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,274,0,0
+1780473937933,584,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,584,0,0
+1780473937762,769,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,784,10,10,http://127.0.0.1:55255/,168,0,0
+1780473937762,168,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,439,10,10,http://127.0.0.1:55255/setCurrency,168,0,0
+1780473937930,601,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,601,0,0
+1780473937936,624,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,46,0,0
+1780473937936,46,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,46,0,0
+1780473937983,577,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,577,0,0
+1780473938432,815,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8204,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,814,0,0
+1780473938482,2247,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7036,695,10,10,http://127.0.0.1:55255/cart/checkout,2238,0,0
+1780473938686,3665,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7038,695,10,10,http://127.0.0.1:55255/cart/checkout,3665,0,0
+1780473939505,2845,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,2845,0,0
+1780473938653,3815,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,510,0,0
+1780473938653,510,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,510,0,0
+1780473939163,3305,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,3304,0,0
+1780473938802,3744,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17532,815,10,10,http://127.0.0.1:55255/cart,1545,0,0
+1780473938802,1545,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,1545,0,0
+1780473940347,2199,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17360,349,10,10,http://127.0.0.1:55255/cart,2199,0,0
+1780473938530,4127,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17540,815,10,10,http://127.0.0.1:55255/cart,1836,0,0
+1780473938530,1836,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,1836,0,0
+1780473940366,2291,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17368,349,10,10,http://127.0.0.1:55255/cart,2287,0,0
+1780473939580,3272,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,771,0,0
+1780473939580,771,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,771,0,0
+1780473940352,2500,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,2500,0,0
+1780473938883,4079,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,false,"The operation lasted too long: It took 4,079 milliseconds, but should not have lasted longer than 2,000 milliseconds.",10730,345,10,10,http://127.0.0.1:55255/,4079,0,0
+1780473939229,3826,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17496,815,10,10,http://127.0.0.1:55255/cart,2217,0,0
+1780473939229,2217,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,2217,0,0
+1780473941446,1609,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,1608,0,0
+1780473940442,2712,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,100,0,0
+1780473940442,100,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,100,0,0
+1780473940542,2612,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,2612,0,0
+1780473942879,372,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,371,0,0
+1780473942439,819,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,818,0,0
+1780473943236,166,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17322,349,10,10,http://127.0.0.1:55255/cart,165,0,0
+1780473943370,66,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,66,0,0
+1780473943460,52,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7046,695,10,10,http://127.0.0.1:55255/cart/checkout,52,0,0
+1780473943525,39,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17340,349,10,10,http://127.0.0.1:55255/cart,38,0,0
+1780473943584,351,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,351,0,0
+1780473943879,142,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7018,695,10,10,http://127.0.0.1:55255/cart/checkout,142,0,0
+1780473943801,229,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,229,0,0
+1780473943827,243,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17518,815,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473943827,20,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473943847,223,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17346,349,10,10,http://127.0.0.1:55255/cart,222,0,0
+1780473944007,178,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7018,695,10,10,http://127.0.0.1:55255/cart/checkout,178,0,0
+1780473944068,167,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8178,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,167,0,0
+1780473944065,247,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8158,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,247,0,0
+1780473944203,117,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7008,695,10,10,http://127.0.0.1:55255/cart/checkout,116,0,0
+1780473944234,179,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7042,695,10,10,http://127.0.0.1:55255/cart/checkout,179,0,0
+1780473944230,192,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17304,349,10,10,http://127.0.0.1:55255/cart,192,0,0
+1780473944473,142,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,142,0,0
+1780473944467,233,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,10,0,0
+1780473944467,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473944478,222,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,222,0,0
+1780473944929,305,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,305,0,0
+1780473945118,128,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,8,0,0
+1780473945118,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473945126,120,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,120,0,0
+1780473945301,47,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17352,349,10,10,http://127.0.0.1:55255/cart,44,0,0
+1780473945315,129,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,37,0,0
+1780473945315,37,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,37,0,0
+1780473945352,92,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,92,0,0
+1780473945603,239,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,239,0,0
+1780473945615,235,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8202,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,235,0,0
+1780473945789,160,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8176,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,160,0,0
+1780473945979,175,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,33,0,0
+1780473945979,33,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,33,0,0
+1780473946012,142,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,141,0,0
+1780473946050,410,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,410,0,0
+1780473946258,393,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7010,695,10,10,http://127.0.0.1:55255/cart/checkout,393,0,0
+1780473946350,315,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7016,695,10,10,http://127.0.0.1:55255/cart/checkout,315,0,0
+1780473946373,387,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17320,349,10,10,http://127.0.0.1:55255/cart,387,0,0
+1780473946465,378,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8178,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,377,0,0
+1780473946344,500,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17496,815,10,10,http://127.0.0.1:55255/cart,117,0,0
+1780473946344,117,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,117,0,0
+1780473946462,382,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,381,0,0
+1780473946453,491,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8236,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,491,0,0
+1780473946583,383,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,75,0,0
+1780473946583,75,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,75,0,0
+1780473946659,307,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,307,0,0
+1780473946874,172,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8208,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,172,0,0
+1780473946996,72,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8196,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,72,0,0
+1780473946861,281,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,10,10,http://127.0.0.1:55255/,86,0,0
+1780473946861,86,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,86,0,0
+1780473946947,195,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,195,0,0
+1780473947255,37,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,37,0,0
+1780473947562,57,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473947562,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473947569,50,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,50,0,0
+1780473947566,129,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,7,0,0
+1780473947566,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473947574,121,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,120,0,0
+1780473947798,57,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17312,349,10,10,http://127.0.0.1:55255/cart,56,0,0
+1780473947847,165,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,10,10,http://127.0.0.1:55255/,8,0,0
+1780473947847,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473947855,157,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,157,0,0
+1780473947970,77,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,77,0,0
+1780473947963,87,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7012,695,10,10,http://127.0.0.1:55255/cart/checkout,87,0,0
+1780473948082,63,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7000,695,10,10,http://127.0.0.1:55255/cart/checkout,63,0,0
+1780473948106,104,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,35,0,0
+1780473948106,35,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,35,0,0
+1780473948142,68,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,68,0,0
+1780473948395,25,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8172,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,25,0,0
+1780473948409,146,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17534,815,10,10,http://127.0.0.1:55255/cart,59,0,0
+1780473948409,59,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,59,0,0
+1780473948468,87,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17362,349,10,10,http://127.0.0.1:55255/cart,86,0,0
+1780473948549,186,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,186,0,0
+1780473948747,65,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,65,0,0
+1780473948807,50,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,50,0,0
+1780473948885,36,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,14,0,0
+1780473948885,14,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,14,0,0
+1780473948899,22,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,21,0,0
+1780473948945,31,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17508,815,10,10,http://127.0.0.1:55255/cart,11,0,0
+1780473948945,11,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,11,0,0
+1780473948956,20,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473948983,72,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17520,815,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473948983,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473948992,63,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17348,349,10,10,http://127.0.0.1:55255/cart,63,0,0
+1780473949150,24,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8208,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,24,0,0
+1780473949295,45,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7022,695,10,10,http://127.0.0.1:55255/cart/checkout,45,0,0
+1780473949512,46,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473949512,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473949517,41,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,41,0,0
+1780473949541,29,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7022,695,10,10,http://127.0.0.1:55255/cart/checkout,29,0,0
+1780473949605,38,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17368,349,10,10,http://127.0.0.1:55255/cart,37,0,0
+1780473949777,67,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8168,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,66,0,0
+1780473949904,32,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473949904,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473949912,24,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,24,0,0
+1780473950123,36,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473950123,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473950128,31,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,31,0,0
+1780473950456,42,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,9,0,0
+1780473950456,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473950465,33,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,33,0,0
+1780473950587,30,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,30,0,0
+1780473950631,30,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17542,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473950631,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473950641,20,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17370,349,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473950680,32,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17326,349,10,10,http://127.0.0.1:55255/cart,31,0,0
+1780473950818,238,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,237,0,0
+1780473950841,214,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17316,349,10,10,http://127.0.0.1:55255/cart,214,0,0
+1780473950874,191,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,191,0,0
+1780473951008,239,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17538,815,10,10,http://127.0.0.1:55255/cart,35,0,0
+1780473951008,35,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,35,0,0
+1780473951043,204,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17366,349,10,10,http://127.0.0.1:55255/cart,204,0,0
+1780473951089,159,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7040,695,10,10,http://127.0.0.1:55255/cart/checkout,159,0,0
+1780473950998,250,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,250,0,0
+1780473951044,216,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17302,349,10,10,http://127.0.0.1:55255/cart,216,0,0
+1780473951147,199,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8184,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,199,0,0
+1780473951359,39,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7022,695,10,10,http://127.0.0.1:55255/cart/checkout,39,0,0
+1780473951581,137,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,10,0,0
+1780473951581,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473951618,100,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8216,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,99,0,0
+1780473951592,126,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,126,0,0
+1780473951645,78,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17536,815,10,10,http://127.0.0.1:55255/cart,15,0,0
+1780473951645,15,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,15,0,0
+1780473951660,63,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17364,349,10,10,http://127.0.0.1:55255/cart,63,0,0
+1780473952046,35,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7070,695,10,10,http://127.0.0.1:55255/cart/checkout,35,0,0
+1780473952182,28,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17352,349,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473952283,20,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8224,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,20,0,0
+1780473952314,33,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7072,695,10,10,http://127.0.0.1:55255/cart/checkout,33,0,0
+1780473952352,135,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7070,695,10,10,http://127.0.0.1:55255/cart/checkout,134,0,0
+1780473952383,156,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,155,0,0
+1780473952501,150,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,150,0,0
+1780473952627,129,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,129,0,0
+1780473952822,19,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17360,349,10,10,http://127.0.0.1:55255/cart,19,0,0
+1780473952839,108,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473952839,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473952844,103,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,103,0,0
+1780473953011,49,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17548,815,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473953011,12,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473953023,37,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17376,349,10,10,http://127.0.0.1:55255/cart,37,0,0
+1780473953113,36,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,36,0,0
+1780473953570,87,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17504,815,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473953570,27,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473953598,59,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17332,349,10,10,http://127.0.0.1:55255/cart,59,0,0
+1780473953615,96,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8196,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,96,0,0
+1780473953669,227,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,226,0,0
+1780473953989,122,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,7,0,0
+1780473953989,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473953996,115,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,115,0,0
+1780473954045,77,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7034,695,10,10,http://127.0.0.1:55255/cart/checkout,77,0,0
+1780473954078,62,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8202,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,62,0,0
+1780473954423,22,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,22,0,0
+1780473954497,22,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8216,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,22,0,0
+1780473954614,29,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,29,0,0
+1780473954625,85,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17510,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473954625,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473954634,76,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17338,349,10,10,http://127.0.0.1:55255/cart,76,0,0
+1780473954662,80,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8174,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,80,0,0
+1780473954667,80,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7032,695,10,10,http://127.0.0.1:55255/cart/checkout,80,0,0
+1780473954801,43,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17320,349,10,10,http://127.0.0.1:55255/cart,43,0,0
+1780473954770,141,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473954770,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473954775,136,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,136,0,0
+1780473954837,104,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8200,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,104,0,0
+1780473954838,103,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8158,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,103,0,0
+1780473955003,36,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473955003,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473955009,30,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,30,0,0
+1780473955204,39,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473955204,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473955209,34,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,34,0,0
+1780473955325,27,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,27,0,0
+1780473955596,52,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7058,695,10,10,http://127.0.0.1:55255/cart/checkout,52,0,0
+1780473955682,59,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473955682,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473955691,50,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,50,0,0
+1780473955822,31,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17322,349,10,10,http://127.0.0.1:55255/cart,31,0,0
+1780473955865,37,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473955865,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473955872,30,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,30,0,0
+1780473956119,30,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7024,695,10,10,http://127.0.0.1:55255/cart/checkout,30,0,0
+1780473956190,30,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,4,0,0
+1780473956190,4,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,4,0,0
+1780473956195,25,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,25,0,0
+1780473956364,29,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17508,815,10,10,http://127.0.0.1:55255/cart,7,0,0
+1780473956364,7,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,7,0,0
+1780473956371,22,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,21,0,0
+1780473956499,63,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,63,0,0
+1780473956547,24,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8200,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,24,0,0
+1780473956575,175,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17496,815,10,10,http://127.0.0.1:55255/cart,38,0,0
+1780473956575,38,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,38,0,0
+1780473956613,137,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,137,0,0
+1780473956861,169,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17322,349,10,10,http://127.0.0.1:55255/cart,168,0,0
+1780473956691,442,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,10,10,http://127.0.0.1:55255/,90,0,0
+1780473956691,90,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,90,0,0
+1780473956782,351,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,351,0,0
+1780473956841,297,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,297,0,0
+1780473956975,168,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8192,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,168,0,0
+1780473956970,266,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,141,0,0
+1780473956970,141,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,141,0,0
+1780473957111,125,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,125,0,0
+1780473957134,209,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17378,349,10,10,http://127.0.0.1:55255/cart,209,0,0
+1780473956920,423,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17498,815,10,10,http://127.0.0.1:55255/cart,192,0,0
+1780473957063,281,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7028,695,10,10,http://127.0.0.1:55255/cart/checkout,281,0,0
+1780473956920,192,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,192,0,0
+1780473957114,229,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17326,349,10,10,http://127.0.0.1:55255/cart,229,0,0
+1780473957274,149,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17330,349,10,10,http://127.0.0.1:55255/cart,148,0,0
+1780473957423,102,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473957423,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473957429,96,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,96,0,0
+1780473957567,22,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17322,349,10,10,http://127.0.0.1:55255/cart,22,0,0
+1780473957715,51,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,12,0,0
+1780473957715,12,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,12,0,0
+1780473957727,39,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,39,0,0
+1780473958065,180,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,180,0,0
+1780473958099,154,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17530,815,10,10,http://127.0.0.1:55255/cart,40,0,0
+1780473958099,40,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,40,0,0
+1780473958139,114,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,114,0,0
+1780473958221,136,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17476,815,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473958221,27,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473958248,109,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17304,349,10,10,http://127.0.0.1:55255/cart,109,0,0
+1780473958490,29,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17356,349,10,10,http://127.0.0.1:55255/cart,29,0,0
+1780473958549,94,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7010,695,10,10,http://127.0.0.1:55255/cart/checkout,94,0,0
+1780473958570,137,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7020,695,10,10,http://127.0.0.1:55255/cart/checkout,136,0,0
+1780473958573,137,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8186,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,137,0,0
+1780473958587,131,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7038,695,10,10,http://127.0.0.1:55255/cart/checkout,131,0,0
+1780473958646,91,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17352,349,10,10,http://127.0.0.1:55255/cart,91,0,0
+1780473958875,76,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17488,815,10,10,http://127.0.0.1:55255/cart,13,0,0
+1780473958875,13,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,13,0,0
+1780473958888,63,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17316,349,10,10,http://127.0.0.1:55255/cart,63,0,0
+1780473958888,65,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17348,349,10,10,http://127.0.0.1:55255/cart,65,0,0
+1780473958899,75,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7028,695,10,10,http://127.0.0.1:55255/cart/checkout,75,0,0
+1780473959295,39,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7018,695,10,10,http://127.0.0.1:55255/cart/checkout,39,0,0
+1780473959451,23,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,23,0,0
+1780473959602,138,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7048,695,10,10,http://127.0.0.1:55255/cart/checkout,137,0,0
+1780473959610,152,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,31,0,0
+1780473959610,31,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,31,0,0
+1780473959641,121,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,121,0,0
+1780473959674,166,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,166,0,0
+1780473960107,121,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,120,0,0
+1780473960118,116,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,116,0,0
+1780473960271,50,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8174,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,50,0,0
+1780473960348,70,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7036,695,10,10,http://127.0.0.1:55255/cart/checkout,69,0,0
+1780473960353,159,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,159,0,0
+1780473960364,179,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,9,0,0
+1780473960364,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473960374,169,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,169,0,0
+1780473960372,180,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,180,0,0
+1780473960524,100,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,99,0,0
+1780473960883,45,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,6998,695,10,10,http://127.0.0.1:55255/cart/checkout,45,0,0
+1780473960972,32,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17520,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473960972,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473960981,23,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17348,349,10,10,http://127.0.0.1:55255/cart,23,0,0
+1780473961106,21,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8234,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,21,0,0
+1780473961125,20,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8186,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,20,0,0
+1780473961153,57,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8212,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,57,0,0
+1780473961192,119,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8214,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,119,0,0
+1780473961163,180,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,180,0,0
+1780473961864,197,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,197,0,0
+1780473961987,165,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,75,0,0
+1780473961987,75,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,75,0,0
+1780473962062,90,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,90,0,0
+1780473962130,117,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,10,10,http://127.0.0.1:55255/,8,0,0
+1780473962130,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473962139,108,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,108,0,0
+1780473962158,149,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473962158,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473962164,143,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,143,0,0
+1780473962250,84,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8184,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,84,0,0
+1780473962338,70,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473962338,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473962344,64,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,64,0,0
+1780473962359,82,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8198,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,82,0,0
+1780473962363,83,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17364,349,10,10,http://127.0.0.1:55255/cart,83,0,0
+1780473962421,30,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8176,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,30,0,0
+1780473962516,129,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17510,815,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473962516,30,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473962546,99,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17338,349,10,10,http://127.0.0.1:55255/cart,99,0,0
+1780473962723,46,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473962723,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473962732,37,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,37,0,0
+1780473962766,89,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473962766,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473962773,82,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,82,0,0
+1780473962891,44,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17486,815,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473962891,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473962899,36,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17314,349,10,10,http://127.0.0.1:55255/cart,36,0,0
+1780473963329,24,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8208,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,24,0,0
+1780473963332,26,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17342,349,10,10,http://127.0.0.1:55255/cart,26,0,0
+1780473963377,67,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7050,695,10,10,http://127.0.0.1:55255/cart/checkout,67,0,0
+1780473963822,130,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473963822,12,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473963835,117,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,117,0,0
+1780473963813,139,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,11,0,0
+1780473963813,11,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,11,0,0
+1780473963824,128,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,127,0,0
+1780473963902,445,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17356,349,10,10,http://127.0.0.1:55255/cart,445,0,0
+1780473963911,438,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17522,815,10,10,http://127.0.0.1:55255/cart,114,0,0
+1780473963911,114,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,114,0,0
+1780473964149,200,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7038,695,10,10,http://127.0.0.1:55255/cart/checkout,199,0,0
+1780473964025,324,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17350,349,10,10,http://127.0.0.1:55255/cart,324,0,0
+1780473963946,504,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17534,815,10,10,http://127.0.0.1:55255/cart,104,0,0
+1780473963946,104,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,104,0,0
+1780473964051,399,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17362,349,10,10,http://127.0.0.1:55255/cart,399,0,0
+1780473964267,211,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17314,349,10,10,http://127.0.0.1:55255/cart,210,0,0
+1780473963952,590,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,61,0,0
+1780473963952,61,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,61,0,0
+1780473964013,529,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,529,0,0
+1780473964308,349,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,38,0,0
+1780473964308,38,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,38,0,0
+1780473964347,310,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,310,0,0
+1780473964469,192,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,192,0,0
+1780473965150,163,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7012,695,10,10,http://127.0.0.1:55255/cart/checkout,162,0,0
+1780473965137,201,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,200,0,0
+1780473965295,120,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17356,349,10,10,http://127.0.0.1:55255/cart,120,0,0
+1780473965453,102,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7006,695,10,10,http://127.0.0.1:55255/cart/checkout,102,0,0
+1780473965344,212,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17366,349,10,10,http://127.0.0.1:55255/cart,211,0,0
+1780473965681,208,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17532,815,10,10,http://127.0.0.1:55255/cart,57,0,0
+1780473965681,57,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,57,0,0
+1780473965738,151,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17360,349,10,10,http://127.0.0.1:55255/cart,151,0,0
+1780473965777,179,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8194,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,177,0,0
+1780473965873,109,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7006,695,10,10,http://127.0.0.1:55255/cart/checkout,108,0,0
+1780473966018,34,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17536,815,10,10,http://127.0.0.1:55255/cart,10,0,0
+1780473966018,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,10,0,0
+1780473966028,24,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17364,349,10,10,http://127.0.0.1:55255/cart,24,0,0
+1780473966087,53,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17378,349,10,10,http://127.0.0.1:55255/cart,53,0,0
+1780473966106,103,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,103,0,0
+1780473966509,24,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8178,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,24,0,0
+1780473966632,83,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17526,815,10,10,http://127.0.0.1:55255/cart,21,0,0
+1780473966632,21,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,21,0,0
+1780473966654,61,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17354,349,10,10,http://127.0.0.1:55255/cart,60,0,0
+1780473967000,30,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7056,695,10,10,http://127.0.0.1:55255/cart/checkout,30,0,0
+1780473967054,22,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17332,349,10,10,http://127.0.0.1:55255/cart,22,0,0
+1780473967100,29,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8184,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,29,0,2
+1780473966695,476,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,476,0,0
+1780473967205,27,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,27,0,0
+1780473967244,68,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17350,349,10,10,http://127.0.0.1:55255/cart,68,0,0
+1780473967536,98,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,7,0,0
+1780473967536,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473967543,91,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,91,0,0
+1780473967545,95,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7008,695,10,10,http://127.0.0.1:55255/cart/checkout,95,0,0
+1780473967747,29,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8188,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,28,0,0
+1780473967958,47,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7016,695,10,10,http://127.0.0.1:55255/cart/checkout,47,0,0
+1780473967945,71,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,11,0,0
+1780473967945,11,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,11,0,0
+1780473967956,60,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,59,0,0
+1780473968142,98,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,98,0,0
+1780473968134,111,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7040,695,10,10,http://127.0.0.1:55255/cart/checkout,111,0,0
+1780473968335,54,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473968335,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473968341,48,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,47,0,0
+1780473968366,277,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,277,0,0
+1780473968731,288,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8194,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,288,0,0
+1780473968722,352,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7054,695,10,10,http://127.0.0.1:55255/cart/checkout,352,0,0
+1780473968893,238,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17542,815,10,10,http://127.0.0.1:55255/cart,42,0,0
+1780473968893,42,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,42,0,0
+1780473968935,196,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17370,349,10,10,http://127.0.0.1:55255/cart,195,0,0
+1780473969266,66,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17508,815,10,10,http://127.0.0.1:55255/cart,34,0,1
+1780473969266,34,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,34,0,1
+1780473969301,31,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,31,0,0
+1780473969342,187,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,8,0,0
+1780473969342,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473969351,178,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,178,0,0
+1780473969386,146,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,145,0,0
+1780473969602,44,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,44,0,0
+1780473969763,53,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,53,0,0
+1780473969783,153,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8198,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,153,0,0
+1780473969832,117,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17482,815,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473969832,20,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473969852,97,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17310,349,10,10,http://127.0.0.1:55255/cart,97,0,0
+1780473969958,83,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8218,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,83,0,0
+1780473970234,100,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17332,349,10,10,http://127.0.0.1:55255/cart,100,0,0
+1780473970179,226,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,25,0,0
+1780473970179,25,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,25,0,0
+1780473970205,200,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,200,0,0
+1780473970269,168,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8168,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,166,0,0
+1780473970358,146,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,145,0,0
+1780473970573,66,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473970573,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473970579,60,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,60,0,0
+1780473970698,35,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17316,349,10,10,http://127.0.0.1:55255/cart,35,0,0
+1780473970794,29,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8196,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,29,0,0
+1780473970949,141,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,10,0,0
+1780473970949,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473970959,131,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,131,0,0
+1780473970994,110,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17358,349,10,10,http://127.0.0.1:55255/cart,110,0,0
+1780473970954,182,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,10,10,http://127.0.0.1:55255/,8,0,0
+1780473970954,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473970962,174,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,173,0,0
+1780473971113,123,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8178,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,122,0,0
+1780473971265,39,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473971265,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473971274,30,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473971268,70,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7036,695,10,10,http://127.0.0.1:55255/cart/checkout,70,0,0
+1780473971386,60,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17522,815,10,10,http://127.0.0.1:55255/cart,14,0,0
+1780473971386,14,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,14,0,0
+1780473971401,45,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17350,349,10,10,http://127.0.0.1:55255/cart,45,0,0
+1780473971586,40,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17498,815,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473971586,12,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473971598,28,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17326,349,10,10,http://127.0.0.1:55255/cart,28,0,0
+1780473971734,98,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,10,10,http://127.0.0.1:55255/,9,0,0
+1780473971734,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473971744,88,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,88,0,0
+1780473971838,43,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7010,695,10,10,http://127.0.0.1:55255/cart/checkout,43,0,0
+1780473972076,51,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7018,695,10,10,http://127.0.0.1:55255/cart/checkout,51,0,4
+1780473972123,27,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17328,349,10,10,http://127.0.0.1:55255/cart,27,0,0
+1780473972305,163,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7030,695,10,10,http://127.0.0.1:55255/cart/checkout,162,0,0
+1780473972379,590,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17350,349,10,10,http://127.0.0.1:55255/cart,589,0,0
+1780473972493,769,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,89,0,0
+1780473972493,89,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,89,0,0
+1780473972583,679,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,678,0,0
+1780473972439,1108,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,518,0,0
+1780473972439,518,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,518,0,0
+1780473972957,590,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,590,0,0
+1780473972850,698,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17324,349,10,10,http://127.0.0.1:55255/cart,697,0,0
+1780473972932,821,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,820,0,0
+1780473972926,827,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,827,0,0
+1780473972841,1003,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17532,815,10,10,http://127.0.0.1:55255/cart,236,0,0
+1780473972841,236,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,236,0,0
+1780473973077,767,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17360,349,10,10,http://127.0.0.1:55255/cart,767,0,0
+1780473973200,708,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,708,0,0
+1780473973628,331,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17490,815,10,10,http://127.0.0.1:55255/cart,135,0,0
+1780473973628,135,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,135,0,0
+1780473973763,196,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,195,0,0
+1780473974313,335,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7068,695,10,10,http://127.0.0.1:55255/cart/checkout,334,0,0
+1780473974183,471,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,465,0,2
+1780473974140,524,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7040,695,10,10,http://127.0.0.1:55255/cart/checkout,521,0,0
+1780473974523,285,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8186,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,284,0,0
+1780473974620,201,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8186,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,200,0,0
+1780473974793,144,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8210,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,144,0,0
+1780473974751,192,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17304,349,10,10,http://127.0.0.1:55255/cart,192,0,0
+1780473974601,399,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17528,815,10,10,http://127.0.0.1:55255/cart,137,0,0
+1780473974601,137,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,137,0,0
+1780473974739,261,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17356,349,10,10,http://127.0.0.1:55255/cart,260,0,0
+1780473975112,128,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,13,0,0
+1780473975112,13,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,13,0,0
+1780473975125,115,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,115,0,0
+1780473975186,159,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17326,349,10,10,http://127.0.0.1:55255/cart,159,0,0
+1780473975279,162,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17320,349,10,10,http://127.0.0.1:55255/cart,161,0,0
+1780473975185,265,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,265,0,0
+1780473975417,35,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8232,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,35,0,0
+1780473975572,114,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,7,0,0
+1780473975572,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473975579,107,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,107,0,0
+1780473975577,110,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,109,0,0
+1780473975864,25,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17354,349,10,10,http://127.0.0.1:55255/cart,24,0,0
+1780473975990,31,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7012,695,10,10,http://127.0.0.1:55255/cart/checkout,31,0,0
+1780473976380,107,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,9,0,0
+1780473976380,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473976389,98,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,97,0,0
+1780473976617,118,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7028,695,10,10,http://127.0.0.1:55255/cart/checkout,118,0,0
+1780473976629,181,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17516,815,10,10,http://127.0.0.1:55255/cart,72,0,0
+1780473976629,72,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,72,0,0
+1780473976702,108,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17344,349,10,10,http://127.0.0.1:55255/cart,108,0,0
+1780473976655,272,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,10,10,http://127.0.0.1:55255/,48,0,0
+1780473976881,46,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8174,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,46,0,0
+1780473976655,48,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,48,0,0
+1780473976703,224,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,224,0,0
+1780473976899,38,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7002,695,10,10,http://127.0.0.1:55255/cart/checkout,38,0,0
+1780473976904,105,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8158,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,104,0,0
+1780473976985,47,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7034,695,10,10,http://127.0.0.1:55255/cart/checkout,47,0,0
+1780473977142,32,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,31,0,0
+1780473977400,115,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17498,815,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473977400,12,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,12,0,0
+1780473977412,103,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17326,349,10,10,http://127.0.0.1:55255/cart,103,0,0
+1780473977405,203,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,203,0,0
+1780473977423,202,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17488,815,10,10,http://127.0.0.1:55255/cart,80,0,0
+1780473977423,80,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,10,10,http://127.0.0.1:55255/cart,80,0,0
+1780473977504,121,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17316,349,10,10,http://127.0.0.1:55255/cart,121,0,0
+1780473977573,241,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,240,0,0
+1780473977670,257,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,30,0,0
+1780473977670,30,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,30,0,0
+1780473977701,226,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,225,0,0
+1780473977843,257,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17352,349,10,10,http://127.0.0.1:55255/cart,257,0,0
+1780473977960,268,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,268,0,0
+1780473977922,308,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,26,0,0
+1780473977922,26,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,26,0,0
+1780473977948,282,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,282,0,0
+1780473978783,20,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8194,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,20,0,0
+1780473978793,186,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8206,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,186,0,0
+1780473978939,152,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8216,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,152,0,0
+1780473979028,68,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17338,349,10,10,http://127.0.0.1:55255/cart,68,0,0
+1780473978850,280,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17548,815,10,10,http://127.0.0.1:55255/cart,38,0,0
+1780473978850,38,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,10,10,http://127.0.0.1:55255/cart,38,0,0
+1780473978888,242,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17376,349,10,10,http://127.0.0.1:55255/cart,241,0,0
+1780473979130,147,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7054,695,10,10,http://127.0.0.1:55255/cart/checkout,147,0,0
+1780473979289,143,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17312,349,10,10,http://127.0.0.1:55255/cart,143,0,0
+1780473979308,133,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17492,815,10,10,http://127.0.0.1:55255/cart,34,0,4
+1780473979308,34,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,10,10,http://127.0.0.1:55255/cart,34,0,4
+1780473979343,98,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17320,349,10,10,http://127.0.0.1:55255/cart,97,0,0
+1780473979563,22,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8200,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,22,0,0
+1780473979955,46,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,45,0,0
+1780473979983,149,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17476,815,10,10,http://127.0.0.1:55255/cart,17,0,0
+1780473979983,17,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,10,10,http://127.0.0.1:55255/cart,17,0,0
+1780473980001,131,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17304,349,10,10,http://127.0.0.1:55255/cart,131,0,0
+1780473979869,264,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17342,349,10,10,http://127.0.0.1:55255/cart,264,0,0
+1780473980283,37,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473980283,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473980289,31,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,31,0,0
+1780473980306,112,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,10,10,http://127.0.0.1:55255/,5,0,0
+1780473980306,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,5,0,0
+1780473980312,106,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,106,0,0
+1780473980381,140,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,10,10,http://127.0.0.1:55255/,19,0,0
+1780473980381,19,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,19,0,0
+1780473980400,121,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,120,0,0
+1780473980478,50,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7052,695,10,10,http://127.0.0.1:55255/cart/checkout,50,0,0
+1780473980487,42,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17492,815,10,10,http://127.0.0.1:55255/cart,11,0,0
+1780473980487,11,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,11,0,0
+1780473980499,30,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17320,349,10,10,http://127.0.0.1:55255/cart,30,0,0
+1780473980538,69,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17352,349,10,10,http://127.0.0.1:55255/cart,68,0,0
+1780473980616,32,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7054,695,10,10,http://127.0.0.1:55255/cart/checkout,32,0,0
+1780473980692,38,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7010,695,10,10,http://127.0.0.1:55255/cart/checkout,38,0,0
+1780473980684,49,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,10,0,1
+1780473980684,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,10,0,1
+1780473980695,38,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,38,0,0
+1780473980719,88,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17332,349,10,10,http://127.0.0.1:55255/cart,88,0,0
+1780473980741,160,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,8170,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,159,0,0
+1780473981057,55,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17474,815,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473981057,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,10,10,http://127.0.0.1:55255/cart,8,0,0
+1780473981065,47,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17302,349,10,10,http://127.0.0.1:55255/cart,46,0,0
+1780473981155,33,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,33,0,0
+1780473981222,30,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7044,695,10,10,http://127.0.0.1:55255/cart/checkout,30,0,0
+1780473981265,35,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17476,815,10,10,http://127.0.0.1:55255/cart,10,0,0
+1780473981265,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,10,10,http://127.0.0.1:55255/cart,10,0,0
+1780473981276,24,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17304,349,10,10,http://127.0.0.1:55255/cart,24,0,0
+1780473981470,23,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17318,349,10,10,http://127.0.0.1:55255/cart,23,0,0
+1780473981597,29,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17518,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473981597,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473981606,20,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17346,349,10,10,http://127.0.0.1:55255/cart,20,0,0
+1780473981694,48,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,47,0,0
+1780473982194,32,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7036,695,10,10,http://127.0.0.1:55255/cart/checkout,31,0,0
+1780473982203,36,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7048,695,10,10,http://127.0.0.1:55255/cart/checkout,36,0,0
+1780473982269,33,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8236,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,33,0,0
+1780473982350,86,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7040,695,10,10,http://127.0.0.1:55255/cart/checkout,86,0,0
+1780473982304,203,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10945,803,10,10,http://127.0.0.1:55255/,6,0,0
+1780473982304,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473982311,196,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,10730,345,10,10,http://127.0.0.1:55255/,196,0,0
+1780473982316,215,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,215,0,0
+1780473982389,227,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,227,0,0
+1780473982377,240,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,240,0,0
+1780473982623,29,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17342,349,10,10,http://127.0.0.1:55255/cart,28,0,0
+1780473982656,76,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8190,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,76,0,0
+1780473982678,124,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17316,349,10,10,http://127.0.0.1:55255/cart,123,0,0
+1780473982773,164,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,164,0,0
+1780473983031,122,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,10,10,http://127.0.0.1:55255/,122,0,0
+1780473983573,318,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17506,815,10,10,http://127.0.0.1:55255/cart,66,0,0
+1780473983573,66,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-2,,true,,172,466,10,10,http://127.0.0.1:55255/cart,66,0,0
+1780473983639,252,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17334,349,10,10,http://127.0.0.1:55255/cart,252,0,0
+1780473983538,407,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,10,10,http://127.0.0.1:55255/,74,0,0
+1780473983538,74,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,74,0,0
+1780473983613,332,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,10,10,http://127.0.0.1:55255/,332,0,0
+1780473984111,273,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,8204,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,273,0,0
+1780473984183,220,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8202,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,220,0,0
+1780473984020,396,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7036,695,10,10,http://127.0.0.1:55255/cart/checkout,396,0,0
+1780473984145,279,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7044,695,10,10,http://127.0.0.1:55255/cart/checkout,278,0,0
+1780473984171,258,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,258,0,2
+1780473984347,158,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8216,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,157,0,0
+1780473984480,96,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,8170,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,96,0,0
+1780473984542,170,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,10,10,http://127.0.0.1:55255/,30,0,0
+1780473984542,30,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,30,0,0
+1780473984572,140,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,10,10,http://127.0.0.1:55255/,140,0,0
+1780473984919,88,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17506,815,10,10,http://127.0.0.1:55255/cart,33,0,0
+1780473984919,33,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,10,10,http://127.0.0.1:55255/cart,33,0,0
+1780473984952,55,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17334,349,10,10,http://127.0.0.1:55255/cart,55,0,0
+1780473984876,155,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,10,10,http://127.0.0.1:55255/,154,0,0
+1780473985078,21,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8162,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,21,0,0
+1780473985155,66,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,10,10,http://127.0.0.1:55255/,9,0,0
+1780473985155,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473985165,56,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,10,10,http://127.0.0.1:55255/,56,0,0
+1780473985241,136,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17336,349,10,10,http://127.0.0.1:55255/cart,136,0,0
+1780473985190,189,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10945,803,10,10,http://127.0.0.1:55255/,14,0,0
+1780473985190,14,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,14,0,0
+1780473985205,174,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,10730,345,10,10,http://127.0.0.1:55255/,174,0,0
+1780473985330,60,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17472,815,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473985330,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,10,10,http://127.0.0.1:55255/cart,9,0,0
+1780473985339,51,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17300,349,10,10,http://127.0.0.1:55255/cart,51,0,0
+1780473985506,37,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,10,10,http://127.0.0.1:55255/,36,0,0
+1780473985593,122,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,17328,349,10,10,http://127.0.0.1:55255/cart,122,0,0
+1780473985666,134,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8180,363,10,10,http://127.0.0.1:55255/product/OLJCESPC7Z,133,0,0
+1780473985594,234,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,10,10,http://127.0.0.1:55255/,37,0,0
+1780473985594,37,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,37,0,0
+1780473985631,197,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,10,10,http://127.0.0.1:55255/,197,0,0
+1780473985965,64,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,10,10,http://127.0.0.1:55255/,7,0,0
+1780473985965,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,10,10,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473985972,57,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,10,10,http://127.0.0.1:55255/,56,0,0
+1780473986026,41,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7042,695,10,10,http://127.0.0.1:55255/cart/checkout,41,0,2
+1780473986210,116,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-2,text,true,,7026,695,10,10,http://127.0.0.1:55255/cart/checkout,116,0,0
+1780473986235,180,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17500,815,9,9,http://127.0.0.1:55255/cart,11,0,0
+1780473986235,11,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,9,9,http://127.0.0.1:55255/cart,11,0,0
+1780473986246,169,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17328,349,9,9,http://127.0.0.1:55255/cart,168,0,0
+1780473986201,232,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,9,9,http://127.0.0.1:55255/,8,0,0
+1780473986201,8,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,9,9,http://127.0.0.1:55255/setCurrency,8,0,0
+1780473986210,223,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,9,9,http://127.0.0.1:55255/,223,0,0
+1780473986332,186,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10945,803,9,9,http://127.0.0.1:55255/,16,0,0
+1780473986332,16,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,215,458,9,9,http://127.0.0.1:55255/setCurrency,16,0,0
+1780473986348,170,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,10730,345,9,9,http://127.0.0.1:55255/,170,0,0
+1780473986447,85,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8186,363,9,9,http://127.0.0.1:55255/product/OLJCESPC7Z,84,0,0
+1780473986466,69,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17548,815,9,9,http://127.0.0.1:55255/cart,7,0,0
+1780473986466,7,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-4,,true,,172,466,9,9,http://127.0.0.1:55255/cart,7,0,0
+1780473986473,62,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17376,349,9,9,http://127.0.0.1:55255/cart,62,0,0
+1780473986708,31,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17360,349,9,9,http://127.0.0.1:55255/cart,31,0,0
+1780473986727,75,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17474,815,9,9,http://127.0.0.1:55255/cart,22,0,0
+1780473986727,22,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,9,9,http://127.0.0.1:55255/cart,22,0,0
+1780473986749,53,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17302,349,9,9,http://127.0.0.1:55255/cart,52,0,0
+1780473986947,43,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17498,815,9,9,http://127.0.0.1:55255/cart,9,0,0
+1780473986947,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-1,,true,,172,466,9,9,http://127.0.0.1:55255/cart,9,0,0
+1780473986956,34,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17326,349,9,9,http://127.0.0.1:55255/cart,34,0,0
+1780473987021,47,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7008,695,9,9,http://127.0.0.1:55255/cart/checkout,47,0,0
+1780473987268,44,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17496,815,9,9,http://127.0.0.1:55255/cart,9,0,0
+1780473987268,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,9,9,http://127.0.0.1:55255/cart,9,0,0
+1780473987278,34,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17324,349,9,9,http://127.0.0.1:55255/cart,33,0,0
+1780473987313,106,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,9,9,http://127.0.0.1:55255/,106,0,0
+1780473987562,55,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17318,349,9,9,http://127.0.0.1:55255/cart,55,0,0
+1780473987642,154,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,17346,349,9,9,http://127.0.0.1:55255/cart,153,0,0
+1780473987691,248,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17516,815,9,9,http://127.0.0.1:55255/cart,119,0,0
+1780473987691,119,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,9,9,http://127.0.0.1:55255/cart,119,0,0
+1780473987811,128,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17344,349,9,9,http://127.0.0.1:55255/cart,128,0,0
+1780473987796,147,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17350,349,9,9,http://127.0.0.1:55255/cart,146,0,0
+1780473988017,106,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7044,695,9,9,http://127.0.0.1:55255/cart/checkout,105,0,0
+1780473988098,118,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,17368,349,9,9,http://127.0.0.1:55255/cart,117,0,0
+1780473988390,37,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8202,363,9,9,http://127.0.0.1:55255/product/OLJCESPC7Z,36,0,0
+1780473988450,256,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,9,9,http://127.0.0.1:55255/,256,0,0
+1780473988590,521,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-1,text,true,,7036,695,9,9,http://127.0.0.1:55255/cart/checkout,520,0,0
+1780473988648,578,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,8,8,http://127.0.0.1:55255/,62,0,0
+1780473988648,62,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,8,8,http://127.0.0.1:55255/setCurrency,62,0,0
+1780473988711,515,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,8,8,http://127.0.0.1:55255/,515,0,0
+1780473988673,553,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,8,8,http://127.0.0.1:55255/,553,0,0
+1780473989133,169,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17342,349,8,8,http://127.0.0.1:55255/cart,168,0,0
+1780473989256,169,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7012,695,8,8,http://127.0.0.1:55255/cart/checkout,169,0,0
+1780473989267,159,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-4,text,true,,7054,695,8,8,http://127.0.0.1:55255/cart/checkout,159,0,0
+1780473989256,245,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,7,7,http://127.0.0.1:55255/,12,0,0
+1780473989256,12,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,12,0,0
+1780473989268,233,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,7,7,http://127.0.0.1:55255/,232,0,0
+1780473989655,150,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17356,349,7,7,http://127.0.0.1:55255/cart,149,0,0
+1780473989784,227,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,8202,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,227,0,0
+1780473989953,632,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17488,815,7,7,http://127.0.0.1:55255/cart,39,0,0
+1780473989953,39,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,7,7,http://127.0.0.1:55255/cart,39,0,0
+1780473989992,593,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17316,349,7,7,http://127.0.0.1:55255/cart,592,0,0
+1780473990263,321,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8196,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,321,0,0
+1780473990430,225,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17502,815,7,7,http://127.0.0.1:55255/cart,112,0,0
+1780473990430,112,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,7,7,http://127.0.0.1:55255/cart,112,0,0
+1780473990543,112,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17330,349,7,7,http://127.0.0.1:55255/cart,112,0,0
+1780473990694,148,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,7,7,http://127.0.0.1:55255/,148,0,0
+1780473989798,1056,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7006,695,7,7,http://127.0.0.1:55255/cart/checkout,1055,0,0
+1780473990062,843,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7050,695,7,7,http://127.0.0.1:55255/cart/checkout,842,0,0
+1780473990834,193,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10945,803,7,7,http://127.0.0.1:55255/,65,0,0
+1780473990834,65,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,65,0,0
+1780473990900,127,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,10730,345,7,7,http://127.0.0.1:55255/,127,0,0
+1780473991205,33,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17334,349,7,7,http://127.0.0.1:55255/cart,32,0,0
+1780473991252,106,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,7,7,http://127.0.0.1:55255/,6,0,0
+1780473991252,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,6,0,0
+1780473991259,99,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,7,7,http://127.0.0.1:55255/,98,0,0
+1780473991453,84,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,7,7,http://127.0.0.1:55255/,84,0,3
+1780473991589,38,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,7,7,http://127.0.0.1:55255/,38,0,0
+1780473991621,86,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17368,349,7,7,http://127.0.0.1:55255/cart,86,0,0
+1780473991728,66,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7052,695,7,7,http://127.0.0.1:55255/cart/checkout,66,0,0
+1780473992114,33,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,7,7,http://127.0.0.1:55255/,33,0,0
+1780473992167,62,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17498,815,7,7,http://127.0.0.1:55255/cart,14,0,0
+1780473992167,14,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-3,,true,,172,466,7,7,http://127.0.0.1:55255/cart,14,0,0
+1780473992181,48,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17326,349,7,7,http://127.0.0.1:55255/cart,48,0,0
+1780473992420,21,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,8178,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,21,0,0
+1780473992436,21,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,17312,349,7,7,http://127.0.0.1:55255/cart,21,0,0
+1780473992528,27,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17540,815,7,7,http://127.0.0.1:55255/cart,8,0,0
+1780473992528,8,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,7,7,http://127.0.0.1:55255/cart,8,0,0
+1780473992536,19,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17368,349,7,7,http://127.0.0.1:55255/cart,19,0,0
+1780473992605,25,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8182,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,25,0,0
+1780473992952,18,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,8184,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,18,0,0
+1780473993184,39,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7030,695,7,7,http://127.0.0.1:55255/cart/checkout,38,0,0
+1780473993300,27,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17310,349,7,7,http://127.0.0.1:55255/cart,27,0,0
+1780473993402,110,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,7,7,http://127.0.0.1:55255/,10,0,0
+1780473993402,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473993412,100,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,7,7,http://127.0.0.1:55255/,100,0,0
+1780473993547,50,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8180,363,7,7,http://127.0.0.1:55255/product/OLJCESPC7Z,49,0,2
+1780473993562,75,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10945,803,7,7,http://127.0.0.1:55255/,9,0,0
+1780473993562,9,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,9,0,0
+1780473993571,66,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,10730,345,7,7,http://127.0.0.1:55255/,66,0,0
+1780473994066,37,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,7,7,http://127.0.0.1:55255/,7,0,0
+1780473994066,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,7,7,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473994073,30,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,7,7,http://127.0.0.1:55255/,30,0,0
+1780473994101,28,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-3,text,true,,7040,695,7,7,http://127.0.0.1:55255/cart/checkout,28,0,0
+1780473994202,102,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17546,815,6,6,http://127.0.0.1:55255/cart,10,0,0
+1780473994202,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,6,6,http://127.0.0.1:55255/cart,10,0,0
+1780473994212,92,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17374,349,6,6,http://127.0.0.1:55255/cart,92,0,0
+1780473994263,137,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7014,695,6,6,http://127.0.0.1:55255/cart/checkout,137,0,0
+1780473994297,131,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10945,803,6,6,http://127.0.0.1:55255/,7,0,0
+1780473994297,7,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,215,458,6,6,http://127.0.0.1:55255/setCurrency,7,0,0
+1780473994304,124,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,10730,345,6,6,http://127.0.0.1:55255/,124,0,0
+1780473994404,102,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17548,815,6,6,http://127.0.0.1:55255/cart,70,0,0
+1780473994404,70,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,6,6,http://127.0.0.1:55255/cart,70,0,0
+1780473994474,32,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17376,349,6,6,http://127.0.0.1:55255/cart,32,0,0
+1780473994510,87,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,6,6,http://127.0.0.1:55255/,87,0,0
+1780473994557,61,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17508,815,6,6,http://127.0.0.1:55255/cart,41,0,0
+1780473994557,41,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-6,,true,,172,466,6,6,http://127.0.0.1:55255/cart,41,0,0
+1780473994598,20,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17336,349,6,6,http://127.0.0.1:55255/cart,20,0,0
+1780473995202,40,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,8158,363,6,6,http://127.0.0.1:55255/product/OLJCESPC7Z,40,0,0
+1780473995502,52,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10945,803,6,6,http://127.0.0.1:55255/,10,0,0
+1780473995502,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,215,458,6,6,http://127.0.0.1:55255/setCurrency,10,0,0
+1780473995513,41,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,10730,345,6,6,http://127.0.0.1:55255/,41,0,0
+1780473995731,33,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17338,349,6,6,http://127.0.0.1:55255/cart,33,0,0
+1780473995882,29,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,17340,349,6,6,http://127.0.0.1:55255/cart,29,0,0
+1780473995915,183,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17486,815,6,6,http://127.0.0.1:55255/cart,10,0,0
+1780473995915,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-5,,true,,172,466,6,6,http://127.0.0.1:55255/cart,10,0,0
+1780473995925,173,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17314,349,6,6,http://127.0.0.1:55255/cart,173,0,0
+1780473995977,124,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17324,349,6,6,http://127.0.0.1:55255/cart,124,0,0
+1780473995930,293,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17504,815,6,6,http://127.0.0.1:55255/cart,81,0,0
+1780473995930,81,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-8,,true,,172,466,6,6,http://127.0.0.1:55255/cart,81,0,0
+1780473996011,212,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17332,349,6,6,http://127.0.0.1:55255/cart,212,0,0
+1780473996059,167,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,6,6,http://127.0.0.1:55255/,167,0,0
+1780473996662,37,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7048,695,6,6,http://127.0.0.1:55255/cart/checkout,37,0,0
+1780473996977,34,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,8222,363,6,6,http://127.0.0.1:55255/product/OLJCESPC7Z,34,0,0
+1780473996992,43,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7062,695,6,6,http://127.0.0.1:55255/cart/checkout,43,0,0
+1780473997334,42,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-6,text,true,,7032,695,6,6,http://127.0.0.1:55255/cart/checkout,41,0,0
+1780473997397,85,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,5,5,http://127.0.0.1:55255/,85,0,0
+1780473997474,58,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,17332,349,5,5,http://127.0.0.1:55255/cart,58,0,0
+1780473997567,25,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,17354,349,5,5,http://127.0.0.1:55255/cart,25,0,0
+1780473998306,129,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-5,text,true,,7028,695,5,5,http://127.0.0.1:55255/cart/checkout,129,0,0
+1780473998631,174,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-8,text,true,,7036,695,4,4,http://127.0.0.1:55255/cart/checkout,174,0,0
+1780473998690,196,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10945,803,3,3,http://127.0.0.1:55255/,18,0,0
+1780473998690,18,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,215,458,3,3,http://127.0.0.1:55255/setCurrency,18,0,0
+1780473998709,177,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,10730,345,3,3,http://127.0.0.1:55255/,177,0,0
+1780473999206,57,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,3,3,http://127.0.0.1:55255/,57,0,0
+1780473999616,22,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8170,363,3,3,http://127.0.0.1:55255/product/OLJCESPC7Z,22,0,0
+1780473999803,45,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8196,363,3,3,http://127.0.0.1:55255/product/OLJCESPC7Z,45,0,0
+1780473999952,46,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17506,815,3,3,http://127.0.0.1:55255/cart,15,0,0
+1780473999952,15,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-7,,true,,172,466,3,3,http://127.0.0.1:55255/cart,15,0,0
+1780473999967,31,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17334,349,3,3,http://127.0.0.1:55255/cart,30,0,0
+1780474000059,29,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,17342,349,3,3,http://127.0.0.1:55255/cart,29,0,0
+1780474000550,64,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,3,3,http://127.0.0.1:55255/,5,0,0
+1780474000550,5,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,3,3,http://127.0.0.1:55255/setCurrency,5,0,0
+1780474000556,58,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,3,3,http://127.0.0.1:55255/,58,0,0
+1780474000917,36,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-7,text,true,,7046,695,3,3,http://127.0.0.1:55255/cart/checkout,35,0,0
+1780474001040,43,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,2,2,http://127.0.0.1:55255/,6,0,0
+1780474001040,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,2,2,http://127.0.0.1:55255/setCurrency,6,0,0
+1780474001046,37,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,2,2,http://127.0.0.1:55255/,37,0,0
+1780474001673,34,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17506,815,2,2,http://127.0.0.1:55255/cart,10,0,0
+1780474001673,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,2,2,http://127.0.0.1:55255/cart,10,0,0
+1780474001684,23,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17334,349,2,2,http://127.0.0.1:55255/cart,23,0,0
+1780474002083,98,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17522,815,2,2,http://127.0.0.1:55255/cart,51,0,0
+1780474002083,51,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,2,2,http://127.0.0.1:55255/cart,51,0,0
+1780474002135,46,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17350,349,2,2,http://127.0.0.1:55255/cart,46,0,0
+1780474002231,27,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17376,349,2,2,http://127.0.0.1:55255/cart,26,0,0
+1780474003376,38,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17334,349,2,2,http://127.0.0.1:55255/cart,38,0,0
+1780474004002,41,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7008,695,2,2,http://127.0.0.1:55255/cart/checkout,41,0,0
+1780474004108,32,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7072,695,2,2,http://127.0.0.1:55255/cart/checkout,32,0,0
+1780474004416,95,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,2,2,http://127.0.0.1:55255/,95,0,0
+1780474005313,33,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,8206,363,2,2,http://127.0.0.1:55255/product/OLJCESPC7Z,33,0,0
+1780474005435,188,1. Visit Homepage /,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,2,2,http://127.0.0.1:55255/,188,0,0
+1780474005753,21,2. Browse Product /product/OLJCESPC7Z,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,8214,363,2,2,http://127.0.0.1:55255/product/OLJCESPC7Z,21,0,0
+1780474006825,178,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10945,803,2,2,http://127.0.0.1:55255/,10,0,0
+1780474006825,10,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,215,458,2,2,http://127.0.0.1:55255/setCurrency,10,0,0
+1780474006836,167,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,10730,345,2,2,http://127.0.0.1:55255/,167,0,0
+1780474007252,42,3. Set Currency /setCurrency,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10945,803,2,2,http://127.0.0.1:55255/,6,0,0
+1780474007252,6,3. Set Currency /setCurrency-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,215,458,2,2,http://127.0.0.1:55255/setCurrency,6,0,0
+1780474007259,35,3. Set Currency /setCurrency-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,10730,345,2,2,http://127.0.0.1:55255/,34,0,0
+1780474007627,30,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17530,815,2,2,http://127.0.0.1:55255/cart,9,0,0
+1780474007627,9,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-9,,true,,172,466,2,2,http://127.0.0.1:55255/cart,9,0,0
+1780474007636,21,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17358,349,2,2,http://127.0.0.1:55255/cart,21,0,0
+1780474007876,37,4. Add to Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17538,815,2,2,http://127.0.0.1:55255/cart,10,0,0
+1780474007876,10,4. Add to Cart /cart-0,302,Found,Scenario 1: Baseline Test (10 Users) 1-10,,true,,172,466,2,2,http://127.0.0.1:55255/cart,10,0,0
+1780474007886,27,4. Add to Cart /cart-1,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17366,349,2,2,http://127.0.0.1:55255/cart,27,0,0
+1780474009348,30,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,17350,349,2,2,http://127.0.0.1:55255/cart,30,0,0
+1780474009410,104,5. View Cart /cart,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,17314,349,2,2,http://127.0.0.1:55255/cart,104,0,0
+1780474010793,29,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-10,text,true,,7044,695,2,2,http://127.0.0.1:55255/cart/checkout,29,0,0
+1780474010979,37,6. Place Order /cart/checkout,200,OK,Scenario 1: Baseline Test (10 Users) 1-9,text,true,,7018,695,1,1,http://127.0.0.1:55255/cart/checkout,37,0,0
