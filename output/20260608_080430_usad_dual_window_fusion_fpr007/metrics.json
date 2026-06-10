@@ -1,0 +1,128 @@
+{
+  "run_name": "usad_dual_window_fusion_fpr007",
+  "dataset": "online_boutique_rca_full_v1",
+  "scaled_features": true,
+  "sampling_interval_seconds": 5.0,
+  "threshold": {
+    "threshold_mode": "fixed_fpr",
+    "threshold_value": 65.89338,
+    "threshold_deployable": true,
+    "use_pred": true,
+    "best_f1": 0.713881,
+    "validation_f1": null,
+    "fixed_fpr": 0.07
+  },
+  "point_level": {
+    "point_precision": 0.653484,
+    "point_recall": 0.733615,
+    "point_f1": 0.691235,
+    "point_accuracy": 0.891873,
+    "point_specificity": 0.923141,
+    "TP": 347,
+    "FP": 184,
+    "TN": 2210,
+    "FN": 126
+  },
+  "ranking": {
+    "pr_auc": 0.708846,
+    "roc_auc": 0.859705
+  },
+  "event_level": {
+    "event_recall": 1.0,
+    "detected_incidents": 40,
+    "missed_incidents": 0,
+    "missed_incident_ids": [],
+    "recall_at_15s": 0.375,
+    "recall_at_30s": 0.975,
+    "recall_at_60s": 1.0,
+    "mean_detection_delay_seconds": 17.35,
+    "median_detection_delay_seconds": 17.0,
+    "p90_detection_delay_seconds": 25.0,
+    "max_detection_delay_seconds": 32.0,
+    "per_incident_delay_seconds": {
+      "online_boutique_rca_6/INC-001": 15.0,
+      "online_boutique_rca_6/INC-002": 21.0,
+      "online_boutique_rca_6/INC-003": 23.0,
+      "online_boutique_rca_6/INC-004": 5.0,
+      "online_boutique_rca_6/INC-005": 24.0,
+      "online_boutique_rca_6/INC-006": 12.0,
+      "online_boutique_rca_6/INC-007": 22.0,
+      "online_boutique_rca_6/INC-008": 10.0,
+      "online_boutique_rca_6/INC-009": 18.0,
+      "online_boutique_rca_6/INC-010": 12.0,
+      "online_boutique_rca_6/INC-011": 30.0,
+      "online_boutique_rca_6/INC-012": 9.0,
+      "online_boutique_rca_6/INC-013": 32.0,
+      "online_boutique_rca_6/INC-014": 20.0,
+      "online_boutique_rca_6/INC-015": 21.0,
+      "online_boutique_rca_6/INC-016": 13.0,
+      "online_boutique_rca_6/INC-017": 25.0,
+      "online_boutique_rca_6/INC-018": 17.0,
+      "online_boutique_rca_6/INC-019": 21.0,
+      "online_boutique_rca_6/INC-020": 20.0,
+      "online_boutique_rca_7/INC-001": 30.0,
+      "online_boutique_rca_7/INC-002": 5.0,
+      "online_boutique_rca_7/INC-003": 16.0,
+      "online_boutique_rca_7/INC-004": 18.0,
+      "online_boutique_rca_7/INC-005": 25.0,
+      "online_boutique_rca_7/INC-006": 10.0,
+      "online_boutique_rca_7/INC-007": 24.0,
+      "online_boutique_rca_7/INC-008": 11.0,
+      "online_boutique_rca_7/INC-009": 16.0,
+      "online_boutique_rca_7/INC-010": 11.0,
+      "online_boutique_rca_7/INC-011": 23.0,
+      "online_boutique_rca_7/INC-012": 11.0,
+      "online_boutique_rca_7/INC-013": 17.0,
+      "online_boutique_rca_7/INC-014": 16.0,
+      "online_boutique_rca_7/INC-015": 19.0,
+      "online_boutique_rca_7/INC-016": 14.0,
+      "online_boutique_rca_7/INC-017": 17.0,
+      "online_boutique_rca_7/INC-018": 12.0,
+      "online_boutique_rca_7/INC-019": 18.0,
+      "online_boutique_rca_7/INC-020": 11.0
+    }
+  },
+  "false_alarm": {
+    "false_alarms_per_hour": 55.338346,
+    "false_positive_points": 184,
+    "normal_points": 2394,
+    "normal_duration_hours": 3.325,
+    "alarm_ratio": 0.185211
+  },
+  "point_adjust": {
+    "point_adjust_precision": 0.719939,
+    "point_adjust_recall": 1.0,
+    "point_adjust_f1": 0.837168
+  },
+  "grouped": {
+    "event_recall_by_fault_type": {
+      "cpu_stress": 1.0,
+      "pod_kill": 1.0
+    },
+    "recall_at_30s_by_fault_type": {
+      "cpu_stress": 0.95,
+      "pod_kill": 1.0
+    },
+    "median_delay_by_fault_type": {
+      "cpu_stress": 21.5,
+      "pod_kill": 12.0
+    },
+    "point_f1_by_fault_type": {
+      "cpu_stress": 0.54007,
+      "pod_kill": 0.625407
+    },
+    "event_recall_by_service": {
+      "cartservice": 1.0,
+      "recommendationservice": 1.0
+    },
+    "recall_at_30s_by_service": {
+      "cartservice": 1.0,
+      "recommendationservice": 0.95
+    },
+    "median_delay_by_service": {
+      "cartservice": 12.0,
+      "recommendationservice": 21.5
+    }
+  },
+  "warnings": []
+}
