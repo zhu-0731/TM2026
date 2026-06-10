@@ -1,0 +1,71 @@
+{
+  "test_mode": "baseline",
+  "browser": "edge",
+  "frontend_url": "http://localhost:18080",
+  "timestamp": "2026-06-03T11:38:21.048968",
+  "summary": {
+    "total_tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "pass_rate": "100.0%",
+    "avg_response_ms": 4884.9,
+    "max_response_ms": 14655.71,
+    "min_response_ms": 325.29
+  },
+  "details": [
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "旅程-首页加载",
+      "duration_ms": 11149.88,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:38:17.512508"
+    },
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "旅程-货币切换",
+      "duration_ms": 722.64,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:38:18.235149"
+    },
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "旅程-浏览商品",
+      "duration_ms": 479.71,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:38:18.715874"
+    },
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "旅程-添加购物车",
+      "duration_ms": 325.29,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:38:19.041162"
+    },
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "旅程-提交订单",
+      "duration_ms": 1976.17,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:38:21.017328"
+    },
+    {
+      "browser": "edge",
+      "test_mode": "baseline",
+      "operation": "完整用户旅程",
+      "duration_ms": 14655.71,
+      "status": "success",
+      "detail": "Your order is complete!",
+      "timestamp": "2026-06-03T11:38:21.044970"
+    }
+  ]
+}

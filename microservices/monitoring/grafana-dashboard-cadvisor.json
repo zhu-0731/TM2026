@@ -1,0 +1,169 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "onlineboutique-cadvisor",
+    "title": "OnlineBoutique 微服务监控 (Kubernetes 容器指标)",
+    "tags": ["microservices", "onlineboutique", "cadvisor"],
+    "timezone": "browser",
+    "schemaVersion": 36,
+    "refresh": "10s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Pod Running 状态",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "kube_pod_status_phase{namespace=\"default\",phase=\"Running\"}",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "steps": [
+                {"color": "red", "value": 0},
+                {"color": "green", "value": 1}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 4, "w": 24, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Pod CPU 使用率",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(container_cpu_usage_seconds_total{namespace=\"default\",container!=\"\",container!=\"POD\"}[5m])",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 4}
+      },
+      {
+        "id": 3,
+        "title": "Pod 内存使用量",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "container_memory_usage_bytes{namespace=\"default\",container!=\"\",container!=\"POD\"} / 1024 / 1024",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "mbytes"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 4}
+      },
+      {
+        "id": 4,
+        "title": "Pod 内存工作集 (WSS)",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "container_memory_working_set_bytes{namespace=\"default\",container!=\"\",container!=\"POD\"} / 1024 / 1024",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "mbytes"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 12}
+      },
+      {
+        "id": 5,
+        "title": "网络接收速率",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(container_network_receive_bytes_total{namespace=\"default\"}[5m]) / 1024",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "kbytes"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 12}
+      },
+      {
+        "id": 6,
+        "title": "网络发送速率",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(container_network_transmit_bytes_total{namespace=\"default\"}[5m]) / 1024",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "kbytes"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 20}
+      },
+      {
+        "id": 7,
+        "title": "容器重启次数",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "kube_pod_container_status_restarts_total{namespace=\"default\"}",
+            "legendFormat": "{{pod}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": 0},
+                {"color": "yellow", "value": 1},
+                {"color": "red", "value": 3}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 4, "w": 12, "x": 12, "y": 20}
+      },
+      {
+        "id": 8,
+        "title": "核心服务 CPU 对比",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "rate(container_cpu_usage_seconds_total{namespace=\"default\",pod=~\"frontend-.*\"}[5m])",
+            "legendFormat": "frontend"
+          },
+          {
+            "expr": "rate(container_cpu_usage_seconds_total{namespace=\"default\",pod=~\"checkoutservice-.*\"}[5m])",
+            "legendFormat": "checkoutservice"
+          },
+          {
+            "expr": "rate(container_cpu_usage_seconds_total{namespace=\"default\",pod=~\"cartservice-.*\"}[5m])",
+            "legendFormat": "cartservice"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit"
+          }
+        },
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 28}
+      }
+    ]
+  },
+  "overwrite": true
+}

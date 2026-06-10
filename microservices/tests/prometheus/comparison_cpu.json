@@ -1,0 +1,55 @@
+{
+  "baseline_file": "baseline_cpu.json",
+  "chaos_file": "chaos_cpu_metrics.json",
+  "comparison_time": "2026-06-02T20:44:17.729427",
+  "results": {
+    "pod_cpu_usage": {
+      "baseline_avg": 0.005775,
+      "chaos_avg": 0.005472,
+      "change_percent": -5.25,
+      "impact": "decreased"
+    },
+    "pod_cpu_usage_frontend": {
+      "baseline_avg": 0.030597,
+      "chaos_avg": 0.028371,
+      "change_percent": -7.27,
+      "impact": "decreased"
+    },
+    "pod_cpu_usage_checkout": {
+      "baseline_avg": 0.002482,
+      "chaos_avg": 0.001951,
+      "change_percent": -21.41,
+      "impact": "decreased"
+    },
+    "pod_cpu_usage_cart": {
+      "baseline_avg": 0.00527,
+      "chaos_avg": 0.004456,
+      "change_percent": -15.46,
+      "impact": "decreased"
+    },
+    "pod_memory_usage": {
+      "baseline_avg": 29198823.619048,
+      "chaos_avg": 29231786.666667,
+      "change_percent": 0.11,
+      "impact": "increased"
+    },
+    "pod_memory_working_set": {
+      "baseline_avg": 26931980.190476,
+      "chaos_avg": 26824118.857143,
+      "change_percent": -0.4,
+      "impact": "decreased"
+    },
+    "pod_memory_usage_frontend": {
+      "baseline_avg": 19816448.0,
+      "chaos_avg": 19947520.0,
+      "change_percent": 0.66,
+      "impact": "increased"
+    },
+    "pod_memory_usage_cart": {
+      "baseline_avg": 35991552.0,
+      "chaos_avg": 36012032.0,
+      "change_percent": 0.06,
+      "impact": "increased"
+    }
+  }
+}

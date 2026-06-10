@@ -1,0 +1,146 @@
+[
+  {
+    "browser": "chrome",
+    "operation": "页面加载",
+    "duration_ms": 3579.28,
+    "status": "success",
+    "detail": "找到 9 个商品",
+    "timestamp": "2026-06-02T23:03:35.737282"
+  },
+  {
+    "browser": "chrome",
+    "operation": "DNS查询",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:03:35.754678"
+  },
+  {
+    "browser": "chrome",
+    "operation": "TCP连接",
+    "duration_ms": 304.4,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:03:35.754678"
+  },
+  {
+    "browser": "chrome",
+    "operation": "DOM处理",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:03:35.754678"
+  },
+  {
+    "browser": "chrome",
+    "operation": "总加载时间",
+    "duration_ms": 0.0,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:03:35.754678"
+  },
+  {
+    "browser": "chrome",
+    "operation": "货币更改",
+    "duration_ms": 494.36,
+    "status": "success",
+    "detail": "EUR",
+    "timestamp": "2026-06-02T23:03:37.680585"
+  },
+  {
+    "browser": "chrome",
+    "operation": "加载商品",
+    "duration_ms": 623.61,
+    "status": "success",
+    "detail": "Sunglasses",
+    "timestamp": "2026-06-02T23:03:49.910426"
+  },
+  {
+    "browser": "chrome",
+    "operation": "添加购物车",
+    "duration_ms": 471.87,
+    "status": "success",
+    "detail": "购物车有 1 个商品",
+    "timestamp": "2026-06-02T23:03:50.499918"
+  },
+  {
+    "browser": "chrome",
+    "operation": "清空购物车",
+    "duration_ms": 0,
+    "status": "failed",
+    "detail": "未找到清空按钮",
+    "timestamp": "2026-06-02T23:04:11.119998"
+  },
+  {
+    "browser": "chrome",
+    "operation": "返回主页",
+    "duration_ms": 211.45,
+    "status": "success",
+    "detail": "找到 9 个商品",
+    "timestamp": "2026-06-02T23:04:11.354041"
+  },
+  {
+    "browser": "chrome",
+    "operation": "填写邮箱",
+    "duration_ms": 275.72,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:12.718457"
+  },
+  {
+    "browser": "chrome",
+    "operation": "提交订单",
+    "duration_ms": 2334.76,
+    "status": "failed",
+    "detail": "Hot Products",
+    "timestamp": "2026-06-02T23:04:15.102305"
+  },
+  {
+    "browser": "chrome",
+    "operation": "旅程-页面加载",
+    "duration_ms": 183.3,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:15.296653"
+  },
+  {
+    "browser": "chrome",
+    "operation": "旅程-更改货币",
+    "duration_ms": 270.78,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:15.567429"
+  },
+  {
+    "browser": "chrome",
+    "operation": "旅程-加载商品",
+    "duration_ms": 510.16,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:16.078621"
+  },
+  {
+    "browser": "chrome",
+    "operation": "旅程-添加购物车",
+    "duration_ms": 979.89,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:17.058508"
+  },
+  {
+    "browser": "chrome",
+    "operation": "旅程-提交订单",
+    "duration_ms": 2712.39,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:19.770897"
+  },
+  {
+    "browser": "chrome",
+    "operation": "完整用户旅程",
+    "duration_ms": 4658.1,
+    "status": "success",
+    "detail": "",
+    "timestamp": "2026-06-02T23:04:19.771455"
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "test_mode": "baseline",
+  "browser": "chrome",
+  "frontend_url": "http://localhost:18080",
+  "timestamp": "2026-06-03T11:57:54.898202",
+  "summary": {
+    "total_tests": 22,
+    "passed": 22,
+    "failed": 0,
+    "pass_rate": "100.0%",
+    "avg_response_ms": 4325.91,
+    "max_response_ms": 16801.43,
+    "min_response_ms": 68.37
+  },
+  "details": [
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "首页加载",
+      "duration_ms": 16801.43,
+      "status": "success",
+      "detail": "找到 9 个商品",
+      "timestamp": "2026-06-03T11:56:19.845857"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "货币切换",
+      "duration_ms": 10583.82,
+      "status": "success",
+      "detail": "EUR",
+      "timestamp": "2026-06-03T11:56:30.962140"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "商品详情浏览",
+      "duration_ms": 457.45,
+      "status": "success",
+      "detail": "商品价格: €17.68",
+      "timestamp": "2026-06-03T11:56:31.843334"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "添加购物车",
+      "duration_ms": 535.62,
+      "status": "success",
+      "detail": "购物车商品数: 1",
+      "timestamp": "2026-06-03T11:56:33.447234"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "清空购物车",
+      "duration_ms": 1349.17,
+      "status": "success",
+      "detail": "购物车已清空",
+      "timestamp": "2026-06-03T11:56:47.273680"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "返回主页",
+      "duration_ms": 143.14,
+      "status": "success",
+      "detail": "找到 9 个商品",
+      "timestamp": "2026-06-03T11:56:47.436730"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "提交订单",
+      "duration_ms": 4224.02,
+      "status": "success",
+      "detail": "Your order is complete!",
+      "timestamp": "2026-06-03T11:56:52.552040"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "优惠券功能",
+      "duration_ms": 4828.63,
+      "status": "success",
+      "detail": "订单完成 + 优惠券已应用",
+      "timestamp": "2026-06-03T11:56:58.255205"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "货币切换-USD",
+      "duration_ms": 10452.37,
+      "status": "success",
+      "detail": "$ 找到",
+      "timestamp": "2026-06-03T11:57:08.872724"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "货币切换-EUR",
+      "duration_ms": 10715.53,
+      "status": "success",
+      "detail": "€ 找到",
+      "timestamp": "2026-06-03T11:57:19.826611"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "货币切换-JPY",
+      "duration_ms": 10716.79,
+      "status": "success",
+      "detail": "¥ 找到",
+      "timestamp": "2026-06-03T11:57:30.755132"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "货币切换-GBP",
+      "duration_ms": 10651.29,
+      "status": "success",
+      "detail": "£ 找到",
+      "timestamp": "2026-06-03T11:57:41.623253"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "商品数量选择",
+      "duration_ms": 238.36,
+      "status": "success",
+      "detail": "选择数量: 3, 单价: £15.20",
+      "timestamp": "2026-06-03T11:57:43.212479"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "空购物车状态",
+      "duration_ms": 68.37,
+      "status": "success",
+      "detail": "空提示: 有, 继续购物按钮: 有",
+      "timestamp": "2026-06-03T11:57:44.400649"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "订单确认详情",
+      "duration_ms": 3842.23,
+      "status": "success",
+      "detail": "订单完成:✓, 确认邮件提示:✓, 确认号:✓, 追踪号:✓, 支付总额:✓, 继续购物按钮:✓",
+      "timestamp": "2026-06-03T11:57:49.330584"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "推荐商品展示",
+      "duration_ms": 1441.59,
+      "status": "success",
+      "detail": "推荐商品数: 4",
+      "timestamp": "2026-06-03T11:57:50.775178"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "旅程-首页加载",
+      "duration_ms": 369.83,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:57:51.148889"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "旅程-货币切换",
+      "duration_ms": 390.57,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:57:51.539454"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "旅程-浏览商品",
+      "duration_ms": 364.47,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:57:51.903919"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "旅程-添加购物车",
+      "duration_ms": 281.18,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:57:52.186096"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "旅程-提交订单",
+      "duration_ms": 2653.57,
+      "status": "success",
+      "detail": "",
+      "timestamp": "2026-06-03T11:57:54.839665"
+    },
+    {
+      "browser": "chrome",
+      "test_mode": "baseline",
+      "operation": "完整用户旅程",
+      "duration_ms": 4060.61,
+      "status": "success",
+      "detail": "Your order is complete!",
+      "timestamp": "2026-06-03T11:57:54.896455"
+    }
+  ]
+}

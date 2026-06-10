@@ -1,0 +1,61 @@
+{{- if .Values.couponservice.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onlineboutique.fullname" . }}-couponservice
+  labels:
+    {{- include "onlineboutique.labels" . | nindent 4 }}
+    app.kubernetes.io/component: couponservice
+spec:
+  selector:
+    matchLabels:
+      {{- include "onlineboutique.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: couponservice
+  template:
+    metadata:
+      labels:
+        {{- include "onlineboutique.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: couponservice
+    spec:
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: "{{ .Values.images.repository }}/couponservice:{{ .Values.images.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        resources:
+          {{- toYaml .Values.couponservice.resources | nindent 10 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "onlineboutique.fullname" . }}-couponservice
+  labels:
+    {{- include "onlineboutique.labels" . | nindent 4 }}
+    app.kubernetes.io/component: couponservice
+spec:
+  type: ClusterIP
+  selector:
+    {{- include "onlineboutique.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/component: couponservice
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+{{- end }}
