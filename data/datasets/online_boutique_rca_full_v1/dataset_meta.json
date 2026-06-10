@@ -1,0 +1,60 @@
+{
+  "dataset_name": "online_boutique_rca_full_v1",
+  "assembled_from": [
+    "online_boutique_rca_1",
+    "online_boutique_rca_2",
+    "online_boutique_rca_3",
+    "online_boutique_rca_4",
+    "online_boutique_rca_5",
+    "online_boutique_rca_6",
+    "online_boutique_rca_7"
+  ],
+  "train_runs": [
+    "online_boutique_rca_1",
+    "online_boutique_rca_2",
+    "online_boutique_rca_3",
+    "online_boutique_rca_4"
+  ],
+  "valid_runs": [
+    "online_boutique_rca_5"
+  ],
+  "test_runs": [
+    "online_boutique_rca_6",
+    "online_boutique_rca_7"
+  ],
+  "run_windows": {
+    "online_boutique_rca_1": "2026-05-29T05:24:14Z",
+    "online_boutique_rca_2": "2026-05-29T09:43:52Z",
+    "online_boutique_rca_3": "2026-05-29T13:25:08Z",
+    "online_boutique_rca_4": "2026-05-30T06:40:47Z",
+    "online_boutique_rca_5": "2026-05-30T10:29:26Z",
+    "online_boutique_rca_6": "2026-05-30T12:55:57Z",
+    "online_boutique_rca_7": "2026-05-30T15:02:13Z"
+  },
+  "split_policy": "last3_valid_last2_test",
+  "temporal_order": "runs sorted by collection_start; train precedes valid precedes test (no future leakage)",
+  "created_at": "2026-06-01T03:42:41Z",
+  "sampling_interval_seconds": 5,
+  "feature_count": 63,
+  "services": [
+    "frontend",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "shippingservice",
+    "adservice",
+    "redis-cart"
+  ],
+  "train_rows": 8570,
+  "valid_rows": 1496,
+  "test_rows": 2867,
+  "train_anomaly_points": 1251,
+  "valid_anomaly_points": 235,
+  "test_anomaly_points": 473,
+  "norm_stats_fit_on": "train_only",
+  "test_labels_location": "answers/ (test_y not in processed/ to keep eval blind)"
+}
