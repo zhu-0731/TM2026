@@ -5,7 +5,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Pipeline experiment outputs (timestamped, regenerated per run)
-output/
+# output/
 
 # Logs
 *.log
@@ -18,10 +18,10 @@ aiops_agent/config.yaml
 
 # Datasets are NOT published in this public repo (collect your own via
 # `python -m benchmark.cli collect` + `assemble`). See README.
-data/
+# data/
 
 # OS / editor
 .DS_Store
 Thumbs.db
 aiops_agent/config.yaml
-data/
+# data/
